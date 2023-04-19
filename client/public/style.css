@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  background: url(https://solarsystem.nasa.gov/assets/footer_bg.jpg);
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 20px 0px #132e50;
+  color: white;
+  font-family: "Roboto Serif", serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+.logoArea {
+  height: 84px;
+  width: 84px;
+  background: url(./images/272051990_445268953891206_6313159391565369473_n.jpg);
+  background-size: contain;
+}
+.navOptionsArea ul {
+  display: flex;
+}
+.navOptions {
+  padding: 2em;
+  list-style-type: none;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  height: 84px;
+  position: relative;
+  text-align: center;
+}
+.navOptions:hover {
+  /* background: #132e50; */
+  transform: scale(1.1);
+}
+.navOptions::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  transform: scale(0.2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  transition: all 0.2s ease-in-out;
+}
+.navOptions:hover::before {
+  transform: scale(1);
+}
+.planet {
+  /* background: url(./images/2k_makemake_fictional.jpg); */
+  background-size: cover;
+  height: 37vw;
+  width: 37vw;
+  max-height: 576px;
+  max-width: 576px;
+  animation: spin 120s linear infinite;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 10px 20px 4px #a16f5c;
+  transition: scale 0.2s;
+}
+.planet:hover {
+  scale: 1.01;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    background-position-x: 0%;
+  }
+  100% {
+    transform: rotate(360deg);
+    background-position-x: 100%;
+  }
+}
+.DetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+.detailsSection {
+  width: 50vw;
+  padding: 2em;
+  text-align: justify;
+  top: 5%;
+  position: relative;
+  animation: float 5s linear infinite;
+}
+@keyframes float {
+  50% {
+    top: 2%;
+  }
+  75% {
+    top: 10%;
+  }
+  100% {
+    top: 5%;
+  }
+}
+.detailsSection p {
+  text-align: justify;
+}
+.planetContainer {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+.domainsSection {
+  padding: 1em;
+  margin-top: 5%;
+  height: 100vh;
+  color: white;
+}
+.domainCard {
+  height: 100px;
+  width: 100px;
+  background: white;
+}
+@media only screen and (max-width: 900px) {
+  .DetailsContainer {
+    flex-direction: column-reverse;
+  }
+  .detailsSection {
+    width: 90vw;
+  }
+  .detailsSection h1 {
+    font-size: 1.5em;
+    padding: 1em 0;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navOptionsArea {
+    overflow-x: auto;
+  }
+}
