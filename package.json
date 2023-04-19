@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 	"name": "scc",
 	"version": "1.0.0",
 	"description": "Official Website of SIET Coding Club",
@@ -21,9 +20,4 @@
 		"jsonwebtoken": "^9.0.0",
 		"mongoose": "^7.0.4"
 	}
-=======
-  "dependencies": {
-    "react-script-tag": "^1.1.2"
-  }
->>>>>>> f36cb310073e2dce7367d48d59f25dd2984a8385
 }
