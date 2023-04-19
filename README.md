@@ -8,7 +8,7 @@ Installing Dependencies
 
 ```sh
 npm install
-npm client-install
+npm run client-install
 ```
 
 Setup environment variables
