@@ -6,10 +6,10 @@ This website requires [Node.js](https://nodejs.org/) to run.
 
 Installing Dependencies
 
-'''sh
+```sh
 npm install
 npm client-install
-'''
+```
 
 Setup environment variables
 
@@ -18,9 +18,9 @@ Setup environment variables
 
 Start the server
 
-'''sh
+```sh
 npm run dev
-'''
+```
 
 ## Licence
 
