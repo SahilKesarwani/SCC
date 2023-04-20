@@ -6,7 +6,7 @@
   user-select: none;
 }
 body {
-  background: url(https://solarsystem.nasa.gov/assets/footer_bg.jpg);
+  background: url("https://solarsystem.nasa.gov/assets/footer_bg.jpg");
   background-size: cover;
   overflow-x: hidden;
   background-attachment: fixed;
@@ -30,7 +30,7 @@ body {
 .logoArea {
   height: 84px;
   width: 84px;
-  background: url(./images/272051990_445268953891206_6313159391565369473_n.jpg);
+  background: url("./images/272051990_445268953891206_6313159391565369473_n.jpg");
   background-size: contain;
 }
 .navOptionsArea ul {
