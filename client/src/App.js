@@ -8,7 +8,6 @@ const App = () => {
     <Navbar/>
     <HomePage/>
             {/* <div style="height:100vh; background: transparent;"></div> */}
-	  
 
     </>
   );
