@@ -15,27 +15,32 @@ const HomePage = () => {
           <div className="planet"></div>
         </div>
       </div>
-      <div style={{ width: "100vw", height: "100vh" }}>
+      <div style={{ width: "100vw", height: "100vh"}}>
       <div className="carousel">
             <a href="#one" className="carousel-item">
                 <img
-                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+                    src="./images/oath_to_code.jpg"/>
+                    <h1><center>One Day Challenges</center></h1>
             </a>
             <a href="#two" className="carousel-item">
                 <img
-                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+                    src="./images/hackverse.jpg"/>
+                    <h1><center>Hackathons</center></h1>
             </a>
             <a href="#three" className="carousel-item">
                 <img
-                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+                    src="./images/bootcamp.jpg"/>
+                    <h1><center>Bootcamp</center></h1>
             </a>
             <a href="#four" className="carousel-item">
                 <img
-                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+                    src="./images/30daysChallenge.jpg"/>
+                    <h1><center>30 Days Challenge</center></h1>
             </a>
             <a href="#five" className="carousel-item">
                 <img
                     src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+                    <h1><center>Join Us</center></h1>
             </a>
         </div>
       </div>

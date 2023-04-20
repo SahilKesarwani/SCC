@@ -137,10 +137,20 @@ body {
   background: white;
 }
 .carousel{
+  height: 100vh;
+}
+.carousel .carousel-item{
+  width: 500px;
   height: 500px;
 }
-.carousel-item{
-  width: 400px;
+.carousel .carousel-item img{
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+}
+.carousel h1{
+  font-size: 2rem;
+  margin: 0;
 }
 @media only screen and (max-width: 900px) {
   .DetailsContainer {
