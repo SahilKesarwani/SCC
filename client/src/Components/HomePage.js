@@ -1,4 +1,4 @@
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <div className="DetailsContainer">
@@ -15,8 +15,29 @@ export default function HomePage() {
           <div className="planet"></div>
         </div>
       </div>
-      <div style={{ background: "white", width: "100vw", height: "100vh" }}>
-        R
+      <div style={{ width: "100vw", height: "100vh" }}>
+      <div className="carousel">
+            <a href="#one" className="carousel-item">
+                <img
+                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+            </a>
+            <a href="#two" className="carousel-item">
+                <img
+                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+            </a>
+            <a href="#three" className="carousel-item">
+                <img
+                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+            </a>
+            <a href="#four" className="carousel-item">
+                <img
+                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+            </a>
+            <a href="#five" className="carousel-item">
+                <img
+                    src="https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png"/>
+            </a>
+        </div>
       </div>
       <div className="domainsSection">
         <h1>
@@ -35,4 +56,6 @@ export default function HomePage() {
       </div>
     </>
   );
-}
+};
+
+export default HomePage;

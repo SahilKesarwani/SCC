@@ -136,6 +136,12 @@ body {
   width: 100px;
   background: white;
 }
+.carousel{
+  height: 500px;
+}
+.carousel-item{
+  width: 400px;
+}
 @media only screen and (max-width: 900px) {
   .DetailsContainer {
     flex-direction: column-reverse;
