@@ -264,8 +264,7 @@ body {
 }
 .content {
   position: absolute;
-  bottom: 0;
-  top: 230px;
+  top: 235px;
   right: 0px;
   left: 0;
   background: #0000005e;
@@ -274,7 +273,11 @@ body {
   padding: 1em;
   text-align: justify;
   color: white;
-  text-align: justify;
+  height: 300px;
+}
+.content h5 {
+  font-size: 1.3rem;
+  text-align: center;
 }
 .parentr:hover .content {
   top: 0;
@@ -293,10 +296,11 @@ body {
   align-items: center;
   color: white;
   position: absolute;
-  margin-top: 30%;
-  /* bottom: 0; */
+  bottom: 5%;
   left: 0;
   right: 0;
+  width: 80%;
+  margin: auto;
 }
 .btn:hover {
   background: white;
@@ -312,8 +316,10 @@ body {
 }
 .card_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
 }
 @media only screen and (max-width: 900px) {
   .DetailsContainer {
