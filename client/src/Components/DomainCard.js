@@ -10,8 +10,7 @@ const DomainCard = ({title, imgSrc, description,domainClickButton}) => {
           <img src={imgSrc} />
           <div className="content">
             <h5>{title}</h5>
-            <p>{description}
-            </p>
+            <p>{description}</p>
             <div className="btn" onClick={()=>domainClickButton(title)}>Enroll</div>
           </div>
           <div className="overlayr"></div>
