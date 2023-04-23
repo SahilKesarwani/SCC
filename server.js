@@ -22,6 +22,10 @@ mongoose
 	.then(() => console.log("MongoDB Connected"))
 	.catch(err => console.log(err));
 
+// Use Routes
+const domains = require("./routes/api/domains");
+app.use("/api/domains", domains);
+
 // On deploy
 // app.use(express.static(path.join(__dirname, "./client/build")));
 // app.get("*", (req, res) => {
