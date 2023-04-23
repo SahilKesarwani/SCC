@@ -1,4 +1,12 @@
-export default function HomePage() {
+import DomainCard from "./DomainCard";
+import SccCarousel from "./SccCarousel";
+import domainsApi from "../apis/domainCardApi";
+import sccCarouselApi from "../apis/sccCarouselApi";
+const domainClick = (title) => {
+  console.log(title);
+};
+
+const HomePage = () => {
   return (
     <>
       <div className="DetailsContainer">
@@ -15,24 +23,37 @@ export default function HomePage() {
           <div className="planet"></div>
         </div>
       </div>
-      <div style={{ background: "white", width: "100vw", height: "100vh" }}>
-        R
+      <div className="carouselSection">
+        <div className="carousel">
+          {sccCarouselApi.map((carousel) => {
+            const { id, href, imgSrc, data } = carousel;
+            return (
+              <SccCarousel key={id} href={href} imgSrc={imgSrc} data={data} />
+            );
+          })}
+        </div>
       </div>
       <div className="domainsSection">
         <h1>
           <center>Domains</center>
         </h1>
-        <div className="domainsContainer">
-          <div className="domainCardArea">
-            <div className="domainCard">
-              <div className="domainBorderTop"></div>
-              <div className="domainBorderLeft"></div>
-              <div className="domainBorderBottom"></div>
-              <div className="domainBorderRight"></div>
-            </div>
-          </div>
+        <div className="card_container">
+          {domainsApi.map((domain) => {
+            const { id, title, imgSrc, description } = domain;
+            return (
+              <DomainCard
+                key={id}
+                title={title}
+                imgSrc={imgSrc}
+                description={description}
+                domainClickButton={domainClick}
+              />
+            );
+          })}
         </div>
       </div>
     </>
   );
-}
+};
+
+export default HomePage;

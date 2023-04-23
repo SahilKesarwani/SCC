@@ -136,6 +136,191 @@ body {
   width: 100px;
   background: white;
 }
+.carouselSection {
+  opacity: 0;
+  transition: opacity 1s linear;
+  width: 100vw;
+  height: 100vh;
+}
+.carousel {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+}
+.carousel .carousel-item {
+  width: 500px;
+  height: 500px;
+}
+.carousel .carousel-item img {
+  height: 300px;
+  width: 500px;
+  object-fit: cover;
+}
+.carousel h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+  font-weight: bolder;
+}
+.vis {
+  opacity: 1;
+}
+.parentr {
+  height: 350px;
+  width: 285px;
+  background-color: transparent;
+  outline: 1px solid white;
+  /* padding: 2em; */
+  position: relative;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow: hidden;
+}
+.cardr {
+  height: 300px;
+  width: 234px;
+  background: red;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  margin-top: 24px;
+  overflow: hidden;
+}
+.leftr,
+.rightr,
+.topr,
+.bottomr {
+  background: white;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  position: absolute;
+}
+.leftr {
+  width: 4px;
+  height: 30%;
+  top: 0;
+  left: -1px;
+  transition: all 0.3s 0s linear;
+  transform: translateY(-110%);
+}
+.rightr {
+  width: 4px;
+  height: 30%;
+  bottom: 0px;
+  right: 0px;
+  transition: all 0.3s 0s linear;
+  transform: translateY(110%);
+}
+.topr {
+  width: 30%;
+  height: 4px;
+  top: -1px;
+  right: 0;
+  transition: all 0.3s 0.1s linear;
+  transform: translateX(110%);
+}
+.bottomr {
+  width: 30%;
+  height: 4px;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.3s 0.1s linear;
+  transform: translateX(-110%);
+}
+.parentr:hover .bottomr {
+  left: 375px;
+  transform: translateX(-87%);
+}
+.parentr:hover .leftr {
+  top: 450px;
+  transform: translateY(-90%);
+}
+.parentr:hover .topr {
+  right: 375px;
+  transform: translateX(87%);
+}
+.parentr:hover .rightr {
+  bottom: 450px;
+  transform: translateY(90%);
+}
+
+.childr {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.cardr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlayr {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.content {
+  position: absolute;
+  top: 235px;
+  right: 0px;
+  left: 0;
+  background: #0000005e;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  padding: 1em;
+  text-align: justify;
+  color: white;
+  height: 300px;
+}
+.content h5 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.parentr:hover .content {
+  top: 0;
+}
+.title {
+  color: white;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+}
+.btn:hover {
+  background: white;
+  color: black;
+  outline: 1px solid black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+.btn p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 80%;
+}
 @media only screen and (max-width: 900px) {
   .DetailsContainer {
     flex-direction: column-reverse;
