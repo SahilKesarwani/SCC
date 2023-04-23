@@ -1,7 +1,7 @@
-export default function Navbar() {
+const Navbar = ({navbar}) => {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" ref={navbar}>
         <div className="logoArea"></div>
         <div className="navOptionsArea">
           <ul>
@@ -15,3 +15,5 @@ export default function Navbar() {
     </>
   );
 }
+
+export default Navbar;

@@ -1,15 +1,59 @@
+import { useEffect, useRef } from "react"
 import DomainCard from "./DomainCard";
 import SccCarousel from "./SccCarousel";
 import domainsApi from "../apis/domainCardApi";
 import sccCarouselApi from "../apis/sccCarouselApi";
-const domainClick = (title) => {
-  console.log(title);
-};
 
-const HomePage = () => {
+
+const HomePage = ({navbar}) => {
+  const domainClick = (title) => {
+    console.log(title);
+  };
+
+  const detailsContainer = useRef("");
+  const domainsSections = useRef("");
+  const carouselSection = useRef("");
+
+  const applyStyling = () => {
+    const navbarHeight = navbar.offsetHeight;
+    const windowHeight = window.innerHeight;
+    detailsContainer.current.style.scale =
+      1 -
+      window.scrollY /
+      (document.documentElement.offsetHeight - window.innerHeight);
+    detailsContainer.current.style.opacity =
+      1 -
+      (window.scrollY /
+        (document.documentElement.offsetHeight - window.innerHeight)) *
+      3;
+    domainsSections.current.style.paddingTop = navbarHeight + "px";
+    domainsSections.current.style.scale =
+      1 -
+      (domainsSections.current.getBoundingClientRect().top - navbarHeight) /
+        (windowHeight - navbarHeight);
+    domainsSections.current.style.opacity =
+      1 -
+      (domainsSections.current.getBoundingClientRect().top - navbarHeight) /
+      (windowHeight - navbarHeight);
+    if(domainsSections.current.style.scale > 1) {
+      domainsSections.current.style.scale = 1;
+      domainsSections.current.style.opacity = 1;
+    }
+    if(carouselSection.current.getBoundingClientRect().top < windowHeight / 2) {
+      carouselSection.current.classList.add("vis");
+    } else {
+      carouselSection.current.classList.remove("vis");
+    }
+  }
+  
+  useEffect(() => {
+    window.addEventListener("scroll", applyStyling);
+    return () => window.removeEventListener("scroll", applyStyling);
+  }, [])
+
   return (
     <>
-      <div className="DetailsContainer">
+      <div className="DetailsContainer" ref={detailsContainer}>
         <div className="detailsSection">
           <h1>SCC SIET Coding Club</h1>
           <p>
@@ -23,7 +67,7 @@ const HomePage = () => {
           <div className="planet"></div>
         </div>
       </div>
-      <div className="carouselSection">
+      <div className="carouselSection" ref={carouselSection}>
         <div className="carousel">
           {sccCarouselApi.map((carousel) => {
             const { id, href, imgSrc, data } = carousel;
@@ -33,7 +77,7 @@ const HomePage = () => {
           })}
         </div>
       </div>
-      <div className="domainsSection">
+      <div className="domainsSection" ref={domainsSections}>
         <h1>
           <center>Domains</center>
         </h1>

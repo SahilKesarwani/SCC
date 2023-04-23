@@ -1,12 +1,14 @@
-import React from "react";
-import "./style.css"
+import { useRef } from "react";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Components/HomePage";
+import "./style.css"
+
 const App = () => {
+  const navbar = useRef("");
   return (
     <>
-    <Navbar/>
-    <HomePage/>
+      <Navbar navbar={navbar} />
+      <HomePage navbar={navbar} />
     </>
   );
 };
