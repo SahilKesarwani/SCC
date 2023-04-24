@@ -11,7 +11,7 @@ const DomainCard = ({title, imgSrc, description,domainClickButton}) => {
           <div className="content">
             <h5>{title}</h5>
             <p>{description}</p>
-            <div className="btn" onClick={()=>domainClickButton(title)}>Enroll</div>
+            <div className="btn" onClick={()=>domainClickButton(title)}>Know More</div>
           </div>
           <div className="overlayr"></div>
         </div>
