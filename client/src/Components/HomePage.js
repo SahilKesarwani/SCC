@@ -1,13 +1,17 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 import DomainCard from "./DomainCard";
 import SccCarousel from "./SccCarousel";
 import domainsApi from "../apis/domainCardApi";
 import sccCarouselApi from "../apis/sccCarouselApi";
-
-
-const HomePage = ({navbar}) => {
+import DomainModal from "./DomainModal";
+const HomePage = ({ navbar }) => {
   const domainClick = (title) => {
-    console.log(title);
+    let title2 = title.replaceAll(" ", "");
+    let modal = document.body.querySelectorAll(".modall");
+    Array.from(modal).forEach((e) => {
+      e.style.display = "none";
+    });
+    document.getElementById(title2).style.display = "flex";
   };
 
   const detailsContainer = useRef("");
@@ -15,17 +19,18 @@ const HomePage = ({navbar}) => {
   const carouselSection = useRef("");
 
   const applyStyling = () => {
-    const navbarHeight = navbar.offsetHeight;
+    const navbarHeight = navbar.current.offsetHeight;
     const windowHeight = window.innerHeight;
     detailsContainer.current.style.scale =
       1 -
       window.scrollY /
-      (document.documentElement.offsetHeight - window.innerHeight);
+        (document.documentElement.offsetHeight - window.innerHeight);
     detailsContainer.current.style.opacity =
       1 -
       (window.scrollY /
         (document.documentElement.offsetHeight - window.innerHeight)) *
-      3;
+        3;
+    detailsContainer.current.style.paddingTop = navbarHeight + "px";
     domainsSections.current.style.paddingTop = navbarHeight + "px";
     domainsSections.current.style.scale =
       1 -
@@ -34,22 +39,27 @@ const HomePage = ({navbar}) => {
     domainsSections.current.style.opacity =
       1 -
       (domainsSections.current.getBoundingClientRect().top - navbarHeight) /
-      (windowHeight - navbarHeight);
-    if(domainsSections.current.style.scale > 1) {
+        (windowHeight - navbarHeight);
+    if (domainsSections.current.style.scale > 1) {
       domainsSections.current.style.scale = 1;
       domainsSections.current.style.opacity = 1;
     }
-    if(carouselSection.current.getBoundingClientRect().top < windowHeight / 2) {
+    if (
+      carouselSection.current.getBoundingClientRect().top <
+      windowHeight / 2
+    ) {
       carouselSection.current.classList.add("vis");
     } else {
       carouselSection.current.classList.remove("vis");
     }
-  }
-  
+  };
   useEffect(() => {
-    window.addEventListener("scroll", applyStyling);
+    window.addEventListener("scroll", () => {
+      applyStyling();
+      document.body.style.backgroundPositionX = window.scrollY / 10 + "px";
+    });
     return () => window.removeEventListener("scroll", applyStyling);
-  }, [])
+  }, []);
 
   return (
     <>
@@ -96,6 +106,10 @@ const HomePage = ({navbar}) => {
           })}
         </div>
       </div>
+          {domainsApi.map((domain) => {
+            const { id, title, imgSrc, description } = domain;
+            return <DomainModal key={id} title={title} />;
+          })}
     </>
   );
 };

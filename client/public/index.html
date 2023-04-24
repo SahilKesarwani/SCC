@@ -1,32 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#000000" />
-		<meta name="description" content="Web site created using create-react-app" />
-		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-		<title>SIET Coding Club</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-	</head>
-	<body>
-		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<div id="root"></div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-			integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
-			integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
-			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script>
-			$(document).ready(function () {
-				$('.carousel').carousel({
-					indicators: true
-				});
-			});</script>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>SIET Coding Club</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".carousel").carousel({
+          indicators: true,
+        });
+      });
+    </script>
+    <script>
+      window.onload = function () {
+        let closeModalDiv = document.querySelectorAll(".closeModal");
+        Array.from(closeModalDiv).forEach((e) => {
+          e.addEventListener("click", () => {
+            Array.from(document.querySelectorAll(".modall")).forEach((el) => {
+              el.style.display = "none";
+            });
+          });
+        });
+        let nextSectionArrow = document.querySelectorAll(".nextSectionArrow");
+        let roadmapContainerArea = document.querySelectorAll(".roadmapContainerArea");
+        let videoContainerArea = document.querySelectorAll(".videoContainerArea");
+        console.log(nextSectionArrow);
+        Array.from(nextSectionArrow).forEach((e)=>{
+          e.addEventListener('click',(elem)=>{
+            if(elem.target.style.rotate==="0deg"){
+              elem.target.style.rotate="180deg";
+            }
+            else{
+              elem.target.style.rotate="0deg";
+            }
+            Array.from(roadmapContainerArea).forEach((el)=>{
+                if( el.style.right=="0vw")
+                {el.style.right="80vw";}
+                else{
+                  el.style.right="0vw";
+                }
+            });
+            Array.from(videoContainerArea).forEach((el)=>{
+              if( el.style.left=="80vw")
+                {el.style.left="0vw";}
+                else{
+                  el.style.left="80vw";
+                }
+            });
+          })
+        });
+      };
+    </script>
+  </body>
 </html>
