@@ -10,6 +10,7 @@ body {
   background-size: cover;
   overflow-x: hidden;
   background-attachment: fixed;
+  color: white;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -380,6 +381,46 @@ body {
 .nextSectionArrow:hover {
   box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #0fa,
     0 0 32px #0fa, 0px 0px 11px #0fa, 0 0 1px #0fa, 0 0 1px #0fa;
+}
+.slideShowContainer{
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 80vh;
+  width: 100vw;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+}
+.slides{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  background: rebeccapurple;
+  transition: all 0.2s linear;
+  overflow: hidden;
+}
+.slides:nth-child(2n){
+  background: gold;
+}
+.slideButton{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1em;
+  cursor: pointer;
+}
+.slideButton:hover{
+  background: yellow;
+}
+#slidePrev{
+  left: 0;
+}
+#slideNext{
+  right: 0;
 }
 @media only screen and (max-width: 900px) {
   .DetailsContainer {

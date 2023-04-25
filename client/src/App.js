@@ -9,8 +9,8 @@ const App = () => {
   return (
     <>
       <Navbar navbar={navbar} />
-      <HomePage navbar={navbar} />
-      {/* <EventsPage navbar={navbar} title="Hello"/> */}
+      {/* <HomePage navbar={navbar} /> */}
+      <EventsPage navbar={navbar} title="SlideShow Container"/>
     </>
   );
 };

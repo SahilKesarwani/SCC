@@ -1,0 +1,31 @@
+const eventSlidesDataApi=[
+    {
+        id:1,
+        slideText:"slide1"
+    },
+    {
+        id:2,
+        slideText:"slide2"
+    },
+    {
+        id:3,
+        slideText:"slide3"
+    },
+    {
+        id:4,
+        slideText:"slide4"
+    },
+    {
+        id:5,
+        slideText:"slide5"
+    },
+    {
+        id:6,
+        slideText:"slide6"
+    },
+    {
+        id:7,
+        slideText:"slide7"
+    }
+]
+export default eventSlidesDataApi
