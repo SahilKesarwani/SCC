@@ -30,6 +30,7 @@ body {
 .logoArea {
   height: 84px;
   width: 84px;
+  margin-left: 15px;
   background: url("./images/272051990_445268953891206_6313159391565369473_n.jpg");
   background-size: contain;
 }
@@ -327,7 +328,6 @@ body {
   inset: 0;
   background: #000;
   display: none;
-  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;

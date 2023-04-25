@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Navbar from "./Components/Navbar";
 import HomePage from "./Components/HomePage";
+import EventsPage from "./Components/EventsPage";
 import "./style.css"
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <>
       <Navbar navbar={navbar} />
       <HomePage navbar={navbar} />
+      {/* <EventsPage navbar={navbar} title="Hello"/> */}
     </>
   );
 };
