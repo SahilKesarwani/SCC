@@ -53,17 +53,30 @@ const EventsPage = ({ navbar, title }) => {
       {/* <div>Hello World, I'm a {title}</div> */}
       <div className="slideShowContainer" ref={slideShowContainer}>
         {eventSlidesDataApi.map((slides) => {
-          const { id, slideText } = slides;
-          return <EventSlides key={id} navbar={navbar} slideText={slideText} />;
+          const { id, slideText , imgSrc} = slides;
+          return <EventSlides key={id} navbar={navbar} slideText={slideText} imgSrc={imgSrc}/>;
         })}
         <div className="slideButton" id="slidePrev">
-          Prev
+        ❮
         </div>
         <div className="slideButton" id="slideNext">
-          Next
+        ❯
         </div>
       </div>
-      <div style={{height:"100vh", width:"100vw"}}>Yo</div>
+      <div className="recentEventsDiv">
+        <div className="recentHeading"> Recent Events</div>
+        <div className="recentEventContainer">
+          <div className="recentEvent">
+            <img src="https://wallpapercave.com/wp/ngPEfyE.jpg"/>
+          </div>
+          <div className="recentEvent">
+          <img src="http://thestatetimes.com/wp-content/uploads/2018/02/infotech.jpg"/>
+          </div>
+          <div className="recentEvent">
+          <img src="https://wallpapercave.com/wp/ngPEfyE.jpg"/>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

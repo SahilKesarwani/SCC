@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-const EventSlides = ({ navbar, slideText }) => {
+const EventSlides = ({ navbar, slideText, imgSrc }) => {
   const slides = useRef("");
   const applyStyling = () => {
     const navbarHeight = navbar.current.offsetHeight;
@@ -11,7 +11,8 @@ const EventSlides = ({ navbar, slideText }) => {
   return (
     <>
       <div className="slides" ref={slides}>
-        {slideText}
+        {/* {slideText} */}
+        <img src={imgSrc}/>
       </div>
 
     </>

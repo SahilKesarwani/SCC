@@ -1,31 +1,38 @@
 const eventSlidesDataApi=[
     {
         id:1,
-        slideText:"slide1"
+        slideText:"slide1",
+        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
     },
     {
         id:2,
-        slideText:"slide2"
+        slideText:"slide2",
+        imgSrc:"http://thestatetimes.com/wp-content/uploads/2018/02/infotech.jpg"
     },
     {
         id:3,
-        slideText:"slide3"
+        slideText:"slide3",
+        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
     },
     {
         id:4,
-        slideText:"slide4"
+        slideText:"slide4",
+        imgSrc:"http://thestatetimes.com/wp-content/uploads/2018/02/infotech.jpg"
     },
     {
         id:5,
-        slideText:"slide5"
+        slideText:"slide5",
+        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
     },
     {
         id:6,
-        slideText:"slide6"
+        slideText:"slide6",
+        imgSrc:"http://thestatetimes.com/wp-content/uploads/2018/02/infotech.jpg"
     },
     {
         id:7,
-        slideText:"slide7"
+        slideText:"slide7",
+        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
     }
 ]
 export default eventSlidesDataApi
