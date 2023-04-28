@@ -26,6 +26,10 @@ const eventSlidesDataApi=[
     {
         id:7,
         slideText:"slide7"
+    },
+    {
+        id:8,
+        slideText:"slide8"
     }
 ]
 export default eventSlidesDataApi

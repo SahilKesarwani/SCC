@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import EventSlides from "./EventSlides";
 import eventSlidesDataApi from "../apis/eventSlidesDataApi";
+import eventListApi from "../apis/eventsListApi";
+import EventListData from "./EventListData";
 const EventsPage = ({ navbar, title }) => {
   const outsideNavArea = useRef("");
   const slideShowContainer = useRef("");
@@ -38,6 +40,7 @@ const EventsPage = ({ navbar, title }) => {
     next.addEventListener("click", () => {
       slideShow(1);
     });
+
     next.click();
     nextSlide();
     slideShowContainer.current.addEventListener("mouseover", () => {
@@ -57,13 +60,38 @@ const EventsPage = ({ navbar, title }) => {
           return <EventSlides key={id} navbar={navbar} slideText={slideText} />;
         })}
         <div className="slideButton" id="slidePrev">
-          Prev
+          &lt;
         </div>
         <div className="slideButton" id="slideNext">
-          Next
+          &gt;
         </div>
       </div>
-      <div style={{height:"100vh", width:"100vw"}}>Yo</div>
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+        }}
+      >
+        <div className="eventList">
+          <h3>
+            <center>All other past events</center>
+          </h3>
+          <div className="eventContainer" style={{background: "rgba(255, 255, 255, 0.235)"}}>
+        <div className="eventName">Contest Name</div>
+        <div className="eventDateandTime">
+          <div className="eventTime">Timing</div>
+          <div className="eventDate">Date</div>
+        </div>
+      </div>
+          {eventListApi.map((eventList) => {
+            const { id, name, time, date } = eventList;
+            return <EventListData key={id} name={name} time={time} date={date}/>
+          })}
+        </div>
+      </div>
     </>
   );
 };
