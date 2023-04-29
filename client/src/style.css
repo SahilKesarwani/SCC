@@ -15,6 +15,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+a {
+  color: inherit;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -405,6 +408,11 @@ body {
   transition: all 0.2s linear;
   overflow: hidden;
 }
+.slides img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .slides:nth-child(2n) {
   background: gold;
 }
@@ -431,7 +439,7 @@ body {
 #slideNext {
   right: 0;
 }
-.eventList{
+.eventList {
   max-height: 100%;
   overflow: auto;
 }
@@ -439,13 +447,13 @@ body {
   display: flex;
   justify-content: space-between;
   width: 60vw;
-  border-bottom:2px solid white;
+  border-bottom: 2px solid white;
   padding: 1em;
-  position: relative; 
-  background: rgba(255, 255, 255, 0.235);
+  position: relative;
+  /* background: rgba(255, 255, 255, 0.235); */
 }
-.eventContainer::before{
-  content: '';
+.eventContainer::before {
+  content: "";
   position: absolute;
   left: 0;
   right: 100%;
@@ -455,39 +463,38 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.eventContainer:hover::before{
+.eventContainer:hover::before {
   right: 0;
 }
-.eventDateandTime{
+.eventDateandTime {
   display: flex;
 }
-.eventDateandTime div{
+.eventDateandTime div {
   margin: 0em 1em;
   width: 100px;
   text-align: center;
 }
-.recentEventContainer{
+.recentEventContainer {
   height: 350px;
   width: 104vw;
   display: flex;
-  
 }
-.recentEvent{
+.recentEvent {
   height: 100%;
   width: 20vw;
   padding: 1em;
-  background-color:red;
+  background-color: red;
   transform: skew(-10deg);
   flex-grow: 1;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   border-right: 3px solid white;
 }
-.recentEvent:nth-child(2){
-  background:url('https://www.xoriant.com/cdn/ff/FjWuvx7e1r0xQoKL_S43CLDpdfZooIbOvvGnVdTOtPA/1603982157/public/homepageAccordian/ROBUSTNESS.png');
+.recentEvent:nth-child(2) {
+  background: url("https://www.xoriant.com/cdn/ff/FjWuvx7e1r0xQoKL_S43CLDpdfZooIbOvvGnVdTOtPA/1603982157/public/homepageAccordian/ROBUSTNESS.png");
 }
-.recentEvent:hover{
-  flex-grow:2;
+.recentEvent:hover {
+  flex-grow: 2;
 }
 @media only screen and (max-width: 900px) {
   .DetailsContainer {

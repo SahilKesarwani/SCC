@@ -56,8 +56,15 @@ const EventsPage = ({ navbar, title }) => {
       {/* <div>Hello World, I'm a {title}</div> */}
       <div className="slideShowContainer" ref={slideShowContainer}>
         {eventSlidesDataApi.map((slides) => {
-          const { id, slideText , imgSrc} = slides;
-          return <EventSlides key={id} navbar={navbar} slideText={slideText} imgSrc={imgSrc}/>;
+          const { id, slideText, imgSrc } = slides;
+          return (
+            <EventSlides
+              key={id}
+              navbar={navbar}
+              slideText={slideText}
+              imgSrc={imgSrc}
+            />
+          );
         })}
         <div className="slideButton" id="slidePrev">
           &lt;
@@ -88,7 +95,10 @@ const EventsPage = ({ navbar, title }) => {
           <h3>
             <center>All other past events</center>
           </h3>
-          <div className="eventContainer">
+          <div
+            className="eventContainer"
+            style={{ background: "rgba(255, 255, 255, 0.235)" }}
+          >
             <div className="eventName">Contest Name</div>
             <div className="eventDateandTime">
               <div className="eventTime">Timing</div>
