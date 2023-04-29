@@ -31,8 +31,11 @@ const eventSlidesDataApi=[
     },
     {
         id:7,
-        slideText:"slide7",
-        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
+        slideText:"slide7"
+    },
+    {
+        id:8,
+        slideText:"slide8"
     }
 ]
 export default eventSlidesDataApi

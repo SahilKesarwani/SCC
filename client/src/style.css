@@ -327,11 +327,12 @@ body {
 .modall {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: #0000007a;
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  backdrop-filter: blur(20px);
 }
 .closeModal {
   position: fixed;
@@ -413,11 +414,16 @@ body {
   transform: translateY(-50%);
   padding: 1em;
   cursor: pointer;
-  font-size: 45px;
-  transition: all 0.5s ease-in-out;
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 }
 .slideButton:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background: yellow;
 }
 #slidePrev {
   left: 0;
@@ -425,55 +431,40 @@ body {
 #slideNext {
   right: 0;
 }
-.slides img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.eventList{
+  max-height: 100%;
+  overflow: auto;
 }
-.recentEventsDiv {
-  height: 100vh;
-  width: 100vw;
+.eventContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 60vw;
+  border-bottom:2px solid white;
+  padding: 1em;
+  position: relative; 
 }
-.recentEventContainer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 80vh;
-}
-.recentEvent {
-  height: 400px;
-  width: 400px;
-  background: azure;
-  transition: all 0.5s ease-in-out;
+.eventContainer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.235);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.recentEvent:nth-child(2) {
-  height: 450px;
-  width: 450px;
+.eventContainer:hover::before{
+  right: 0;
 }
-.recentEvent:hover {
-  height: 450px;
-  width: 450px;
-}
-.recentHeading {
-  color: azure;
-  font-size: 50px;
+.eventDateandTime{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
 }
-.recentEvent img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.eventDateandTime div{
+  margin: 0em 1em;
+  width: 100px;
+  text-align: center;
 }
-
 @media only screen and (max-width: 900px) {
   .DetailsContainer {
     flex-direction: column-reverse;

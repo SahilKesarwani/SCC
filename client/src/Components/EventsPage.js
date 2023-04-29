@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import EventSlides from "./EventSlides";
 import eventSlidesDataApi from "../apis/eventSlidesDataApi";
+import eventListApi from "../apis/eventsListApi";
+import EventListData from "./EventListData";
 const EventsPage = ({ navbar, title }) => {
   const outsideNavArea = useRef("");
   const slideShowContainer = useRef("");
@@ -38,6 +40,7 @@ const EventsPage = ({ navbar, title }) => {
     next.addEventListener("click", () => {
       slideShow(1);
     });
+
     next.click();
     nextSlide();
     slideShowContainer.current.addEventListener("mouseover", () => {
@@ -57,24 +60,36 @@ const EventsPage = ({ navbar, title }) => {
           return <EventSlides key={id} navbar={navbar} slideText={slideText} imgSrc={imgSrc}/>;
         })}
         <div className="slideButton" id="slidePrev">
-        ❮
+          &lt;
         </div>
         <div className="slideButton" id="slideNext">
-        ❯
+          &gt;
         </div>
       </div>
-      <div className="recentEventsDiv">
-        <div className="recentHeading"> Recent Events</div>
-        <div className="recentEventContainer">
-          <div className="recentEvent">
-            <img src="https://wallpapercave.com/wp/ngPEfyE.jpg"/>
-          </div>
-          <div className="recentEvent">
-          <img src="http://thestatetimes.com/wp-content/uploads/2018/02/infotech.jpg"/>
-          </div>
-          <div className="recentEvent">
-          <img src="https://wallpapercave.com/wp/ngPEfyE.jpg"/>
-          </div>
+      <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+        }}
+      >
+        <div className="eventList">
+          <h3>
+            <center>All other past events</center>
+          </h3>
+          <div className="eventContainer" style={{background: "rgba(255, 255, 255, 0.235)"}}>
+        <div className="eventName">Contest Name</div>
+        <div className="eventDateandTime">
+          <div className="eventTime">Timing</div>
+          <div className="eventDate">Date</div>
+        </div>
+      </div>
+          {eventListApi.map((eventList) => {
+            const { id, name, time, date } = eventList;
+            return <EventListData key={id} name={name} time={time} date={date}/>
+          })}
         </div>
       </div>
     </>
