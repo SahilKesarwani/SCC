@@ -68,27 +68,38 @@ const EventsPage = ({ navbar, title }) => {
       </div>
       <div
         style={{
-          height: "100vh",
+          // height: "100vh",
           width: "100vw",
           display: "flex",
           justifyContent: "space-evenly",
           alignItems: "center",
+          flexDirection: "column",
         }}
       >
+        <h3>
+          <center>Recent Events</center>
+        </h3>
+        <div className="recentEventContainer">
+          <div className="recentEvent">Event1</div>
+          <div className="recentEvent">Event2</div>
+          <div className="recentEvent">Event3</div>
+        </div>
         <div className="eventList">
           <h3>
             <center>All other past events</center>
           </h3>
-          <div className="eventContainer" style={{background: "rgba(255, 255, 255, 0.235)"}}>
-        <div className="eventName">Contest Name</div>
-        <div className="eventDateandTime">
-          <div className="eventTime">Timing</div>
-          <div className="eventDate">Date</div>
-        </div>
-      </div>
+          <div className="eventContainer">
+            <div className="eventName">Contest Name</div>
+            <div className="eventDateandTime">
+              <div className="eventTime">Timing</div>
+              <div className="eventDate">Date</div>
+            </div>
+          </div>
           {eventListApi.map((eventList) => {
             const { id, name, time, date } = eventList;
-            return <EventListData key={id} name={name} time={time} date={date}/>
+            return (
+              <EventListData key={id} name={name} time={time} date={date} />
+            );
           })}
         </div>
       </div>
