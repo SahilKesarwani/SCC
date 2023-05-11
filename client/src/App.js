@@ -7,6 +7,8 @@ import Navbar from "./ComponentsNew/Navbar";
 // import "./style.css";
 
 import "./stylenew.css";
+import HomePage from "./ComponentsNew/HomePage";
+import EventPage from "./ComponentsNew/EventPage";
 
 const App = () => {
 	// const navbar = useRef("");
@@ -20,7 +22,22 @@ const App = () => {
 			</Routes> */}
 			{/* <HomePage navbar={navbar} /> */}
 			{/* <EventsPage navbar={navbar} title="SlideShow Container" /> */}
+			{/* <HomePage/>
+			<EventPage/> */}
+
+
+
+
+
+			
 			<Navbar/>
+			<Routes>
+				<Route exact path="/" element={<HomePage/>}></Route>
+				<Route exact path="/eventpage" element={<EventPage/>}></Route>
+				<Route exact path="/ourteam" element={<div>I'm Our Team Page</div>}></Route>
+				<Route exact path="/about" element={<div>I'm About Page</div>}></Route>
+				<Route path="*" element={<div>Error 404</div>}></Route>
+			</Routes>
 		</>
 	);
 };
