@@ -1,3 +1,4 @@
+import * as THREE from "three";
 import { useEffect, useRef } from "react";
 import EventSlides from "./EventSlides";
 import eventSlidesDataApi from "../apis/eventSlidesDataApi";
@@ -49,15 +50,51 @@ const EventsPage = ({ navbar, title }) => {
     slideShowContainer.current.addEventListener("mouseout", () => {
       checkSlidePass = 1;
     });
+    globe();
   }, []);
+
+  const globe = () => {
+    const scene = new THREE.Scene();
+    const geometry = new THREE.SphereGeometry(3, 64, 64);
+    const material = new THREE.MeshStandardMaterial({
+      color: "#00ff83",
+    });
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    //Camera
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight);
+    camera.position.z = 30;
+    scene.add(camera);
+
+    //Light
+    const light = new THREE.PointLight(0xffffff,1,100);
+    light.position.set(10,10,10);
+    scene.add(light);
+
+    //Renderer
+    const canvas = document.querySelector("#canvas");
+    const renderer = new THREE.WebGLRenderer({ canvas })
+    renderer.setSize(window.innerWidth,window.innerHeight);
+    renderer.setPixelRatio(2);
+    renderer.render(scene, camera);
+  };
+
   return (
     <>
       <div ref={outsideNavArea}></div>
       {/* <div>Hello World, I'm a {title}</div> */}
       <div className="slideShowContainer" ref={slideShowContainer}>
         {eventSlidesDataApi.map((slides) => {
-          const { id, slideText , imgSrc} = slides;
-          return <EventSlides key={id} navbar={navbar} slideText={slideText} imgSrc={imgSrc}/>;
+          const { id, slideText, imgSrc } = slides;
+          return (
+            <EventSlides
+              key={id}
+              navbar={navbar}
+              slideText={slideText}
+              imgSrc={imgSrc}
+            />
+          );
         })}
         <div className="slideButton" id="slidePrev">
           &lt;
@@ -88,7 +125,10 @@ const EventsPage = ({ navbar, title }) => {
           <h3>
             <center>All other past events</center>
           </h3>
-          <div className="eventContainer">
+          <div
+            className="eventContainer"
+            style={{ background: "rgba(255, 255, 255, 0.235)" }}
+          >
             <div className="eventName">Contest Name</div>
             <div className="eventDateandTime">
               <div className="eventTime">Timing</div>
@@ -103,6 +143,10 @@ const EventsPage = ({ navbar, title }) => {
           })}
         </div>
       </div>
+      <canvas
+        style={{ height: "100vh", width: "100vw", backgroundColor: "red" }}
+        id="canvas"
+      ></canvas>
     </>
   );
 };

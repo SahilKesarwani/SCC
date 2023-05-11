@@ -2,7 +2,7 @@ const eventSlidesDataApi=[
     {
         id:1,
         slideText:"slide1",
-        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
+        imgSrc:"https://e0.pxfuel.com/wallpapers/6/451/desktop-wallpaper-hi-tech-ultra-high-resolution-tech.jpg"
     },
     {
         id:2,
@@ -12,12 +12,12 @@ const eventSlidesDataApi=[
     {
         id:3,
         slideText:"slide3",
-        imgSrc:"https://wallpapercave.com/wp/ngPEfyE.jpg"
+        imgSrc:"https://source.unsplash.com/1600x900/?technology"
     },
     {
         id:4,
         slideText:"slide4",
-        imgSrc:"http://thestatetimes.com/wp-content/uploads/2018/02/infotech.jpg"
+        imgSrc:"https://source.unsplash.com/1600x900/?technology"
     },
     {
         id:5,
