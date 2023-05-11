@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 2em 0;
+  transition: 0.2s backdrop-filter linear;
+}
+.logoArea {
+  height: 50px;
+  width: 50px;
+  background: url("./images/logo.jpg");
+  background-size: contain;
+  margin-left: 2em;
+}
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin-right: 3%;
+}
+.menu li {
+  padding: 1em 2.8em;
+  position: relative;
+  cursor: pointer;
+  width: 159px;
+  text-align: center;
+  transition: 0.2s all linear;
+}
+.menu li:hover {
+  transform: scale(1.1);
+}
+.menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  height: 1px;
+  width: 100%;
+  transform: scale(0.2);
+  /* transform-origin: 0 0; */
+  transition: 0.2s all linear;
+}
+.menu li:hover::after {
+  transform: scale(1);
+}
+.contents {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-color: #040a15;
+}
+.astronautRectangle {
+  height: 80%;
+  position: absolute;
+  left: 45.6%;
+  top: 32px;
+  object-fit: contain;
+}
+.astronautBg,
+.astronaut {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contents img:nth-child(1) {
+  height: 110%;
+}
+.astronaut {
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
+  top: 10%;
+  animation: astronautMoveIn 1s ease-in-out,
+    astronaut 4s ease-in-out 1.1s infinite;
+}
+@keyframes astronautMoveIn {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes astronaut {
+  0%,
+  100% {
+    top: 10%;
+  }
+  50% {
+    top: 12%;
+  }
+}
+.name {
+  height: 100vh;
+  width: 50%;
+  background: transparent;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 300px;
+  background-color: transparent;
+  position: relative;
+  left: -12%;
+
+  /* Gauri, please adjust the rectangular box */
+}
+.linec {
+  display: flex;
+  align-items: center;
+  margin-left: 65px;
+  gap: 11px;
+  margin-top: -20px;
+}
+.text .p,
+.linec {
+  font-size: 50px;
+  text-align: right;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
+
+.line {
+  height: 2px;
+  width: 109px;
+  background: white;
+}
+
+.carouselArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./images/astronautBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.overlay {
+  backdrop-filter: blur(30px);
+  position: absolute;
+  inset: 0;
+}
+.domainContainer{
+  min-height: 100vh;
+  width: 100vw;
+  /* background: url(./images/astronautBg.png); */
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.domainContainer .domainHead{
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+.domainArea {
+  width: 80vw;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.parentr {
+  height: 400px;
+  width: 322px;
+  background-color: transparent;
+  outline: 1px solid white;
+  /* padding: 2em; */
+  position: relative;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow: hidden;
+}
+.leftr,
+.rightr,
+.topr,
+.bottomr {
+  background: white;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  position: absolute;
+}
+.leftr {
+  width: 4px;
+  height: 30%;
+  top: 0;
+  left: -1px;
+  transition: all 0.3s 0s linear;
+  transform: translateY(-110%);
+}
+.rightr {
+  width: 4px;
+  height: 30%;
+  bottom: 0px;
+  right: 0px;
+  transition: all 0.3s 0s linear;
+  transform: translateY(110%);
+}
+.topr {
+  width: 30%;
+  height: 4px;
+  top: -1px;
+  right: 0;
+  transition: all 0.3s 0.1s linear;
+  transform: translateX(110%);
+}
+.bottomr {
+  width: 30%;
+  height: 4px;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.3s 0.1s linear;
+  transform: translateX(-110%);
+}
+.parentr:hover .bottomr {
+  left: 455px;
+  transform: translateX(-100%);
+}
+.parentr:hover .leftr {
+  top: 570px;
+  transform: translateY(-100%);
+}
+.parentr:hover .topr {
+  right: 455px;
+  transform: translateX(100%);
+}
+.parentr:hover .rightr {
+  bottom: 570px;
+  transform: translateY(100%);
+}
+.cardr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlayr {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.content {
+  position: absolute;
+  top: 280px;
+  right: 0px;
+  left: 0;
+  background: #0000005e;
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+  padding: 1em;
+  text-align: justify;
+  color: white;
+  height: 350px;
+  line-height: 13px;
+  font-family: 'Roboto', sans-serif;
+}
+.content h5 {
+  font-size: 1.6rem;
+  text-align: center;
+
+}
+.content p{
+  line-height: 20px;
+}
+.parentr:hover .content {
+  top: 0;
+}
+.btn {
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+}
+.btn:hover {
+  background: white;
+  color: black;
+  outline: 1px solid black;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa !important;
+}
+.btn p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardr {
+  height: 350px;
+  width: 267px;
+  background: red;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  margin-top: 24px;
+  overflow: hidden;
+}
