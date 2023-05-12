@@ -15,7 +15,7 @@ const domainsApi = [
     },
     {
       id:3,
-      title: "Machine Learning",
+      title: "Data Scientist",
       imgSrc:
         "https://www.marktechpost.com/wp-content/uploads/2023/04/Blog-Banner-6.jpg",
       description: "description ML",
@@ -36,7 +36,7 @@ const domainsApi = [
     },
     {
       id:6,
-      title: "Data Scientist",
+      title: "Machine Learning",
       imgSrc:
         "https://e0.pxfuel.com/wallpapers/517/930/desktop-wallpaper-data-science-data-visualization.jpg",
       description: "description DS",

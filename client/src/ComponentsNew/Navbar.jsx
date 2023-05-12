@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <>
-      <div class="navbar">
-        <div class="logoArea"></div>
-        <div class="menuArea">
-          <ul class="menu">
-            <li>Home</li>
+      <div className="navbar">
+        <Link to="/"><div className="logoArea"></div></Link>
+        <div className="menuArea">
+          <ul className="menu">
+            <li><Link to="/">Home</Link></li>
             <li>
-              <a href="events.html" target="_blank">
+              <Link to="/eventpage">
                 Events
-              </a>
+              </Link>
             </li>
-            <li>Our Team</li>
-            <li>About</li>
+            <li>
+              <Link to="/ourteam">
+                Our Team
+              </Link></li>
+            <li>
+              <Link to="/about">
+                About
+              </Link></li>
           </ul>
         </div>
       </div>
