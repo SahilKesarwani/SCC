@@ -11,7 +11,7 @@ import HomePage from "./ComponentsNew/HomePage";
 import EventPage from "./ComponentsNew/EventPage";
 
 const App = () => {
-	// const navbar = useRef("");
+	const navbar = useRef("");
 	return (
 		<>
 			{/* <Navbar navbar={navbar} /> */}
@@ -29,10 +29,10 @@ const App = () => {
 
 
 
-			
-			<Navbar/>
+
+			<Navbar navbar={navbar}/>
 			<Routes>
-				<Route exact path="/" element={<HomePage/>}></Route>
+				<Route exact path="/" element={<HomePage navbar={navbar}/>}></Route>
 				<Route exact path="/eventpage" element={<EventPage/>}></Route>
 				<Route exact path="/ourteam" element={<div>I'm Our Team Page</div>}></Route>
 				<Route exact path="/about" element={<div>I'm About Page</div>}></Route>

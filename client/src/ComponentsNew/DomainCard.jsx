@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DomainCard({ title, imgSrc, description }) {
+export default function DomainCard({ title, imgSrc, description, domainClick }) {
   return (
     <>
       <div className="parentr">
@@ -13,7 +13,7 @@ export default function DomainCard({ title, imgSrc, description }) {
           <div className="content">
             <h5>{title}</h5>
             <p>{description}</p>
-            <div className="btn">Know More</div>
+            <div className="btn" onClick={()=>{domainClick(title)}}>Know More</div>
           </div>
           <div className="overlayr"></div>
         </div>

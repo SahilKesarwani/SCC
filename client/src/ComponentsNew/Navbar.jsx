@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({navbar}) {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" ref={navbar}>
         <Link to="/"><div className="logoArea"></div></Link>
         <div className="menuArea">
           <ul className="menu">
