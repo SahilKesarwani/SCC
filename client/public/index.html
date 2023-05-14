@@ -36,10 +36,14 @@
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -111,33 +115,36 @@
           });
         });
         let nextSectionArrow = document.querySelectorAll(".nextSectionArrow");
-        let roadmapContainerArea = document.querySelectorAll(".roadmapContainerArea");
-        let videoContainerArea = document.querySelectorAll(".videoContainerArea");
-        Array.from(nextSectionArrow).forEach((e)=>{
-          e.addEventListener('click',(elem)=>{
-            if(elem.target.style.rotate==="0deg"){
-              elem.target.style.rotate="180deg";
+        let roadmapContainerArea = document.querySelectorAll(
+          ".roadmapContainerArea"
+        );
+        let videoContainerArea = document.querySelectorAll(
+          ".videoContainerArea"
+        );
+        Array.from(nextSectionArrow).forEach((e) => {
+          e.addEventListener("click", (elem) => {
+            if (elem.target.style.rotate === "0deg") {
+              elem.target.style.rotate = "180deg";
+            } else {
+              elem.target.style.rotate = "0deg";
             }
-            else{
-              elem.target.style.rotate="0deg";
-            }
-            Array.from(roadmapContainerArea).forEach((el)=>{
-                if( el.style.right=="0vw")
-                {el.style.right="80vw";}
-                else{
-                  el.style.right="0vw";
-                }
+            Array.from(roadmapContainerArea).forEach((el) => {
+              if (el.style.right == "0vw") {
+                el.style.right = "80vw";
+              } else {
+                el.style.right = "0vw";
+              }
             });
-            Array.from(videoContainerArea).forEach((el)=>{
-              if( el.style.left=="80vw")
-                {el.style.left="0vw";}
-                else{
-                  el.style.left="80vw";
-                }
+            Array.from(videoContainerArea).forEach((el) => {
+              if (el.style.left == "80vw") {
+                el.style.left = "0vw";
+              } else {
+                el.style.left = "80vw";
+              }
             });
-          })
+          });
         });
       };
-    </script> 
+    </script>
   </body>
 </html>
