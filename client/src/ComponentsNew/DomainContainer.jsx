@@ -1,15 +1,16 @@
 import React from "react";
 import DomainCard from "./DomainCard";
 import domainsApi from "../apis/domainCardApi";
+import DomainPage from "./DomainPage";
 
 export default function DomainContainer() {
   const domainClickFunc = (title) => {
-    const title2 = title.replaceAll(" ", "");
-    const modals = document.querySelectorAll(".modall");
-    Array.from(modals).forEach((modals) => {
-      modals.style.display = "none";
-    });
-    document.getElementById(title2).style.display = "flex";
+    // const title2 = title.replaceAll(" ", "");
+    // const modals = document.querySelectorAll(".modall");
+    // Array.from(modals).forEach((modals) => {
+    //   modals.style.display = "none";
+    // });
+    // document.getElementById(title2).style.display = "flex";
   };
   return (
     <>

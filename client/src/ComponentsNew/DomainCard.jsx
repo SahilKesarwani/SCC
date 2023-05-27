@@ -1,6 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import DomainPage from "./DomainPage";
 
-export default function DomainCard({ title, imgSrc, description, domainClick }) {
+export default function DomainCard({
+  title,
+  imgSrc,
+  description,
+  domainClick,
+}) {
   return (
     <>
       <div className="parentr">
@@ -13,7 +20,16 @@ export default function DomainCard({ title, imgSrc, description, domainClick }) 
           <div className="content">
             <h5>{title}</h5>
             <p>{description}</p>
-            <div className="btn" onClick={()=>{domainClick(title)}}>Know More</div>
+            <Link to={{
+                  pathname: `domains/${title}`,
+                }}>
+            <div
+              className="btn"
+              // onClick={() => {domainClick(title);}}
+              >
+              Know More
+            </div>
+              </Link>
           </div>
           <div className="overlayr"></div>
         </div>

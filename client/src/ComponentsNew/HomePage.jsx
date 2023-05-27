@@ -11,7 +11,8 @@ export default function HomePage({ navbar }) {
     const childElement1 = document.body.children[1].children[1];
     window.addEventListener("scroll", () => {
       if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
-        navBar.style.backdropFilter = "blur(10px)";
+        // navBar.style.backdropFilter = "blur(10px)";
+        navBar.style.backdropFilter = "";
       } else {
         navBar.style.backdropFilter = "";
       }
