@@ -10,6 +10,7 @@ import "./stylenew.css";
 import HomePage from "./ComponentsNew/HomePage";
 import EventPage from "./ComponentsNew/EventPage";
 import DomainPage from "./ComponentsNew/DomainPage";
+import OurTeamPage from "./ComponentsNew/OurTeamPage";
 
 const App = () => {
   const navbar = useRef("");
@@ -34,7 +35,7 @@ const App = () => {
         <Route
           exact
           path="/ourteam"
-          element={<div>I'm Our Team Page</div>}
+          element={<OurTeamPage/>}
         ></Route>
         <Route exact path="/about" element={<div>I'm About Page</div>}></Route>
         {/* <Route path="*" element={<div>Error 404</div>}></Route> */}

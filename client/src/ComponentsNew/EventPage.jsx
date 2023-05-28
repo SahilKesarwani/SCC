@@ -1,145 +1,100 @@
 import eventsListApi from "../apis/eventsListApi";
 
-
 export default function EventPage() {
   return (
     <>
-      <div
-        style={{
-          backgroundImage:
-            "url('https://tse2.mm.bing.net/th?id=OIP.x-167wtYdgyEFYZEA2BPsQHaEJ&pid=Api&P=0')",
-          backgroundSize: "cover",
-          height: "70vh",
-          width: "100vw",
-          color: "white",
-          position: "relative",
-        }}
-      >
-        <div className="waves">
-          <div className="wave" id="wave1"></div>
-          <div className="wave" id="wave2"></div>
-          <div className="wave" id="wave3"></div>
-          <div className="wave" id="wave4"></div>
-        </div>
-        <div
-          className="eventPageHeader"
-          style={{ position: "absolute", top: "0", zIndex: "100" }}
-        >
-          Events
-        </div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 220"
-          style={{ position: "absolute", bottom: "0", zIndex: "1100" }}
-        >
-          <path
-            fill="white"
-            fill-opacity="1"
-            d="M0,96L40,128C80,160,160,224,240,213.3C320,203,400,117,480,106.7C560,96,640,160,720,170.7C800,181,880,139,960,138.7C1040,139,1120,181,1200,170.7C1280,160,1360,96,1400,64L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-          ></path>
-        </svg>
-      </div>
-      <div
-        className="upcomingEventHeading"
-        style={{
-          width: "100vw",
-          height: "10%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "40px",
-          fontFamily: "'Merriweather', serif",
-          paddingBottom: "1em",
-        }}
-      >
-        <h2>Upcoming Event</h2>
-        
-      </div>
-      <div className="d-flex" style={{ justifyContent: "space-evenly", gap: "10px" }}>
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src="https://cdn4.buysellads.net/uu/1/127419/1670532177-Stock.jpg"
-            className="card-img-top"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text" style={{ height: "50px" }}></p>
-            <a href="/" className="btn btn-primary">
-              Go somewhere
-            </a>
-          </div>
-        </div>
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src="https://cdn4.buysellads.net/uu/1/127419/1670532177-Stock.jpg"
-            className="card-img-top"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text" style={{ height: "50px" }}></p>
-            <a href="/" className="btn btn-primary">
-              Go somewhere
-            </a>
-          </div>
-        </div>
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src="https://cdn4.buysellads.net/uu/1/127419/1670532177-Stock.jpg"
-            className="card-img-top"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text" style={{ height: "50px" }}></p>
-            <a href="/" className="btn btn-primary">
-              Go somewhere
-            </a>
-          </div>
-        </div>
-        <div className="card" style={{ width: "18rem" }}>
-          <img
-            src="https://cdn4.buysellads.net/uu/1/127419/1670532177-Stock.jpg"
-            className="card-img-top"
-            alt="..."
-          />
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text" style={{ height: "50px" }}></p>
-            <a href="/" className="btn btn-primary">
-              Go somewhere
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        className="upcomingEventHeading"
-        style={{
-          width: "100vw",
-          height: "10%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "40px",
-          fontFamily: "'Merriweather', serif",
-          paddingBottom: "1em",
-          paddingTop: "1em",
-        }}
-      >
-        <h2>Past Event</h2>
-      </div>
-      <div className="pastEventList">
-        
-        {eventsListApi.map((events)=>{
-          const {id, name, time, date} = events;
-          return <div className="eventList" key={id}>
-            <div className="title">{name}</div>
-            <div className="dateAndTime">{date} {time}</div>
+      <div className="eventStarting">
+        <div className="overlay"></div>
+        <div className="startingTextBox">
+          <div className="startingText">
+            <div className="date">
+              <i className="i_h3 fa fa-calendar-check-o id-color"></i>
+              <p>16 Feb </p>
             </div>
-        })}
+            <div className="participant">
+              <i className="i_h3 fa fa-user id-color"></i>
+              <p>150+ Registration</p>
+            </div>
+            <div className="location">
+              <i className="i_h3 fa fa-map-marker id-color"></i>
+              <p>Coding Ninjas</p>
+            </div>
+          </div>
+          <div className="upcomingEventName">
+            <p>HACKVERSE</p>
+          </div>
+          <div className="button">CLICK ME</div>
         </div>
+        <div className="illustrationBox">
+          <div className="illustrationShape">
+            <img src="../images/picture.png" />
+          </div>
+        </div>
+      </div>
+      <div className="recentEvents">
+        <h1 className="recentEventHeadBg">HACKVERSE</h1>
+        <div className="recentEventText">
+          <h1>HackVerse</h1>
+          <p>
+            Hackathon contests are dynamic and exhilarating events that bring
+            together passionate individuals to collaborate, innovate, and solve
+            complex problems in a limited timeframe. These intensive
+            competitions foster creativity, teamwork, and out-of-the-box
+            thinking, making them an ideal platform for aspiring coders,
+            designers, and entrepreneurs to showcase their skills. Participants
+            immerse themselves in a high-pressure environment, leveraging their
+            technical expertise to develop cutting-edge software, apps, or
+            hardware solutions. Hackathons provide a unique opportunity for
+            networking, mentorship, and exposure to industry professionals. With
+            a focus on rapid prototyping and experimentation, these contests
+            fuel the spirit of innovation and push the boundaries of
+            technological advancement.
+          </p>
+          <button>CLICK ME</button>
+        </div>
+        <div className="recentEventImages">
+          <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/1.jpg" />
+          <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/3.jpg" />
+          <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/2.jpg" />
+        </div>
+      </div>
 
+      <div className="eventListBox">
+        <h1 className="pastEventHeading">Past Events</h1>
+        {/* <div className="eventList">
+          <div className="pastEventDate">
+            <p>22jan2023</p>
+            <p>8-10pm</p>
+          </div>
+          <div className="pastEventDescription">
+            <h1>Hackverse</h1>
+            <p>
+              Lorem ipsum dolor, sit amet Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Quasi, aliquam quaerat libero, error
+              nesciunt quas a possimus itaque beatae alias vitae doloremque, ea
+              eius maxime aliquid illum. Perspiciatis, harum quasi?
+            </p>
+          </div>
+        </div> */}
+        {eventsListApi.map((eventDetails) => {
+          const { id, name, time, date, description } = eventDetails;
+          return (
+            <div className="list">
+          <div className="dateTime">
+            <div> {date}</div>
+            <div> {time}</div>
+          </div>
+          <div className="eventDescription">
+            <h1> {name}</h1>
+            <div>
+              {description?description.slice(0,250)+"...":""}
+            </div>
+          </div>
+        </div>
+          );
+        })}
+        
+      </div>
     </>
   );
 }
