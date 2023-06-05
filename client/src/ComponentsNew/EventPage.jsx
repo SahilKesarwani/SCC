@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import eventsListApi from "../apis/eventsListApi";
 
 export default function EventPage() {
@@ -23,7 +24,9 @@ export default function EventPage() {
           <div className="upcomingEventName">
             <p>HACKVERSE</p>
           </div>
-          <div className="button">CLICK ME</div>
+          <Link to="/eventPages/hackverse1">
+            <div className="button">CLICK ME</div>
+          </Link>
         </div>
         <div className="illustrationBox">
           <div className="illustrationShape">
@@ -80,20 +83,19 @@ export default function EventPage() {
           const { id, name, time, date, description } = eventDetails;
           return (
             <div className="list">
-          <div className="dateTime">
-            <div> {date}</div>
-            <div> {time}</div>
-          </div>
-          <div className="eventDescription">
-            <h1> {name}</h1>
-            <div>
-              {description?description.slice(0,250)+"...":""}
+              <div className="dateTime">
+                <div> {date}</div>
+                <div> {time}</div>
+              </div>
+              <div className="eventDescription">
+                <h1> {name}</h1>
+                <div>
+                  {description ? description.slice(0, 250) + "..." : ""}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
           );
         })}
-        
       </div>
     </>
   );

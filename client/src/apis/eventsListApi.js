@@ -6,26 +6,33 @@ const eventsListApi = [
     date: "25 Mar 2023",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem laborum facere fugit possimus ratione nexercitationem vitae enim distinctio officia, vel ullam atque porro assumenda! Voluptatibus ipsa excepturi corporis in voluptate numquam, quo, maiores accusantium voluptas fugit quaerat hic ea voluptatum a commodi amet explicabo! Fuga dolorum quasi dolorem velit magnam aliquam recusandae maxime ducimus facere repudiandae accusamus repellendus fugit aspernatur ipsam suscipit necessitatibus accusantium reprehenderit, explicabo nulla nihil aliquid? Ea ipsum odit maiores, nisi adipisci laboriosam eligendi labore ratione. Modi aspernatur laudantium hic, doloremque itaque quam, corporis exercitationem accusamus assumenda reprehenderit pariatur quasi odio sed id aperiam deserunt asperiores!",
-    imageURL: [{ img1: "" }, { img2: "" }],
-    domainOfEvent: "",
-    totalParticipants: "",
-    sponsors: "",
+    imageURL: [{ imgURL: "img1URL.com" }, { imgURL: "img2URL.com" }],
+    domainOfEvent: "domains",
+    totalParticipants: "200+",
+    sponsors: "CodingNinjas",
     winners: [
       {
-        teamName: "",
+        teamName: "Midnight Coders",
         teamMembers: [
-          { Name: "", Batch: "" },
-          { Name: "", Batch: "" },
+          {
+            Name: "Gauri Gupta",
+            Batch: "2021-25",
+            socialMediaLinks: [{ linkedIn: "linkedIn1", instagram: "insta1" }],
+          },
+          {
+            Name: "Rahul Singh",
+            Batch: "2021-25",
+            socialMediaLinks: [
+              { linkedIn: "linkedIn1", instagram: "insta1" },
+              { linkedIn: "linkedIn1", instagram: "insta1" },
+            ],
+          },
         ],
       },
     ],
-    socialMediaLinks: [
-      { linkedIn: "", instagram: "" },
-      { linkedIn: "", instagram: "" },
-      { linkedIn: "", instagram: "" },
-    ],
-    examiner: "",
-    googleSheetLink: "",
+
+    examiner: "some examiners",
+    googleSheetLink: "www.google.com",
   },
   {
     id: 2,
@@ -34,7 +41,7 @@ const eventsListApi = [
     date: "25 Mar 2023",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem laborum facere fugit possimus ratione nexercitationem vitae enim distinctio officia, vel ullam atque porro assumenda! Voluptatibus ipsa excepturi corporis in voluptate numquam, quo, maiores accusantium voluptas fugit quaerat hic ea voluptatum a commodi amet explicabo! Fuga dolorum quasi dolorem velit magnam aliquam recusandae maxime ducimus facere repudiandae accusamus repellendus fugit aspernatur ipsam suscipit necessitatibus accusantium reprehenderit, explicabo nulla nihil aliquid? Ea ipsum odit maiores, nisi adipisci laboriosam eligendi labore ratione. Modi aspernatur laudantium hic, doloremque itaque quam, corporis exercitationem accusamus assumenda reprehenderit pariatur quasi odio sed id aperiam deserunt asperiores!",
-    imageURL: [{ img1: "" }, { img2: "" }],
+    imageURL: [{ imgURL: "" }, { imgURL: "" }],
     domainOfEvent: "",
     totalParticipants: "",
     sponsors: "",
@@ -62,7 +69,7 @@ const eventsListApi = [
     date: "25 Mar 2023",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem laborum facere fugit possimus ratione nexercitationem vitae enim distinctio officia, vel ullam atque porro assumenda! Voluptatibus ipsa excepturi corporis in voluptate numquam, quo, maiores accusantium voluptas fugit quaerat hic ea voluptatum a commodi amet explicabo! Fuga dolorum quasi dolorem velit magnam aliquam recusandae maxime ducimus facere repudiandae accusamus repellendus fugit aspernatur ipsam suscipit necessitatibus accusantium reprehenderit, explicabo nulla nihil aliquid? Ea ipsum odit maiores, nisi adipisci laboriosam eligendi labore ratione. Modi aspernatur laudantium hic, doloremque itaque quam, corporis exercitationem accusamus assumenda reprehenderit pariatur quasi odio sed id aperiam deserunt asperiores!",
-    imageURL: [{ img1: "" }, { img2: "" }],
+    imageURL: [{ imgURL: "" }, { imgURL: "" }],
     domainOfEvent: "",
     totalParticipants: "",
     sponsors: "",

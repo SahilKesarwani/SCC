@@ -11,6 +11,8 @@ import HomePage from "./ComponentsNew/HomePage";
 import EventPage from "./ComponentsNew/EventPage";
 import DomainPage from "./ComponentsNew/DomainPage";
 import OurTeamPage from "./ComponentsNew/OurTeamPage";
+import About from "./ComponentsNew/About";
+import ParticularEventPage from "./ComponentsNew/ParticularEventPage";
 
 const App = () => {
   const navbar = useRef("");
@@ -32,13 +34,14 @@ const App = () => {
         <Route exact path="/" element={<HomePage navbar={navbar} />}></Route>
         <Route path="/domains/:domainName" element={<DomainPage />}></Route>
         <Route exact path="/eventpage" element={<EventPage />}></Route>
+        <Route exact path="/eventpages/:eventName" element={<ParticularEventPage />}></Route>
         <Route
           exact
           path="/ourteam"
           element={<OurTeamPage/>}
         ></Route>
-        <Route exact path="/about" element={<div>I'm About Page</div>}></Route>
-        {/* <Route path="*" element={<div>Error 404</div>}></Route> */}
+        <Route exact path="/about" element={<About/>}></Route>
+        <Route path="*" element={<div style={{color:"black", marginTop:"10%", textAlign:"center", fontSize:"4em"}}>Error 404</div>}></Route>
       </Routes>
     </>
   );
