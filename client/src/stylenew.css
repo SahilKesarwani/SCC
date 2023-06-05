@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
 body,
 html {
   overflow-x: hidden;
+  
 }
 ::-webkit-scrollbar {
   display: none;
@@ -311,13 +313,14 @@ a {
   right: 0;
   width: 80%;
   margin: auto;
+  background-color: #ec167f;
 }
 .btn:hover {
   background: white;
   color: black;
   outline: 1px solid black;
-  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
-    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa !important;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ec167f,
+    0 0 82px #ec167f, 0 0 92px #ec167f, 0 0 102px #ec167f, 0 0 151px #ec167f !important;
 }
 .btn p {
   display: flex;
@@ -389,8 +392,9 @@ a {
   align-items: center;
   transition: all 0.2s linear;
   cursor: pointer;
-  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #0fa,
-    0 0 2px #0fa, 0px 0px 2px #0fa, 0 0 2px #0fa, 0 0 2px #0fa;
+  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 1px #fff, 0 0 2px rgb(182, 11, 93),
+    0 0 2px rgb(182, 11, 93), 0px 0px 2px rgb(182, 11, 93),
+    0 0 2px rgb(182, 11, 93), 0 0 2px rgb(182, 11, 93);
 }
 .nextSectionArrow:hover {
   box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #0fa,
@@ -878,9 +882,9 @@ body {
 }
 .teamMemberBox {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   /* background: cadetblue; */
-  background: #1b1b1b;
+  background: #101010;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -895,7 +899,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin: -20px;
+
   transition: all 0.2s linear;
   cursor: pointer;
   position: relative;
@@ -906,8 +910,8 @@ body {
   height: 2px;
   background: rgb(50, 50, 50);
   border-radius: 100%;
-  position: relative;
-  bottom: 10px;
+  /* position: relative; */
+  /* bottom: 10px; */
   box-shadow: 0px 5px 14px 2px rgb(50, 50, 50);
 }
 .memberImage {
@@ -963,4 +967,124 @@ body {
   position: absolute;
   top: -10px;
   left: 70%;
+}
+.founderBox {
+  width: 20vw;
+  height: 60vh;
+  background: rgb(21, 21, 21);
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid grey;
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  opacity: 1;
+  margin-top: 6em;
+}
+.founderBox:hover {
+  background: rgb(27, 26, 26);
+}
+.imageBox {
+  width: 20vw;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+  position: relative;
+}
+.textBox {
+  width: 20vw;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  /* height: 55%; */
+}
+.founderContainer {
+  width: 100vw;
+  background: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.imageBox img {
+  width: 60%;
+  border-radius: 50%;
+  border: 2px solid #545151;
+}
+.textBox p {
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 0%;
+}
+.post {
+  margin-top: 1px;
+}
+/* .circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid grey;
+  position: absolute;
+  
+} */
+.icons {
+  font-size: 1em;
+  margin: 5px;
+  margin-top: 15px;
+}
+.icons svg {
+  margin: 10px;
+  height: 2em;
+}
+.icons svg:hover {
+  opacity: 0.5;
+}
+.founderBox:hover .imageBox img {
+  box-sizing: content-box;
+  border: 10px solid rgb(182, 11, 93);
+  transition: all 0.4s linear;
+}
+.founderHeading {
+  /* background:rebeccapurple; */
+  width: 100%;
+  height: 15vh;
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0.5em;
+}
+.teamHeading {
+  width: 100%;
+  height: 15vh;
+  font-size: 70px;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  background: #101010;
+}
+.ourTeamPage{
+  width: 100%;
+  height: 100%;
+  background-color:#101010 ;
+  padding-top: 110px;
+}
+.frontSection{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 300%;
+  text-align: center;
+  background-color: #1b1b1b;
+  color: rgba(255, 255, 255, 0.427);
+  font-style: italic;
+  
 }
