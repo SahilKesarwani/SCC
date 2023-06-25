@@ -4,6 +4,7 @@ import eventsListApi from "../apis/eventsListApi";
 
 export default function ParticularEventPage() {
   const { eventName } = useParams();
+  const [flag, setFlag] = useState();
   return (
     <>
       {eventsListApi.map((events) => {
@@ -21,6 +22,7 @@ export default function ParticularEventPage() {
           examiner,
           googleSheetLink,
         } = events;
+        if(eventName==name){
         return (
           <div key={id} style={{ border: "1px solid black" }}>
             <div>{name}</div>
@@ -52,7 +54,6 @@ export default function ParticularEventPage() {
                       return (
                         <div>
                           {winn.Name} {winn.Batch}
-                          
                         </div>
                       );
                     })}
@@ -66,7 +67,7 @@ export default function ParticularEventPage() {
             <div>{googleSheetLink}</div>
             <br />
           </div>
-        );
+        );}
       })}
     </>
   );

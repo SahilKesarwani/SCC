@@ -24,9 +24,10 @@ export default function EventPage() {
           <div className="upcomingEventName">
             <p>HACKVERSE</p>
           </div>
-          <Link to="/eventPages/hackverse1">
-            <div className="button">CLICK ME</div>
-          </Link>
+
+          <div className="button">
+            <Link to="/eventPages/hackverse1">CLICK ME</Link>
+          </div>
         </div>
         <div className="illustrationBox">
           <div className="illustrationShape">
@@ -53,7 +54,9 @@ export default function EventPage() {
             fuel the spirit of innovation and push the boundaries of
             technological advancement.
           </p>
-          <button>CLICK ME</button>
+          <button>
+            <Link to="/eventPages/hackverse2">CLICK ME</Link>
+          </button>
         </div>
         <div className="recentEventImages">
           <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/1.jpg" />
@@ -82,18 +85,20 @@ export default function EventPage() {
         {eventsListApi.map((eventDetails) => {
           const { id, name, time, date, description } = eventDetails;
           return (
-            <div className="list">
-              <div className="dateTime">
-                <div> {date}</div>
-                <div> {time}</div>
-              </div>
-              <div className="eventDescription">
-                <h1> {name}</h1>
-                <div>
-                  {description ? description.slice(0, 250) + "..." : ""}
+            <Link to={`/eventPages/${name}`}>
+              <div className="list">
+                <div className="dateTime">
+                  <div> {date}</div>
+                  <div> {time}</div>
+                </div>
+                <div className="eventDescription">
+                  <h1> {name}</h1>
+                  <div>
+                    {description ? description.slice(0, 250) + "..." : ""}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
