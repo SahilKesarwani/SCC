@@ -41,7 +41,7 @@ const App = () => {
           element={<OurTeamPage/>}
         ></Route>
         <Route exact path="/about" element={<About/>}></Route>
-        <Route path="*" element={<div style={{color:"black", marginTop:"10%", textAlign:"center", fontSize:"4em"}}>Error 404</div>}></Route>
+        {/* <Route path="*" element={<div style={{color:"black", marginTop:"10%", textAlign:"center", fontSize:"4em"}}>Error 404</div>}></Route> */}
       </Routes>
     </>
   );
