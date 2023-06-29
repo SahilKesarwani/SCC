@@ -1,7 +1,27 @@
 import { Link } from "react-router-dom";
 import eventsListApi from "../apis/eventsListApi";
+import { useEffect, useRef } from "react";
 
 export default function EventPage() {
+  const recentEvents = useRef("");
+  const recentEventsH1 = useRef("");
+  useEffect(() => {
+    document.body.style.backgroundColor = "black";
+    const recentEventsVar = recentEvents.current;
+    window.addEventListener("scroll", () => {
+      const windowHeight = window.innerHeight;
+      const recentEventsTop = recentEventsVar.getBoundingClientRect().top;
+      // console.log(windowHeight, recentEventsTop);
+      const divs = recentEventsVar.getElementsByTagName("div");
+      if (recentEventsTop < windowHeight / 2) {
+        recentEventsVar.classList.add("recentEvents_div_vis");
+        recentEventsH1.current.classList.add("h1_scale");
+      } else {
+        recentEventsVar.classList.remove("recentEvents_div_vis");
+        recentEventsH1.current.classList.remove("h1_scale");
+      }
+    });
+  });
   return (
     <>
       <div className="eventStarting">
@@ -25,9 +45,9 @@ export default function EventPage() {
             <p>HACKVERSE</p>
           </div>
 
-          <div className="button">
+          <button className="recentEvents_button">
             <Link to="/eventPages/hackverse1">CLICK ME</Link>
-          </div>
+          </button>
         </div>
         <div className="illustrationBox">
           <div className="illustrationShape">
@@ -35,8 +55,8 @@ export default function EventPage() {
           </div>
         </div>
       </div>
-      <div className="recentEvents">
-        <h1 className="recentEventHeadBg">HACKVERSE</h1>
+      <div className="recentEvents  recentEvents_div" ref={recentEvents}>
+        <h1 className="recentEventHeadBg " ref={recentEventsH1}>HACKVERSE</h1>
         <div className="recentEventText">
           <h1>HackVerse</h1>
           <p>
@@ -54,7 +74,7 @@ export default function EventPage() {
             fuel the spirit of innovation and push the boundaries of
             technological advancement.
           </p>
-          <button>
+          <button className="recentEvents_button">
             <Link to="/eventPages/hackverse2">CLICK ME</Link>
           </button>
         </div>
@@ -67,25 +87,11 @@ export default function EventPage() {
 
       <div className="eventListBox">
         <h1 className="pastEventHeading">Past Events</h1>
-        {/* <div className="eventList">
-          <div className="pastEventDate">
-            <p>22jan2023</p>
-            <p>8-10pm</p>
-          </div>
-          <div className="pastEventDescription">
-            <h1>Hackverse</h1>
-            <p>
-              Lorem ipsum dolor, sit amet Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Quasi, aliquam quaerat libero, error
-              nesciunt quas a possimus itaque beatae alias vitae doloremque, ea
-              eius maxime aliquid illum. Perspiciatis, harum quasi?
-            </p>
-          </div>
-        </div> */}
+
         {eventsListApi.map((eventDetails) => {
           const { id, name, time, date, description } = eventDetails;
           return (
-            <Link to={`/eventPages/${name}`}>
+            <Link to={`/eventPages/${name}`} key={id}>
               <div className="list">
                 <div className="dateTime">
                   <div> {date}</div>
