@@ -13,6 +13,7 @@ import DomainPage from "./ComponentsNew/DomainPage";
 import OurTeamPage from "./ComponentsNew/OurTeamPage";
 import About from "./ComponentsNew/About";
 import ParticularEventPage from "./ComponentsNew/ParticularEventPage";
+import Error404 from "./ComponentsNew/Error404";
 
 const App = () => {
   const navbar = useRef("");
@@ -34,14 +35,19 @@ const App = () => {
         <Route exact path="/" element={<HomePage navbar={navbar} />}></Route>
         <Route path="/domains/:domainName" element={<DomainPage />}></Route>
         <Route exact path="/eventpage" element={<EventPage />}></Route>
-        <Route exact path="/eventpages/:eventName" element={<ParticularEventPage />}></Route>
         <Route
           exact
-          path="/ourteam"
-          element={<OurTeamPage/>}
+          path="/eventpages/:eventName"
+          element={<ParticularEventPage />}
         ></Route>
-        <Route exact path="/about" element={<About/>}></Route>
-        {/* <Route path="*" element={<div style={{color:"black", marginTop:"10%", textAlign:"center", fontSize:"4em"}}>Error 404</div>}></Route> */}
+        <Route exact path="/ourteam" element={<OurTeamPage />}></Route>
+        <Route exact path="/about" element={<About />}></Route>
+        <Route
+          path="*"
+          element={
+            <Error404/>
+          }
+        ></Route>
       </Routes>
     </>
   );

@@ -4,11 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body,
 html {
   overflow-x: hidden;
-  
 }
 ::-webkit-scrollbar {
   display: none;
@@ -632,6 +632,10 @@ body {
   transform: rotateY(180deg);
   position: relative;
   top: 55px;
+  transition: all 0.2s ease-in;
+}
+.illustrationShape:hover {
+  border-radius: 40% 50% 60% 40% / 67% 61% 59% 43%;
 }
 .illustrationShape img {
   position: absolute;
@@ -663,6 +667,7 @@ body {
   position: relative;
   z-index: 0;
 }
+
 .recentEventHeadBg {
   position: absolute;
   top: 5%;
@@ -672,6 +677,22 @@ body {
   letter-spacing: 80px;
   font-family: "Londrina Outline", cursive;
   color: rgba(170, 170, 170, 0.441);
+  transform: scaleX(0);
+  transition: all 1s ease-in-out;
+  transition-delay: 1s;
+}
+.recentEvents_div {
+  opacity: 0;
+  transform: translateX(-500%);
+  transition: all 1s ease-in-out;
+}
+.recentEvents_div_vis {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.h1_scale {
+  transform: scaleX(1);
 }
 .recentEventText {
   width: 50%;
@@ -708,7 +729,7 @@ body {
   width: 636px;
   position: absolute;
   z-index: 1;
-}
+} 
 .recentEventImages img:nth-child(2) {
   height: 169px;
   width: 254px;
@@ -725,7 +746,7 @@ body {
   bottom: 5%;
   z-index: 0;
 }
-.recentEvents button {
+.recentEvents_button {
   border: 1px solid #ec167f;
   background-color: transparent;
   color: white;
@@ -742,11 +763,11 @@ body {
   overflow: hidden;
   z-index: 1;
 }
-.recentEvents button:hover {
+.recentEvents_button:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
-.recentEvents button::before {
+.recentEvents_button::before {
   content: "";
   display: block;
   width: 90%;
@@ -759,7 +780,7 @@ body {
   transform: skew(-45deg);
   transition: all 0.2s ease-in-out;
 }
-.recentEvents button::after {
+.recentEvents_button::after {
   content: "";
   display: block;
   width: 90%;
@@ -772,10 +793,10 @@ body {
   transform: skew(-45deg);
   transition: all 0.2s ease-in-out;
 }
-.recentEvents button:hover::before {
+.recentEvents_button:hover::before {
   left: -15%;
 }
-.recentEvents button:hover::after {
+.recentEvents_button:hover::after {
   right: -15%;
 }
 .eventListBox {
@@ -1069,14 +1090,14 @@ body {
   font-family: "Montserrat", sans-serif;
   background: #101010;
 }
-.ourTeamPage{
+.ourTeamPage {
   width: 100%;
   height: 100%;
-  background-color:#101010 ;
+  background-color: #101010;
   padding-top: 110px;
 }
-.frontSection{
-  height:100vh;
+.frontSection {
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1086,5 +1107,49 @@ body {
   background-color: #1b1b1b;
   color: rgba(255, 255, 255, 0.427);
   font-style: italic;
-  
+}
+.error404Text {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+  transform: translateY(0%);
+  animation: error404TextAnime 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+.error404TextShadow {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+  transform: translate(10px, 14px);
+  animation: error404TextShadowAnime 3s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+    infinite;
+}
+.error404Character {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  inset: 0px;
+  z-index: 2;
+}
+@keyframes error404TextAnime {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-1%);
+  }
+}
+@keyframes error404TextShadowAnime {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(3px, 7px);
+  }
 }

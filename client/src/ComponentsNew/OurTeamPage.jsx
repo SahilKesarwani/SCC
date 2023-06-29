@@ -54,7 +54,7 @@ export default function OurTeamPage() {
         />
         <TeamMemberDetailComponent
           src={utkarshAvatar}
-          name={"Utkarsh Pratap Singh"}
+          name={"Utkarsh Mehta"}
           designation={"Social Media Team"}
           linkedIn={"https://www.linkedin.com/in/utkarsh-mehta-408669252/"}
           instagram={"https://www.instagram.com/setan_747/"}

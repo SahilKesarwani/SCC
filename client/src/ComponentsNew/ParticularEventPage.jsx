@@ -35,7 +35,7 @@ export default function ParticularEventPage() {
             <br />
             <div>
               {imageURL.map((url) => {
-                return <div>{url.imgURL}</div>;
+                return <div><img src={url.imgURL}/></div>;
               })}
             </div>
             <br />
