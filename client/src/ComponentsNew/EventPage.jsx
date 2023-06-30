@@ -1,48 +1,38 @@
 import { Link } from "react-router-dom";
 import eventsListApi from "../apis/eventsListApi";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function EventPage() {
-  const recentEvents = useRef("");
-  const recentEventsH1 = useRef("");
+  const [isrecentEvents_div_vis, setrecentEvents_div_vis] = useState(false);
+  const [ish1_scale, seth1_scale] = useState(false);
   useEffect(() => {
-    document.body.style.backgroundColor = "black";
-    const recentEventsVar = recentEvents.current;
+    // document.body.style.backgroundColor = "black";
     window.addEventListener("scroll", () => {
-      const windowHeight = window.innerHeight;
-      const recentEventsTop = recentEventsVar.getBoundingClientRect().top;
-      // console.log(windowHeight, recentEventsTop);
-      const divs = recentEventsVar.getElementsByTagName("div");
-      if (recentEventsTop < windowHeight / 2) {
-        recentEventsVar.classList.add("recentEvents_div_vis");
-        recentEventsH1.current.classList.add("h1_scale");
-      } else {
-        recentEventsVar.classList.remove("recentEvents_div_vis");
-        recentEventsH1.current.classList.remove("h1_scale");
-      }
+      setrecentEvents_div_vis(true);
+      seth1_scale(true);
     });
   });
   return (
-    <>
+    <div style={{ background: "black" }}>
       <div className="eventStarting">
         <div className="overlay"></div>
         <div className="startingTextBox">
           <div className="startingText">
             <div className="date">
               <i className="i_h3 fa fa-calendar-check-o id-color"></i>
-              <p>16 Feb </p>
+              <p>{eventsListApi[0].date}</p>
             </div>
             <div className="participant">
               <i className="i_h3 fa fa-user id-color"></i>
-              <p>150+ Registration</p>
+              <p>{eventsListApi[0].registrations}+ Registrations</p>
             </div>
             <div className="location">
               <i className="i_h3 fa fa-map-marker id-color"></i>
-              <p>Coding Ninjas</p>
+              <p>{eventsListApi[0].sponsors}</p>
             </div>
           </div>
           <div className="upcomingEventName">
-            <p>HACKVERSE</p>
+            <p>{eventsListApi[0].name.toUpperCase()}</p>
           </div>
 
           <button className="recentEvents_button">
@@ -55,12 +45,21 @@ export default function EventPage() {
           </div>
         </div>
       </div>
-      <div className="recentEvents  recentEvents_div" ref={recentEvents}>
-        <h1 className="recentEventHeadBg " ref={recentEventsH1}>HACKVERSE</h1>
+      <div
+        className={`recentEvents  recentEvents_div ${
+          isrecentEvents_div_vis ? "recentEvents_div_vis" : ""
+        }`}
+      >
+        <h1 className={`recentEventHeadBg ${ish1_scale ? "h1_scale" : ""}`}>
+          {eventsListApi[1].name.toUpperCase()}
+        </h1>
         <div className="recentEventText">
-          <h1>HackVerse</h1>
+          <h1>
+            {eventsListApi[1].name[0].toUpperCase() +
+              eventsListApi[1].name.slice(1)}
+          </h1>
           <p>
-            Hackathon contests are dynamic and exhilarating events that bring
+            {/* Hackathon contests are dynamic and exhilarating events that bring
             together passionate individuals to collaborate, innovate, and solve
             complex problems in a limited timeframe. These intensive
             competitions foster creativity, teamwork, and out-of-the-box
@@ -72,7 +71,8 @@ export default function EventPage() {
             networking, mentorship, and exposure to industry professionals. With
             a focus on rapid prototyping and experimentation, these contests
             fuel the spirit of innovation and push the boundaries of
-            technological advancement.
+            technological advancement. */}
+            {eventsListApi[1].description}
           </p>
           <button className="recentEvents_button">
             <Link to="/eventPages/hackverse2">CLICK ME</Link>
@@ -108,6 +108,6 @@ export default function EventPage() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

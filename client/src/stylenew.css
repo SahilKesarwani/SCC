@@ -645,7 +645,7 @@ body {
 }
 .overlay {
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   /* display: flex; */
   flex-direction: row;
   justify-content: space-between;
@@ -678,13 +678,13 @@ body {
   font-family: "Londrina Outline", cursive;
   color: rgba(170, 170, 170, 0.441);
   transform: scaleX(0);
-  transition: all 1s ease-in-out;
-  transition-delay: 1s;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.7s;
 }
 .recentEvents_div {
   opacity: 0;
   transform: translateX(-500%);
-  transition: all 1s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .recentEvents_div_vis {
   transform: translateX(0%);
