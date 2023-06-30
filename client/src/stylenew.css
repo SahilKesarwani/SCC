@@ -284,7 +284,7 @@ a {
   left: 0;
   background: #0000005e;
   transition: all 0.3s ease-in-out;
-  z-index: 999;
+  z-index: 990;
   padding: 1em;
   text-align: justify;
   color: white;
