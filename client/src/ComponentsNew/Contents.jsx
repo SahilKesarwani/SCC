@@ -8,7 +8,8 @@ export default function Contents() {
     const astronautRectangle = document.querySelector(".astronautRectangle");
     const astronautRectangleLeft =
       astronautRectangle.getBoundingClientRect().left;
-    const astronautRectangleTop = astronautRectangle.getBoundingClientRect().top;
+    const astronautRectangleTop =
+      astronautRectangle.getBoundingClientRect().top;
 
     astronautContainer.addEventListener("mousemove", (e) => {
       astronautBg.style.top = -e.y * 0.01 + "px";

@@ -522,11 +522,7 @@ a {
   padding: 1em;
 }
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+
 body {
   overflow-x: hidden;
 }
@@ -729,7 +725,7 @@ body {
   width: 636px;
   position: absolute;
   z-index: 1;
-} 
+}
 .recentEventImages img:nth-child(2) {
   height: 169px;
   width: 254px;
