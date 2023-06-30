@@ -20,13 +20,15 @@ export default function carouselArea() {
           <h6>for improving our club</h6>
         </div>
         <div className="carousel">
-          {sccCarouselApi.map((carouselItems) => {
-            const { id, href, imgSrc } = carouselItems;
-            return <SccCarousel key={id} href={href} imgSrc={imgSrc} />;
-          })}
+          
+            {sccCarouselApi.map((carouselItems) => {
+              const { id, href, imgSrc } = carouselItems;
+              return <SccCarousel key={id} href={href} imgSrc={imgSrc} />;
+            })}
+          
         </div>
 
-        <DomainContainer/>
+        <DomainContainer />
       </div>
     </>
   );
