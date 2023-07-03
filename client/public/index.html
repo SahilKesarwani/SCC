@@ -65,7 +65,7 @@
       .carousel {
         height: 100vh;
         perspective: 950px;
-        transform: translateY(-100px);
+        transform: translateY(-30px);
       }
       .carousel .carousel-item {
         overflow: hidden;
@@ -82,7 +82,27 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      const script = document.createElement("script");
+      script.src = "https://code.jquery.com/jquery-1.12.0.min.js";
+      document.body.appendChild(script);
 
+      const script2 = document.createElement("script");
+      script2.src =
+        "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js";
+      document.body.appendChild(script2);
+
+      // AddScript("https://code.jquery.com/jquery-1.12.0.min.js");
+      // AddScript(
+      //   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      // );
+      window.onload = function () {
+        const script = document.createElement("script");
+        script.innerHTML =
+          "$(document).ready(function () {" + "$('.carousel').carousel();});";
+        document.body.appendChild(script);
+      };
+    </script>
     <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
