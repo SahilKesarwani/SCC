@@ -1,89 +1,112 @@
 import { Link } from "react-router-dom";
 import eventsListApi from "../apis/eventsListApi";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function EventPage() {
+export default function EventPage({ navbar }) {
+  useEffect(() => {
+    const navBar = navbar.current;
+    const childElement1 = document.body.children[1].children[1];
+    window.addEventListener("scroll", () => {
+      if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+        navBar.style.backdropFilter = "blur(10px)";
+        // navBar.style.backdropFilter = "";
+      } else {
+        navBar.style.backdropFilter = "";
+      }
+    });
+  });
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const [isrecentEvents_div_vis, setrecentEvents_div_vis] = useState(false);
   const [ish1_scale, seth1_scale] = useState(false);
+  const [secondEventAvail, setSecondEventAvail] = useState(false);
+
   useEffect(() => {
     // document.body.style.backgroundColor = "black";
     window.addEventListener("scroll", () => {
       setrecentEvents_div_vis(true);
       seth1_scale(true);
     });
-  });
+    if (eventsListApi.length > 1) {
+      setSecondEventAvail(true);
+    }
+  },[]);
   return (
     <div style={{ background: "black" }}>
-      <div className="eventStarting">
-        <div className="overlay"></div>
-        <div className="startingTextBox">
-          <div className="startingText">
-            <div className="date">
-              <i className="i_h3 fa fa-calendar-check-o id-color"></i>
-              <p>{eventsListApi[0].date}</p>
-            </div>
-            <div className="participant">
-              <i className="i_h3 fa fa-user id-color"></i>
-              <p>{eventsListApi[0].registrations}+ Registrations</p>
-            </div>
-            <div className="location">
-              <i className="i_h3 fa fa-map-marker id-color"></i>
-              <p>{eventsListApi[0].sponsors}</p>
-            </div>
-          </div>
-          <div className="upcomingEventName">
-            <p>{eventsListApi[0].name.toUpperCase()}</p>
-          </div>
+      <section id="banner">
+        <div
+          className="banner-item bg-overlay"
+          style={{
+            backgroundImage:
+              "url(https://demo.themewinter.com/html/eventor/images/hero-area/bg-main.jpg)",
+          }}
+        >
+          <div className="container">
+            <div className="banner-content text-center">
+              <div className="banner-content-wrap">
+                <div className="countdown bg-style">
+                  <div className="counter-day">
+                    <span className="days">--</span>
+                    <div className="smalltext">Days</div>
+                  </div>
+                  <div className="counter-hour">
+                    <span className="hours">--</span>
+                    <div className="smalltext">Hours</div>
+                  </div>
+                  <div className="counter-minute">
+                    <span className="minutes">--</span>
+                    <div className="smalltext">Minutes</div>
+                  </div>
+                  <div className="counter-second">
+                    <span className="seconds">--</span>
+                    <div className="smalltext">Seconds</div>
+                  </div>
+                </div>
 
-          <button className="recentEvents_button">
-            <Link to="/eventPages/hackverse1">CLICK ME</Link>
-          </button>
-        </div>
-        <div className="illustrationBox">
-          <div className="illustrationShape">
-            <img src="../images/picture.png" />
+                <h1 className="banner-title">name</h1>
+                <h2 className="banner-subtitle">date time</h2>
+                <h3 className="banner-desc">CodeChef</h3>
+                <p className="banner-btn1">
+                  <a href="www.google.com" className="btn1 btn-primary">
+                    Register Now
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className={`recentEvents  recentEvents_div ${
-          isrecentEvents_div_vis ? "recentEvents_div_vis" : ""
-        }`}
-      >
-        <h1 className={`recentEventHeadBg ${ish1_scale ? "h1_scale" : ""}`}>
-          {eventsListApi[1].name.toUpperCase()}
-        </h1>
-        <div className="recentEventText">
-          <h1>
-            {eventsListApi[1].name[0].toUpperCase() +
-              eventsListApi[1].name.slice(1)}
+      </section>
+
+      {secondEventAvail && (
+        <div
+          className={`recentEvents  recentEvents_div ${
+            isrecentEvents_div_vis ? "recentEvents_div_vis" : ""
+          }`}
+        >
+          <h1 className={`recentEventHeadBg ${ish1_scale ? "h1_scale" : ""}`}>
+            {eventsListApi[1].name.toUpperCase()}
           </h1>
-          <p>
-            {/* Hackathon contests are dynamic and exhilarating events that bring
-            together passionate individuals to collaborate, innovate, and solve
-            complex problems in a limited timeframe. These intensive
-            competitions foster creativity, teamwork, and out-of-the-box
-            thinking, making them an ideal platform for aspiring coders,
-            designers, and entrepreneurs to showcase their skills. Participants
-            immerse themselves in a high-pressure environment, leveraging their
-            technical expertise to develop cutting-edge software, apps, or
-            hardware solutions. Hackathons provide a unique opportunity for
-            networking, mentorship, and exposure to industry professionals. With
-            a focus on rapid prototyping and experimentation, these contests
-            fuel the spirit of innovation and push the boundaries of
-            technological advancement. */}
-            {eventsListApi[1].description}
-          </p>
-          <button className="recentEvents_button">
-            <Link to="/eventPages/hackverse2">CLICK ME</Link>
-          </button>
+          <div className="recentEventText">
+            <h1>
+              {eventsListApi[1].name[0].toUpperCase() +
+                eventsListApi[1].name.slice(1)}
+            </h1>
+            <p>
+              {eventsListApi[1].description}
+            </p>
+            <button className="recentEvents_button">
+              <Link to="/eventPages/hackverse2">CLICK ME</Link>
+            </button>
+          </div>
+          <div className="recentEventImages">
+            <img alt=""  src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/1.jpg" />
+            <img alt=""  src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/3.jpg" />
+            <img alt=""  src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/2.jpg" />
+          </div>
         </div>
-        <div className="recentEventImages">
-          <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/1.jpg" />
-          <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/3.jpg" />
-          <img src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/2.jpg" />
-        </div>
-      </div>
+      )}
 
       <div className="eventListBox">
         <h1 className="pastEventHeading">Past Events</h1>

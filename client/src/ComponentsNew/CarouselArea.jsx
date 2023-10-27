@@ -1,8 +1,9 @@
 import SccCarousel from "./SccCarousel";
 import sccCarouselApi from "../apis/sccCarouselApi";
 import DomainContainer from "./DomainContainer";
+import { useEffect } from "react";
 
-export default function carouselArea() {
+export default function CarouselArea() {
   return (
     <>
       <div className="carouselArea">
@@ -27,6 +28,8 @@ export default function carouselArea() {
             })}
           
         </div>
+
+        
 
         <DomainContainer />
       </div>

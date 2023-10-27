@@ -1,18 +1,30 @@
 import React, { useEffect } from "react";
 import AboutCard from "./AboutCard";
 
-export default function About() {
+export default function About({navbar}) {
+  useEffect(() => {
+    const navBar = navbar.current;
+    const childElement1 = document.body.children[1].children[1];
+    window.addEventListener("scroll", () => {
+      if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+        navBar.style.backdropFilter = "blur(10px)";
+        // navBar.style.backdropFilter = "";
+      } else {
+        navBar.style.backdropFilter = "";
+      }
+    });
+  });
   useEffect(() => {
     const particularEventSection1div1 = document.getElementsByClassName(
       "particularEventSection1div1"
     )[0];
     let particularEventSection1div1WidthHold = 0;
-    particularEventSection1div1.addEventListener("click", () => {
-      particularEventSection1div1WidthHold =
-        particularEventSection1div1WidthHold == 0 ? 1 : 0;
-    });
+    // particularEventSection1div1.addEventListener("click", () => {
+    //   particularEventSection1div1WidthHold =
+    //     particularEventSection1div1WidthHold == 0 ? 1 : 0;
+    // });
     window.addEventListener("mousemove", (mouse) => {
-      if (particularEventSection1div1WidthHold == 0) {
+      if (particularEventSection1div1WidthHold === 0) {
         particularEventSection1div1.style.width =
           window.innerWidth - mouse.x + "px";
       }
@@ -67,34 +79,34 @@ export default function About() {
           </div>
           <div className="particularEventSection1div1carousel">
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 1.jpg" />
+              <img alt=""  src="./images/pic 1.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 11.jpg" />
+              <img alt=""  src="./images/pic 11.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 3.jpg" />
+              <img alt=""  src="./images/pic 3.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 10.jpg" />
+              <img alt=""  src="./images/pic 10.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 5.jpg" />
+              <img alt=""  src="./images/pic 5.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 6.jpg" />
+              <img alt=""  src="./images/pic 6.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 12.jpg" />
+              <img alt=""  src="./images/pic 12.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 8.jpg" />
+              <img alt=""  src="./images/pic 8.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 9.jpg" />
+              <img alt=""  src="./images/pic 9.jpg" />
             </div>
             <div className="particularEventSection1div1carouselImageCards">
-              <img src="./images/pic 10.jpg" />
+              <img alt=""  src="./images/pic 10.jpg" />
             </div>
           </div>
         </div>
@@ -121,7 +133,7 @@ export default function About() {
             and success by excelling in the field of Computer Science.
           </div>
           <div className="aboutSCCIntroContainerImage">
-            <img src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg" />
+            <img alt=""  src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg" />
           </div>
         </div>
       </div>
@@ -129,43 +141,43 @@ export default function About() {
         <h1>Gallery Section</h1>
         <div className="gallary">
           <div className="one">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
           </div>
           <div className="two">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
           </div>
           <div className="three">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
           </div>
           <div className="four">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
           </div>
           <div className="five">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
           </div>
           <div className="six">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
           </div>
           <div className="seven">
-            <img
+            <img alt="" 
               className="galleryImage"
               src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
             />
