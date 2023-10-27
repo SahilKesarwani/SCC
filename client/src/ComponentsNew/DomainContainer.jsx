@@ -1,7 +1,6 @@
 import React from "react";
 import DomainCard from "./DomainCard";
 import domainsApi from "../apis/domainCardApi";
-import DomainPage from "./DomainPage";
 
 export default function DomainContainer() {
   const domainClickFunc = (title) => {

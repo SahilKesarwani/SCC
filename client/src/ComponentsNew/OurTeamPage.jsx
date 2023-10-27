@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import TeamMemberDetailComponent from "./TeamMemberDetailComponent";
 import rahulAvatar from "../images/avatar/rahulAvatar.png";
 import gauriAvatar from "../images/avatar/gauriAvatar.png";
@@ -7,7 +7,19 @@ import ayushAvatar from "../images/avatar/ayushAvatar.png";
 import utkarshAvatar from "../images/avatar/utkarshAvatar.png";
 import swarnaAvatar from "../images/avatar/swarnaAvatar.png";
 
-export default function OurTeamPage() {
+export default function OurTeamPage({navbar}) {
+  useEffect(() => {
+    const navBar = navbar.current;
+    const childElement1 = document.body.children[1].children[1];
+    window.addEventListener("scroll", () => {
+      if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+        navBar.style.backdropFilter = "blur(10px)";
+        // navBar.style.backdropFilter = "";
+      } else {
+        navBar.style.backdropFilter = "";
+      }
+    });
+  });
   return (
     <>
     <div className="ourTeamPage">
@@ -79,7 +91,7 @@ export default function OurTeamPage() {
         <div className="founderHeading">FOUNDERS OF SCC</div>
         <div className="founderBox">
           <div className="imageBox">
-            <img src={require("../images/Founders/rishiSir.jpg")} />
+            <img src={require("../images/Founders/rishiSir.jpg")} alt=""/>
           </div>
           <div className="textBox">
             <p>Rishi Singhal</p>
@@ -119,7 +131,7 @@ export default function OurTeamPage() {
         </div>
         <div className="founderBox">
           <div className="imageBox">
-            <img src={require("../images/Founders/sahilSir.jpeg")} />
+            <img src={require("../images/Founders/sahilSir.jpeg")} alt=""/>
           </div>
           <div className="textBox">
             <p>Sahil Kesarwani</p>
@@ -159,7 +171,7 @@ export default function OurTeamPage() {
         </div>
         <div className="founderBox">
           <div className="imageBox">
-            <img src={require("../images/Founders/yuvrajSir.jpeg")} />
+            <img src={require("../images/Founders/yuvrajSir.jpeg")}  alt=""/>
           </div>
           <div className="textBox">
             <p>Yuvraj Tripathi</p>
@@ -199,7 +211,7 @@ export default function OurTeamPage() {
         </div>
         <div className="founderBox">
           <div className="imageBox">
-            <img src={require("../images/Founders/pragatiMam.jpg")} />
+            <img src={require("../images/Founders/pragatiMam.jpg")} alt="" />
           </div>
           <div className="textBox">
             <p>Pragati Kesarwani</p>

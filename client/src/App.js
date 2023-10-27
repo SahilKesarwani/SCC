@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./ComponentsNew/Navbar";
 // import Navbar from "./Components/Navbar";
 // import HomePage from "./Components/HomePage";
@@ -7,6 +7,7 @@ import Navbar from "./ComponentsNew/Navbar";
 // import "./style.css";
 
 import "./stylenew.css";
+
 import HomePage from "./ComponentsNew/HomePage";
 import EventPage from "./ComponentsNew/EventPage";
 import DomainPage from "./ComponentsNew/DomainPage";
@@ -14,6 +15,7 @@ import OurTeamPage from "./ComponentsNew/OurTeamPage";
 import About from "./ComponentsNew/About";
 import ParticularEventPage from "./ComponentsNew/ParticularEventPage";
 import Error404 from "./ComponentsNew/Error404";
+import Footer from "./ComponentsNew/Footer";
 
 const App = () => {
   const navbar = useRef("");
@@ -33,22 +35,23 @@ const App = () => {
       <Navbar navbar={navbar} />
       <Routes>
         <Route exact path="/" element={<HomePage navbar={navbar} />}></Route>
-        <Route path="/domains/:domainName" element={<DomainPage />}></Route>
-        <Route exact path="/eventpage" element={<EventPage />}></Route>
+        <Route path="/domains/:domainName" element={<DomainPage navbar={navbar} />}></Route>
+        <Route exact path="/eventpage" element={<EventPage navbar={navbar} />}></Route>
         <Route
           exact
           path="/eventpages/:eventName"
-          element={<ParticularEventPage />}
+          element={<ParticularEventPage navbar={navbar} />}
         ></Route>
-        <Route exact path="/ourteam" element={<OurTeamPage />}></Route>
-        <Route exact path="/about" element={<About />}></Route>
+        <Route exact path="/ourteam" element={<OurTeamPage navbar={navbar} />}></Route>
+        <Route exact path="/about" element={<About navbar={navbar} />}></Route>
         <Route
           path="*"
           element={
-            <Error404/>
+            <Error404 navbar={navbar} />
           }
         ></Route>
       </Routes>
+      <Footer />
     </>
   );
 };
