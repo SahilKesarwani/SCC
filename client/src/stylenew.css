@@ -1263,18 +1263,7 @@ body {
   position: absolute;
   top: -15%;
 }
-.text {
-  width: 70vh;
-  height: 30vh;
 
-  color: white;
-  font-size: 105px;
-  text-align: inherit;
-  position: absolute;
-
-  margin-top: 15%;
-  margin-left: 5%;
-}
 .secondSec {
   background: linear-gradient(180deg, #08030c, #020c34);
   backdrop-filter: blur(100px);
@@ -1288,7 +1277,7 @@ body {
 .third {
   width: 100vw;
   height: 123vh;
-  background: linear-gradient(180deg, #010535, #4f025e);
+  background: linear-gradient(180deg, #010535, #2a0232);
   backdrop-filter: blur(100px);
   display: flex;
   justify-content: center;
@@ -1409,7 +1398,7 @@ body {
     transform: scale(1);
   }
   25% {
-    transform: scale(1.01);
+    transform: scale(1.02);
   }
   100% {
     transform: scale(1);
@@ -1421,7 +1410,7 @@ h2 {
   color: white;
 }
 .aboutSCCIntroContainer {
-  height: 100vh;
+  height: 65vh;
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -1452,49 +1441,17 @@ h2 {
 }
 .fourth {
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(0deg, #010535, #4e035c);
+  height: 80vh;
+  background: linear-gradient(0deg, #010535, #2a0232);
 
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.eCard {
-  width: 300px;
-  height: 430px;
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 300ms;
-
-  border: 1px solid #0b152e66;
-}
-.eCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-.eventImg img {
-  width: 100%;
-  height: 100%;
-}
-.eventImg {
-  width: 100%;
-  height: 45%;
-  border: 1px solid rgb(255 255 255 / 6%);
-}
-
-.eventText h1 {
-  text-align: center;
-  color: white;
-}
-.eventText p {
-  margin: 10px 10px 10px 10px;
-  text-align: justify;
-  color: white;
-}
 .heading {
-  background: #4f025e;
   width: 100vw;
-  height: 70px;
+  height: 60px;
 }
 .heading h1 {
   font-size: 4em;
@@ -1502,5 +1459,5 @@ h2 {
   color: white;
   margin: 0;
 
-  background: linear-gradient(45deg, #4f025e, #4f025e);
+  background: #2a0232
 }
