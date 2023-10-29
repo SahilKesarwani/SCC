@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import eventsListApi from "../apis/eventsListApi";
 import { useEffect, useState } from "react";
+import currentEventApi from "../apis/currentEventApi";
 
 export default function EventPage({ navbar }) {
   useEffect(() => {
     const navBar = navbar.current;
-    const childElement1 = document.body.children[1].children[1];
+    const childElement1 = document.body.children[1].children[1].children[0];
     window.addEventListener("scroll", () => {
-      if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+      if (
+        childElement1 != null &&
+        childElement1.getBoundingClientRect().bottom <= navBar.clientHeight
+      ) {
         navBar.style.backdropFilter = "blur(10px)";
         // navBar.style.backdropFilter = "";
       } else {
@@ -15,16 +19,16 @@ export default function EventPage({ navbar }) {
       }
     });
   });
-  
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isrecentEvents_div_vis, setrecentEvents_div_vis] = useState(false);
   const [ish1_scale, seth1_scale] = useState(false);
   const [secondEventAvail, setSecondEventAvail] = useState(false);
 
   useEffect(() => {
-    // document.body.style.backgroundColor = "black";
     window.addEventListener("scroll", () => {
       setrecentEvents_div_vis(true);
       seth1_scale(true);
@@ -32,7 +36,7 @@ export default function EventPage({ navbar }) {
     if (eventsListApi.length > 1) {
       setSecondEventAvail(true);
     }
-  },[]);
+  }, []);
   return (
     <div style={{ background: "black" }}>
       <section id="banner">
@@ -64,10 +68,11 @@ export default function EventPage({ navbar }) {
                     <div className="smalltext">Seconds</div>
                   </div>
                 </div>
-
-                <h1 className="banner-title">name</h1>
-                <h2 className="banner-subtitle">date time</h2>
-                <h3 className="banner-desc">CodeChef</h3>
+                <h1 className="banner-title">{currentEventApi[0].name}</h1>
+                <h2 className="banner-subtitle">
+                  {currentEventApi[0].date} - {currentEventApi[0].time}
+                </h2>
+                <h3 className="banner-desc">{currentEventApi[0].venue}</h3>
                 <p className="banner-btn1">
                   <a href="www.google.com" className="btn1 btn-primary">
                     Register Now
@@ -86,24 +91,33 @@ export default function EventPage({ navbar }) {
           }`}
         >
           <h1 className={`recentEventHeadBg ${ish1_scale ? "h1_scale" : ""}`}>
-            {eventsListApi[1].name.toUpperCase()}
+            {eventsListApi[eventsListApi.length - 1].name.toUpperCase()}
           </h1>
           <div className="recentEventText">
             <h1>
-              {eventsListApi[1].name[0].toUpperCase() +
-                eventsListApi[1].name.slice(1)}
+              {eventsListApi[eventsListApi.length - 1].name[0].toUpperCase() +
+                eventsListApi[eventsListApi.length - 1].name.slice(1)}
             </h1>
-            <p>
-              {eventsListApi[1].description}
-            </p>
-            <button className="recentEvents_button">
-              <Link to="/eventPages/hackverse2">CLICK ME</Link>
-            </button>
+            <p>{eventsListApi[eventsListApi.length - 1].description}</p>
+            <Link
+              to={`/eventpage/${eventsListApi[eventsListApi.length - 1].name}`}
+            >
+              <button className="recentEvents_button">CLICK ME</button>
+            </Link>
           </div>
           <div className="recentEventImages">
-            <img alt=""  src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/1.jpg" />
-            <img alt=""  src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/3.jpg" />
-            <img alt=""  src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/2.jpg" />
+            <img
+              alt=""
+              src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/1.jpg"
+            />
+            <img
+              alt=""
+              src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/3.jpg"
+            />
+            <img
+              alt=""
+              src="https://www.madebydesignesia.com/themes/exhibiz/images/misc/2.jpg"
+            />
           </div>
         </div>
       )}
@@ -111,10 +125,10 @@ export default function EventPage({ navbar }) {
       <div className="eventListBox">
         <h1 className="pastEventHeading">Past Events</h1>
 
-        {eventsListApi.map((eventDetails) => {
+        {eventsListApi.reverse().map((eventDetails) => {
           const { id, name, time, date, description } = eventDetails;
           return (
-            <Link to={`/eventPages/${name}`} key={id}>
+            <Link to={`/eventpage/${name}`} key={id}>
               <div className="list">
                 <div className="dateTime">
                   <div> {date}</div>
@@ -122,7 +136,7 @@ export default function EventPage({ navbar }) {
                 </div>
                 <div className="eventDescription">
                   <h1> {name}</h1>
-                  <div>
+                  <div className="eventSubDescription">
                     {description ? description.slice(0, 250) + "..." : ""}
                   </div>
                 </div>

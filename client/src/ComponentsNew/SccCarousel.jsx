@@ -3,7 +3,7 @@ import React from "react";
 export default function SccCarousel({ href, imgSrc }) {
   return (
     <>
-      <a className="carousel-item" href={href}>
+      <a href={href} className="carouselllItem">
         <img src={imgSrc} />
       </a>
     </>

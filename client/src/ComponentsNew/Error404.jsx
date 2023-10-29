@@ -16,7 +16,7 @@ export default function Error404({navbar}) {
   });
   return (
     <>
-      <div>
+      <div className="show">
         <img
           src={process.env.PUBLIC_URL + "/images/error404BG.jpg"}
           style={{ width: "100vw", height: "100vh", objectFit: "cover" }}
@@ -42,6 +42,11 @@ export default function Error404({navbar}) {
           className="error404TextShadow"
           alt=""
         />
+      </div>
+      <div className="hideDiv">
+        <div className="mobErrorPageDiv">
+          <img src="https://cdn.dribbble.com/users/310457/screenshots/3477970/media/a41364ee87ac8d2579133a9bb2c0f9ac.gif" alt="" />
+        </div>
       </div>
     </>
   );

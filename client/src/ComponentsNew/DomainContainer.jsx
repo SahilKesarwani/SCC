@@ -15,14 +15,7 @@ export default function DomainContainer() {
     <>
       <div className="domainContainer">
         {/* <div className="overlay"></div> */}
-        <div
-          style={{
-            position: "relative",
-            color: "white",
-            textAlign: "center",
-            fontFamily: "'Titillium Web', sans-serif",
-          }}
-        >
+        <div className="domainHeading">
           <h1>Paths to be explored</h1>
           <hr />
           <h6>Domains</h6>

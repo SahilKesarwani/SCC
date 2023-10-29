@@ -1,13 +1,17 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import eventsListApi from "../apis/eventsListApi";
+import { v4 as uuid } from "uuid";
 
 export default function ParticularEventPage({ navbar }) {
   useEffect(() => {
     const navBar = navbar.current;
     const childElement1 = document.body.children[1].children[1];
     window.addEventListener("scroll", () => {
-      if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+      if (
+        childElement1 != null &&
+        childElement1.getBoundingClientRect().bottom <= navBar.clientHeight
+      ) {
         navBar.style.backdropFilter = "blur(10px)";
         // navBar.style.backdropFilter = "";
       } else {
@@ -29,10 +33,9 @@ export default function ParticularEventPage({ navbar }) {
           date,
           registrations,
           description,
+          imageURL,
           totalParticipants,
           sponsors,
-          sponsorCount,
-          judges,
           winners,
           examiners,
         } = events;
@@ -73,10 +76,13 @@ export default function ParticularEventPage({ navbar }) {
                         <h2 className="banner-subtitle">
                           {date} - {time}
                         </h2>
-                        <h3 className="banner-desc">CodeChef</h3>
+                        <h3 className="banner-desc">{events.platform}</h3>
                         <p className="banner-btn1">
-                          <a href="https://www.google.com/" className="btn1 btn-primary">
-                            Register Now
+                          <a
+                            href="https://www.google.com/"
+                            className="btn1 btn-primary disableAnchor"
+                          >
+                            Event Ended
                           </a>
                         </p>
                       </div>
@@ -84,11 +90,9 @@ export default function ParticularEventPage({ navbar }) {
                   </div>
                 </div>
               </section>
-              <div style={{ padding: "1em" }}>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{ width: "50%", padding: "2em", paddingLeft: "5em" }}
-                  >
+              <div className="pedesc">
+                <div className="pedescContainer">
+                  <div className="pedescSubContainer">
                     <h2
                       style={{
                         fontSize: "18px",
@@ -115,7 +119,7 @@ export default function ParticularEventPage({ navbar }) {
                       How it All Started
                     </h3>
                     <br />
-                    <p
+                    <div
                       style={{
                         fontFamily: "'Roboto', sans-serif",
                         lineHeight: "24px",
@@ -124,48 +128,40 @@ export default function ParticularEventPage({ navbar }) {
                       }}
                     >
                       {description}
-                    </p>
+                      <ul className="pointers">
+                        {events.eventDetails.map((det) => {
+                          return (
+                            <li key={uuid()} style={{ listStyleType: "disc" }}>
+                              {det}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
                     <a
                       href="https://www.instagram.com/sietcodingclub/"
-                      target="_blank" rel="noreferrer" 
+                      target="_blank"
+                      rel="noreferrer"
                       style={{ display: "inline-block" }}
                     >
                       <div className="kokol">KNOW MORE</div>
                     </a>
                   </div>
-                  <div
-                    style={{
-                      width: "50%",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img alt="" 
-                      src="https://demo.themewinter.com/html/eventor/images/intro-video.jpg"
+                  <div className="pedescSubContainer">
+                    <img
+                      alt=""
+                      src={imageURL[0].imgURL}
                       style={{
                         background: "black",
                         height: "70%",
                         width: "70%",
+                        objectFit: "contain",
                       }}
                     />
                   </div>
                 </div>
-                <div
-                  style={{
-                    padding: "1em",
-                    display: "flex",
-                    width: "100%",
-                    justifyContent: "center",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      borderRight: "1px solid #dedede",
-                      padding: "1em",
-                    }}
-                  >
+                <div className="pedescIconContainer">
+                  <div className="pedescIconContainerDiv">
                     <div
                       style={{
                         fontSize: "2em",
@@ -174,7 +170,10 @@ export default function ParticularEventPage({ navbar }) {
                         alignItems: "center",
                       }}
                     >
-                      <img alt=""  src="https://demo.themewinter.com/html/eventor/images/icons/fact-workshop.png" />
+                      <img
+                        alt=""
+                        src="https://demo.themewinter.com/html/eventor/images/icons/fact-workshop.png"
+                      />
                     </div>
                     <div
                       style={{
@@ -188,13 +187,7 @@ export default function ParticularEventPage({ navbar }) {
                       Registrations
                     </div>
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      borderRight: "1px solid #dedede",
-                      padding: "1em",
-                    }}
-                  >
+                  <div className="pedescIconContainerDiv">
                     <div
                       style={{
                         fontSize: "2em",
@@ -203,7 +196,10 @@ export default function ParticularEventPage({ navbar }) {
                         alignItems: "center",
                       }}
                     >
-                      <img alt=""  src="https://demo.themewinter.com/html/eventor/images/icons/fact-speaker.png" />
+                      <img
+                        alt=""
+                        src="https://demo.themewinter.com/html/eventor/images/icons/fact-speaker.png"
+                      />
                     </div>
                     <div
                       style={{
@@ -217,12 +213,7 @@ export default function ParticularEventPage({ navbar }) {
                       Active Participants
                     </div>
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      borderRight: "1px solid #dedede",
-                      padding: "1em",
-                    }}
+                  <div className="pedescIconContainerDiv"
                   >
                     <div
                       style={{
@@ -232,7 +223,10 @@ export default function ParticularEventPage({ navbar }) {
                         alignItems: "center",
                       }}
                     >
-                      <img alt=""  src="https://demo.themewinter.com/html/eventor/images/icons/fact-sponsor.png" />
+                      <img
+                        alt=""
+                        src="https://demo.themewinter.com/html/eventor/images/icons/fact-sponsor.png"
+                      />
                     </div>
                     <div
                       style={{
@@ -242,16 +236,12 @@ export default function ParticularEventPage({ navbar }) {
                         width: "10em",
                       }}
                     >
-                      {sponsorCount}
+                      {sponsors.length}
                       <br />
                       Sponsor(s)
                     </div>
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      padding: "1em",
-                    }}
+                  <div className="pedescIconContainerDiv"
                   >
                     <div
                       style={{
@@ -261,7 +251,10 @@ export default function ParticularEventPage({ navbar }) {
                         alignItems: "center",
                       }}
                     >
-                      <img alt=""  src="https://demo.themewinter.com/html/eventor/images/icons/fact-country.png" />
+                      <img
+                        alt=""
+                        src="https://demo.themewinter.com/html/eventor/images/icons/fact-country.png"
+                      />
                     </div>
                     <div
                       style={{
@@ -271,7 +264,7 @@ export default function ParticularEventPage({ navbar }) {
                         width: "10em",
                       }}
                     >
-                      {judges}
+                      {examiners.length}
                       <br />
                       Judges
                     </div>
@@ -279,12 +272,63 @@ export default function ParticularEventPage({ navbar }) {
                 </div>
               </div>
 
+              <div className="visionaryBox">
+                <div style={{ textAlign: "center" }}>
+                  <h6 style={{ fontSize: "1.5em" }}>Bringing in the</h6>
+                  <h2 style={{ margin: "0", color: "white" }}>
+                    Winners of this Event
+                  </h2>
+                </div>
+
+                <div className="visSpeakerCardContainer">
+                  {winners.map((win) => {
+                    return (
+                      <div className="visSpeakerCardSubContainer" key={uuid()}>
+                        {win.teamMembers.map((winn) => {
+                          return (
+                            <div className="visSpeakerCard" key={uuid()}>
+                              <div className="visSpeakerImageSection">
+                                <img
+                                  alt=""
+                                  src={winn.profileImage}
+                                  className="visSpeakerPersonImage"
+                                />
+                                <div className="visSpeakerOverlay">
+                                  <div className="visSpeakerSocialIcon">
+                                    <a
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      href={winn.socialMediaLinks[0].linkedIn}
+                                    >
+                                      <i className="fa fa-linkedin socialIcon"></i>
+                                    </a>
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="visSpeakerDetails">
+                                <div className="visSpeakerName">
+                                  {winn.Name}
+                                </div>
+                                <div>
+                                  {" "}
+                                  <b>{win.teamName}</b> - {winn.Batch}
+                                  <br />
+                                  <b>{win.rank}</b> Position
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
               <section id="ts-speakers" className="ts-speakers gradient-bg">
                 <div className="container1">
                   <div className="row1 text-center">
-                    <h2 className="section-title">Revolutionizing the World</h2>
                     <h3 className="section-sub-title title-white">
-                      Visionary Speakers
+                      Our Judges
                     </h3>
                   </div>
                   <div className="row">
@@ -292,14 +336,14 @@ export default function ParticularEventPage({ navbar }) {
                       return (
                         <div
                           className="col-xs-12 col-sm-6 col-md-3"
-                          key={examin.examinerName}
+                          key={uuid()}
                         >
                           <div className="ts-speaker">
                             <div className="ts-speaker-image">
-                              <img alt="" 
-                                className="img"
+                              <img
+                                alt=""
+                                className="img visSpeakerPersonImage"
                                 src={examin.examinerImg}
-                                
                               />
                             </div>
                             <div className="ts-speaker-info">
@@ -317,63 +361,78 @@ export default function ParticularEventPage({ navbar }) {
                   </div>
                 </div>
               </section>
-
-              <div className="visionaryBox">
-                <div style={{ textAlign: "center" }}>
-                  <h6 style={{ fontSize: "1.5em" }}>Bringing in the</h6>
-                  <h2 style={{ margin: "0", color: "white" }}>
-                    Winners of this Event
-                  </h2>
-                </div>
-
-                <div className="visSpeakerCardContainer">
-                  {winners.map((win) => {
-                    return (
-                      <>
-                        {win.teamMembers.map((winn) => {
-                          return (
-                            <div className="visSpeakerCard">
-                              <div>
-                                <img alt="" 
-                                  src={winn.profileImage}
-                                  className="visSpeakerPersonImage"
-                                />
-                              </div>
-                              <div className="visSpeakerDetails">
-                                <div className="visSpeakerName">
-                                  {winn.Name}
-                                </div>
-                                <div>
-                                  {" "}
-                                  <b>{win.teamName}</b> - {winn.Batch}
-                                </div>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </>
-                    );
-                  })}
-                </div>
-              </div>
               <div className="sponsorContainer">
                 <div className="heading1">Supporting Our Event</div>
                 <div className="heading2">Event Sponsor</div>
                 <div className="sponsorCard">
                   {sponsors.map((s) => {
                     return (
-                      <div className="sponsors">
-                        <img alt=""  src={s.logo} />
+                      <div className="sponsors" key={uuid()}>
+                        <img alt="" src={s.logo} />
                         {s.name}
                       </div>
                     );
                   })}
                 </div>
               </div>
+              <div className="third">
+                <h1>Gallery Section</h1>
+                <div className="gallary">
+                  <div className="one">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                  <div className="two">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                  <div className="three">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                  <div className="four">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                  <div className="five">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                  <div className="six">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                  <div className="seven">
+                    <img
+                      alt=""
+                      className="galleryImage"
+                      src="https://i.ytimg.com/vi/_ITiwPMUzho/maxresdefault.jpg"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           );
         }
-        return <></>;
+        return <div key={uuid()}></div>;
       })}
     </>
   );
