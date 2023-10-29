@@ -4,7 +4,7 @@ const eventsListApi = [
     name: "Aarambh",
     time: "19:00 - 21:00",
     date: "12 May 2022",
-    registrations: "160",
+    registrations: "600",
     description:
       "SCC welcomes you with the open arms to the very first event of the club, Aarambh! Aarambh is an online coding competition, in which you fight with the fellow coding warriors from all over the India. The final winners will be awarded with cash prizes and exciting goodies! So without a blink, go ahead, and register yourself. ",
     eventDetails: [
