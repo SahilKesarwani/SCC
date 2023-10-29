@@ -1,7 +1,7 @@
 .footer {
-  background-color: #101015;
-  color: #666666;
-  padding: 50px 0;
+  background-color: #18181d;
+  color: #cccaca;
+  padding: 30px 0;
   position: relative;
   background-attachment: fixed;
 }
@@ -33,7 +33,7 @@
 .footer-logo {
   margin: 30px 0;
 }
-.footer-logo img{
+.footer-logo img {
   height: 50px;
 }
 
@@ -118,5 +118,10 @@
 /*-- Copyright --*/
 
 .copyright-info {
-  margin: 40px 0 0;
+  /* margin: 40px 0 0; */
+}
+.col-md-12 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }

@@ -2,12 +2,13 @@ import { useParams } from "react-router-dom";
 import domainsApi from "../apis/domainCardApi";
 import { useEffect } from "react";
 
-export default function DomainPage({navbar}) {
+export default function DomainPage({ navbar }) {
   useEffect(() => {
     const navBar = navbar.current;
-    const childElement1 = document.body.children[1].children[1];
+    const childElement1 =
+      document.body.children[1].children[1].children[0].children[0];
     window.addEventListener("scroll", () => {
-      if (childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+      if (childElement1!=null && childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
         navBar.style.backdropFilter = "blur(10px)";
       } else {
         navBar.style.backdropFilter = "";
@@ -15,7 +16,9 @@ export default function DomainPage({navbar}) {
     });
   });
   const { domainName } = useParams();
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       style={{
@@ -25,10 +28,11 @@ export default function DomainPage({navbar}) {
       }}
     >
       {domainsApi.map((domains) => {
-        const { id, title, description, roadmap, videoLinks } = domains;
+        const { id, title, description, roadmap, roadmapLink, videoLinks } =
+          domains;
         if (title === domainName) {
           return (
-            <div key={id} style={{ padding: "3em" }}>
+            <div  className="particularDomainContainer" key={id}>
               <div className="eventHeaderr" style={{ position: "relative" }}>
                 <div style={{ height: "50%" }}>
                   <h1 className="neon_green">{domainName}</h1>
@@ -43,77 +47,45 @@ export default function DomainPage({navbar}) {
                     flexWrap: "wrap",
                   }}
                 >
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill1.png")}
-                    style={{
-                      height: "100px",
-                      position: "",
-                      top: "545px",
-                      left: "10px",
-                    }}
+                    style={{ height: "100px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill2.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "210px",
-                    }}
+                    style={{ height: "80px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill3.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "410px",
-                    }}
+                    style={{ height: "80px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill4.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "610px",
-                    }}
+                    style={{ height: "80px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill5.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "810px",
-                    }}
+                    style={{ height: "80px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill6.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "1010px",
-                    }}
+                    style={{ height: "80px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill7.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "1210px",
-                    }}
+                    style={{ height: "80px" }}
                   />
-                  <img alt="" 
+                  <img
+                    alt=""
                     src={require("../images/ill8.png")}
-                    style={{
-                      height: "80px",
-                      position: "",
-                      top: "545px",
-                      left: "1410px",
-                    }}
+                    style={{ height: "80px" }}
                   />
                 </div>
               </div>
@@ -122,19 +94,11 @@ export default function DomainPage({navbar}) {
                   <h2>What is {title} ?</h2>
                   <div className="eventtDescriptionCircle"></div>
                 </div>
-                <div className="eventtDescriptionDiv"><p className="eventtDescriptionP">{description}</p></div>
+                <div className="eventtDescriptionDiv">
+                  <p className="eventtDescriptionP">{description}</p>
+                </div>
               </div>
-              {/* roadmap */}
-              <h2
-                className="neon_green"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginBottom: "100px",
-                  color: "white",
-                  fontFamily: "'Dancing Script', cursive",
-                }}
-              >
+              <h2 className="neon_green">
                 Start your journey to {title} from here
               </h2>
               <div
@@ -163,6 +127,11 @@ export default function DomainPage({navbar}) {
                   );
                 })}
               </div>
+              <a href={roadmapLink} target="_blank" rel="noreferrer">
+                <button className="recentEvents_button1">
+                  See Full Roadmap
+                </button>
+              </a>
               <div className="videoRecomSection">
                 <h2
                   className="neon_green"
@@ -181,8 +150,8 @@ export default function DomainPage({navbar}) {
                     const { titleText, videoLink, imgLink } = video;
                     return (
                       <div className="video" key={videoLink}>
-                        <a href={videoLink} target="_blank" rel="noreferrer" >
-                          <img alt=""  src={imgLink} />
+                        <a href={videoLink} target="_blank" rel="noreferrer">
+                          <img alt="" src={imgLink} />
                           <div className="videoTitle">{titleText}</div>
                         </a>
                       </div>
@@ -193,10 +162,8 @@ export default function DomainPage({navbar}) {
             </div>
           );
         }
-        return(<></>);
-      }
-      
-      )}
+        return <div key={id}></div>;
+      })}
     </div>
   );
 }

@@ -10,39 +10,6 @@
       content="Web site created using create-react-app"
     />
     <title>SIET Coding Club</title>
-    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-    /> -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    /> -->
-
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap"
-      rel="stylesheet"
-    /> -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    /> -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
-      rel="stylesheet"
-    /> -->
 
     <link
       rel="stylesheet"
@@ -59,6 +26,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <style>
@@ -82,74 +50,26 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script>
-      const script = document.createElement("script");
-      script.src = "https://code.jquery.com/jquery-1.12.0.min.js";
-      document.body.appendChild(script);
+    <!-- <script>
+      // const script = document.createElement("script");
+      // script.src = "https://code.jquery.com/jquery-1.12.0.min.js";
+      // document.body.appendChild(script);
 
-      const script2 = document.createElement("script");
-      script2.src =
-        "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js";
-      document.body.appendChild(script2);
+      // const script2 = document.createElement("script");
+      // script2.src =
+      //   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js";
+      // document.body.appendChild(script2);
 
       // AddScript("https://code.jquery.com/jquery-1.12.0.min.js");
       // AddScript(
       //   "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
       // );
-      window.onload = function () {
-        const script = document.createElement("script");
-        script.innerHTML =
-          "$(document).ready(function () {" + "$('.carousel').carousel();});";
-        document.body.appendChild(script);
-      };
-    </script>
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script> -->
-
-    <!-- <script>
-      window.onload = function () {
-        let closeModalDiv = document.querySelectorAll(".closeModal");
-        Array.from(closeModalDiv).forEach((e) => {
-          e.addEventListener("click", () => {
-            Array.from(document.querySelectorAll(".modall")).forEach((el) => {
-              el.style.display = "none";
-            });
-          });
-        });
-        let nextSectionArrow = document.querySelectorAll(".nextSectionArrow");
-        let roadmapContainerArea = document.querySelectorAll(
-          ".roadmapContainerArea"
-        );
-        let videoContainerArea = document.querySelectorAll(
-          ".videoContainerArea"
-        );
-        Array.from(nextSectionArrow).forEach((e) => {
-          e.addEventListener("click", (elem) => {
-            if (elem.target.style.rotate === "0deg") {
-              elem.target.style.rotate = "180deg";
-            } else {
-              elem.target.style.rotate = "0deg";
-            }
-            Array.from(roadmapContainerArea).forEach((el) => {
-              if (el.style.right == "0vw") {
-                el.style.right = "80vw";
-              } else {
-                el.style.right = "0vw";
-              }
-            });
-            Array.from(videoContainerArea).forEach((el) => {
-              if (el.style.left == "80vw") {
-                el.style.left = "0vw";
-              } else {
-                el.style.left = "80vw";
-              }
-            });
-          });
-        });
-      };
+      // window.onload = function () {
+      //   const script = document.createElement("script");
+      //   script.innerHTML =
+      //     "$(document).ready(function () {" + "$('.carousel').carousel();});";
+      //   document.body.appendChild(script);
+      // };
     </script> -->
-  </body>
+    </body>
 </html>

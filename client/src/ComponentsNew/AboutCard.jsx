@@ -1,13 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export default function AboutCard({
-    title,
-    imgSrc,
-    description,
-  }) {
+export default function AboutCard({ title, imgSrc, description }) {
   return (
     <>
-    <div className="parentr">
+      {/* <div className="parentr">
         <div className="leftr"></div>
         <div className="rightr"></div>
         <div className="topr"></div>
@@ -20,6 +16,21 @@ export default function AboutCard({
           </div>
           <div className="overlayr"></div>
         </div>
-      </div></>
-  )
+      </div> */}
+      <div className="flip-card parentr">
+        <div className="leftr"></div>
+        <div className="rightr"></div>
+        <div className="topr"></div>
+        <div className="bottomr"></div>
+        <div className="flip-card-inner">
+          <div className="flip-card-front ">
+            <img src={imgSrc} />
+          </div>
+          <div className="flip-card-back">
+            <p>Architect & Engineer</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
