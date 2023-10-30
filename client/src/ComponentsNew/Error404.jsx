@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 
-export default function Error404({navbar}) {
+export default function Error404({ navbar }) {
   useEffect(() => {
     const navBar = navbar.current;
     const childElement1 = document.body.children[1].children[1];
@@ -45,7 +45,10 @@ export default function Error404({navbar}) {
       </div>
       <div className="hideDiv">
         <div className="mobErrorPageDiv">
-          <img src="https://cdn.dribbble.com/users/310457/screenshots/3477970/media/a41364ee87ac8d2579133a9bb2c0f9ac.gif" alt="" />
+          <img
+            src="https://cdn.dribbble.com/users/310457/screenshots/3477970/media/a41364ee87ac8d2579133a9bb2c0f9ac.gif"
+            alt=""
+          />
         </div>
       </div>
     </>

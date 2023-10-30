@@ -19,17 +19,23 @@ export default function DomainCard({
           <img src={imgSrc} />
           <div className="content">
             <h5>{title}</h5>
-            <p>{(description.length>100?description.substring(0,100)+"...":description)}</p>
-            <Link to={{
-                  pathname: `domains/${title}`,
-                }}>
-            <div
-              className="btn"
-              // onClick={() => {domainClick(title);}}
+            <p>
+              {description.length > 100
+                ? description.substring(0, 100) + "..."
+                : description}
+            </p>
+            <Link
+              to={{
+                pathname: `domains/${title}`,
+              }}
+            >
+              <div
+                className="btn"
+                // onClick={() => {domainClick(title);}}
               >
-              Know More
-            </div>
-              </Link>
+                Know More
+              </div>
+            </Link>
           </div>
           <div className="overlayr"></div>
         </div>

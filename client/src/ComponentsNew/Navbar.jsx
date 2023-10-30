@@ -10,20 +10,19 @@ export default function Navbar({ navbar }) {
     navCloseButton.addEventListener("click", () => {
       if (navMenuArea.style.transform === "translateX(0px)") {
         navMenuArea.style.transform = "";
-        navCloseButton.style.color="white";
+        navCloseButton.style.color = "white";
         openCloseNavBtn.innerHTML = "menu";
-      }
-      else{
-        navMenuArea.style.transform = "translateX(0px)"
-        navCloseButton.style.color="black";
+      } else {
+        navMenuArea.style.transform = "translateX(0px)";
+        navCloseButton.style.color = "black";
         openCloseNavBtn.innerHTML = "close";
       }
     });
   }, []);
-  const toggleNav = ()=>{
+  const toggleNav = () => {
     let navCloseButton = document.querySelector(".navCloseButton");
     navCloseButton.click();
-  }
+  };
   return (
     <>
       <div className="navbar" ref={navbar}>
@@ -38,16 +37,24 @@ export default function Navbar({ navbar }) {
         <div className="menuArea">
           <ul className="menu">
             <li>
-              <Link to="/" onClick={toggleNav}>Home</Link>
+              <Link to="/" onClick={toggleNav}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/eventpage" onClick={toggleNav}>Events</Link>
+              <Link to="/eventpage" onClick={toggleNav}>
+                Events
+              </Link>
             </li>
             <li>
-              <Link to="/ourteam" onClick={toggleNav}>Our Team</Link>
+              <Link to="/ourteam" onClick={toggleNav}>
+                Our Team
+              </Link>
             </li>
             <li>
-              <Link to="/about" onClick={toggleNav}>About</Link>
+              <Link to="/about" onClick={toggleNav}>
+                About
+              </Link>
             </li>
           </ul>
         </div>

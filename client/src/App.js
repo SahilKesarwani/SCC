@@ -20,14 +20,25 @@ const App = () => {
       <Navbar navbar={navbar} />
       <Routes>
         <Route exact path="/" element={<HomePage navbar={navbar} />}></Route>
-        <Route path="/domains/:domainName" element={<DomainPage navbar={navbar} />}></Route>
-        <Route exact path="/eventpage" element={<EventPage navbar={navbar} />}></Route>
+        <Route
+          path="/domains/:domainName"
+          element={<DomainPage navbar={navbar} />}
+        ></Route>
+        <Route
+          exact
+          path="/eventpage"
+          element={<EventPage navbar={navbar} />}
+        ></Route>
         <Route
           exact
           path="/eventpage/:eventName"
           element={<ParticularEventPage navbar={navbar} />}
         ></Route>
-        <Route exact path="/ourteam" element={<OurTeamPage navbar={navbar} />}></Route>
+        <Route
+          exact
+          path="/ourteam"
+          element={<OurTeamPage navbar={navbar} />}
+        ></Route>
         <Route exact path="/about" element={<About navbar={navbar} />}></Route>
         <Route path="*" element={<Error404 navbar={navbar} />}></Route>
       </Routes>

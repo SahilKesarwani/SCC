@@ -29,12 +29,12 @@ export default function Footer() {
                     <a target="_blank" rel="noreferrer" href="www.google.com">Contact</a>
                   </li>
                 </ul>
-              </div> */} 
+              </div> */}
               <div className="footer-logo">
                 <img src={require("../images/logo.jpg")} alt="footer logo" />
                 <p>SIET Coding Club</p>
               </div>
-              
+
               <div className="footer-social">
                 <ul>
                   <li>
@@ -69,7 +69,8 @@ export default function Footer() {
             </div>
             <div className="copyright-info">
               <span>Copyright © 2022 SCC. All Rights Reserved.</span>
-            </div><div className="copyright-info">
+            </div>
+            <div className="copyright-info">
               <span>Made with (❤️) by Rahul Singh and Gauri Gupta</span>
             </div>
           </div>

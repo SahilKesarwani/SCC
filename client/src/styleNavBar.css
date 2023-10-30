@@ -10,6 +10,7 @@
   padding: 2em 0;
   transition: 0.2s backdrop-filter linear;
 }
+
 .logoArea {
   height: 50px;
   width: 50px;
@@ -17,11 +18,13 @@
   background-size: contain;
   margin-left: 2em;
 }
+
 .menu {
   list-style-type: none;
   display: flex;
   margin-right: 3%;
 }
+
 .menu li {
   padding: 1em 2.8em;
   position: relative;
@@ -30,9 +33,11 @@
   text-align: center;
   transition: 0.2s all linear;
 }
+
 .menu li:hover {
   transform: scale(1.1);
 }
+
 .menu li::after {
   content: "";
   position: absolute;
@@ -44,12 +49,15 @@
   transform: scale(0.2);
   transition: 0.2s all linear;
 }
+
 .menu li:hover::after {
   transform: scale(1);
 }
+
 .navCloseButton {
   display: none;
 }
+
 @media screen and (max-width: 480px) {
   .navbar .menuArea {
     position: fixed;
@@ -63,14 +71,17 @@
     transform: translateX(1000%);
     transition: all 0.4s ease-in-out;
   }
+
   .navbar .menuArea a {
     color: black;
   }
+
   .navbar .menu {
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+
   .navCloseButton {
     color: white;
     display: block;

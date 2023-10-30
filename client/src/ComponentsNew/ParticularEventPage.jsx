@@ -23,6 +23,7 @@ export default function ParticularEventPage({ navbar }) {
     window.scrollTo(0, 0);
   }, []);
   const { eventName } = useParams();
+
   return (
     <>
       {eventsListApi.map((events) => {
@@ -213,8 +214,7 @@ export default function ParticularEventPage({ navbar }) {
                       Active Participants
                     </div>
                   </div>
-                  <div className="pedescIconContainerDiv"
-                  >
+                  <div className="pedescIconContainerDiv">
                     <div
                       style={{
                         fontSize: "2em",
@@ -241,8 +241,7 @@ export default function ParticularEventPage({ navbar }) {
                       Sponsor(s)
                     </div>
                   </div>
-                  <div className="pedescIconContainerDiv"
-                  >
+                  <div className="pedescIconContainerDiv">
                     <div
                       style={{
                         fontSize: "2em",
