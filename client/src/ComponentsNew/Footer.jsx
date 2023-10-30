@@ -69,6 +69,8 @@ export default function Footer() {
             </div>
             <div className="copyright-info">
               <span>Copyright © 2022 SCC. All Rights Reserved.</span>
+            </div><div className="copyright-info">
+              <span>Made with (❤️) by Rahul Singh and Gauri Gupta</span>
             </div>
           </div>
         </div>
