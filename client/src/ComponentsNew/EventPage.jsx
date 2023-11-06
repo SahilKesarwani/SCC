@@ -20,9 +20,9 @@ export default function EventPage({ navbar }) {
     });
   });
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [isrecentEvents_div_vis, setrecentEvents_div_vis] = useState(false);
   const [ish1_scale, seth1_scale] = useState(false);
