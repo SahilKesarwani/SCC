@@ -10,7 +10,7 @@ export default function TeamMemberDetailComponent({
   return (
     <>
       <div className="member">
-        <img src={src} className="memberImage"  alt=""/>
+        <img src={src} className="memberImage" alt="" />
         <div className="base"></div>
         <div className="designationBox">
           {name}
@@ -18,7 +18,7 @@ export default function TeamMemberDetailComponent({
         </div>
         <div className="membeInfo">
           <h5>Social</h5>
-          <a target="_blank" rel="noreferrer"  href={linkedIn}>
+          <a target="_blank" rel="noreferrer" href={linkedIn}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
@@ -30,7 +30,7 @@ export default function TeamMemberDetailComponent({
             : LinkedIn
           </a>
           <br />
-          <a target="_blank" rel="noreferrer"  href={instagram}>
+          <a target="_blank" rel="noreferrer" href={instagram}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"

@@ -33,6 +33,7 @@
 .footer-logo {
   margin: 30px 0;
 }
+
 .footer-logo img {
   height: 50px;
 }
@@ -42,15 +43,18 @@
 .footer-social {
   margin: 40px 0;
 }
+
 .footer-social ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .footer-social ul li {
   margin: 0 15px;
   display: inline-block;
 }
+
 .footer-social ul li a i {
   display: block;
   width: 36px;
@@ -91,18 +95,23 @@
 .footer-social ul li a i:hover {
   color: #fff;
 }
+
 .footer-social ul li a .fa-instagram {
   color: #d32a1e;
 }
+
 .footer-social ul li a .fa-facebook {
   color: #677fb5;
 }
+
 .footer-social ul li a .fa-twitter {
   color: #70c2e9;
 }
+
 .footer-social ul li a .fa-google-plus {
   color: #c53942;
 }
+
 .footer-social ul li a .fa-linkedin {
   color: #3daccf;
 }
@@ -120,6 +129,7 @@
 .copyright-info {
   /* margin: 40px 0 0; */
 }
+
 .col-md-12 {
   display: flex;
   justify-content: space-between;

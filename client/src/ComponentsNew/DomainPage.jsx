@@ -8,7 +8,10 @@ export default function DomainPage({ navbar }) {
     const childElement1 =
       document.body.children[1].children[1].children[0].children[0];
     window.addEventListener("scroll", () => {
-      if (childElement1!=null && childElement1.getBoundingClientRect().bottom <= navBar.clientHeight) {
+      if (
+        childElement1 != null &&
+        childElement1.getBoundingClientRect().bottom <= navBar.clientHeight
+      ) {
         navBar.style.backdropFilter = "blur(10px)";
       } else {
         navBar.style.backdropFilter = "";
@@ -32,7 +35,7 @@ export default function DomainPage({ navbar }) {
           domains;
         if (title === domainName) {
           return (
-            <div  className="particularDomainContainer" key={id}>
+            <div className="particularDomainContainer" key={id}>
               <div className="eventHeaderr" style={{ position: "relative" }}>
                 <div style={{ height: "50%" }}>
                   <h1 className="neon_green">{domainName}</h1>

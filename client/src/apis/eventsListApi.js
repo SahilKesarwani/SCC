@@ -156,7 +156,8 @@ const eventsListApi = [
             Batch: "2021-25",
             socialMediaLinks: [
               {
-                linkedIn: "https://www.linkedin.com/in/rishi-mishra-a488a9137?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                linkedIn:
+                  "https://www.linkedin.com/in/rishi-mishra-a488a9137?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
               },
             ],
             profileImage: "../images/person-icon-1682.png",

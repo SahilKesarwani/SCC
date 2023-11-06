@@ -37,6 +37,44 @@ export default function EventPage({ navbar }) {
       setSecondEventAvail(true);
     }
   }, []);
+
+  const [Days, setDays] = useState(0);
+  const [Hours, setHours] = useState(0);
+  const [Minute, setMinute] = useState(0);
+  const [Seconds, setSeconds] = useState(99);
+  const [registeredState, setRegisteredState] = useState("Register Now");
+  const updateTime = () => {
+    let time = new Date(currentEventApi[0].date);
+    let currTime = new Date();
+    let totalTimeDiff = (time.getTime() - currTime.getTime()) / 1000;
+
+    let daysDiff = Math.trunc(totalTimeDiff / (60 * 60 * 24));
+    totalTimeDiff = totalTimeDiff - daysDiff * 24 * 3600;
+
+    let hoursDiff = Math.trunc(totalTimeDiff / (60 * 60));
+    totalTimeDiff = totalTimeDiff - hoursDiff * 3600;
+
+    let minDiff = Math.trunc(totalTimeDiff / 60);
+    totalTimeDiff = totalTimeDiff - minDiff * 60;
+
+    let secDiff = Math.trunc(totalTimeDiff);
+    totalTimeDiff = totalTimeDiff - secDiff;
+
+    if (totalTimeDiff > 0) {
+      setDays(daysDiff);
+      setHours(hoursDiff);
+      setMinute(minDiff);
+      setSeconds(secDiff);
+    } else {
+      setSeconds(0);
+      setRegisteredState("Event Ended");
+      // document.getElementById("registerBtn").style.pointerEvents = "none";
+    }
+  };
+  useEffect(() => {
+    setInterval(() => updateTime(), 1000);
+  }, []);
+
   return (
     <div style={{ background: "black" }}>
       <section id="banner">
@@ -52,30 +90,31 @@ export default function EventPage({ navbar }) {
               <div className="banner-content-wrap">
                 <div className="countdown bg-style">
                   <div className="counter-day">
-                    <span className="days">--</span>
+                    <span className="days">{Days}</span>
                     <div className="smalltext">Days</div>
                   </div>
                   <div className="counter-hour">
-                    <span className="hours">--</span>
+                    <span className="hours">{Hours}</span>
                     <div className="smalltext">Hours</div>
                   </div>
                   <div className="counter-minute">
-                    <span className="minutes">--</span>
+                    <span className="minutes">{Minute}</span>
                     <div className="smalltext">Minutes</div>
                   </div>
                   <div className="counter-second">
-                    <span className="seconds">--</span>
+                    <span className="seconds">{Seconds}</span>
                     <div className="smalltext">Seconds</div>
                   </div>
                 </div>
                 <h1 className="banner-title">{currentEventApi[0].name}</h1>
                 <h2 className="banner-subtitle">
-                  {currentEventApi[0].date} - {currentEventApi[0].time}
+                  {currentEventApi[0].date.replace("T", " ")}
                 </h2>
                 <h3 className="banner-desc">{currentEventApi[0].venue}</h3>
-                <p className="banner-btn1">
+
+                <p id="registerBtn" className="banner-btn1">
                   <a href="www.google.com" className="btn1 btn-primary">
-                    Register Now
+                    {registeredState}
                   </a>
                 </p>
               </div>

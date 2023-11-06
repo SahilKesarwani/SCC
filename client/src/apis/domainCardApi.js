@@ -17,7 +17,6 @@ const domainsApi = [
       Step8: "GIT",
       Step9: "Basecamp",
       Step10: "Work on Projects",
-
     },
     roadmapLink: "https://roadmap.sh/full-stack",
     videoLinks: [
@@ -74,7 +73,6 @@ const domainsApi = [
       Step13: "Testing",
       Step14: "Distribution:Google Play Store",
       Step15: "Work on Projects",
-
     },
     roadmapLink: "https://roadmap.sh/android",
     videoLinks: [
@@ -128,7 +126,6 @@ const domainsApi = [
       Step9: "Data Visualization",
       Step10: "Deployement",
       Step11: "Work on Projects",
-
     },
     roadmapLink: "https://roadmap.sh/ai-data-scientist",
     videoLinks: [
@@ -177,9 +174,8 @@ const domainsApi = [
       Step5: "Cloud Skills And Knowledge",
       Step6: "Programming Skills And Knowledge",
       Step7: "Work on Projects",
-
     },
-    roadmapLink:"https://roadmap.sh/cyber-security",
+    roadmapLink: "https://roadmap.sh/cyber-security",
     videoLinks: [
       {
         titleText: "Cyber Security Course By Simplilearn",
@@ -229,9 +225,8 @@ const domainsApi = [
       Step8: "Business Intelligence",
       Step9: "Work on Projects",
       Step10: "Work on Projects",
-
     },
-    roadmapLink:"https://roadmap.sh/ai-data-scientist",
+    roadmapLink: "https://roadmap.sh/ai-data-scientist",
     videoLinks: [
       {
         titleText:
@@ -271,9 +266,8 @@ const domainsApi = [
       Step5: "Python Libraries",
       Step6: "Deployment",
       Step7: "Work on Projects",
-
     },
-    roadmapLink:"https://roadmap.sh/ai-data-scientist",
+    roadmapLink: "https://roadmap.sh/ai-data-scientist",
     videoLinks: [
       {
         titleText: "Andrew Ng's Machine Learning Course (Coursera)",
