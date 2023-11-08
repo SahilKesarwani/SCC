@@ -1,7 +1,7 @@
 const currentEventApi = [
   {
     name: "Hackverse",
-    date: "2023-10-30T22:07:00",
+    date: "2023-11-9T22:11:55",
     venue: "Coding Ninjas",
   },
 ];
