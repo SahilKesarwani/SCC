@@ -45,6 +45,7 @@ export default function EventPage({ navbar }) {
   const [registeredState, setRegisteredState] = useState("Register Now");
   const updateTime = () => {
     let time = new Date(currentEventApi[0].date);
+    // console.log(time);
     let currTime = new Date();
     let totalTimeDiff = (time.getTime() - currTime.getTime()) / 1000;
 
@@ -61,10 +62,10 @@ export default function EventPage({ navbar }) {
     totalTimeDiff = totalTimeDiff - secDiff;
 
     if (totalTimeDiff > 0) {
-      setDays(daysDiff);
-      setHours(hoursDiff);
-      setMinute(minDiff);
-      setSeconds(secDiff);
+    setDays(daysDiff);
+    setHours(hoursDiff);
+    setMinute(minDiff);
+    setSeconds(secDiff);
     } else {
       setSeconds(0);
       setRegisteredState("Event Ended");
