@@ -104,7 +104,7 @@ export default function OurTeamPage({ navbar }) {
               </div>
               <div className="textBox">
                 <p>Pragati Kesarwani</p>
-                <div className="post">Public Relation Head</div>
+                <div className="post">President</div>
                 <div className="brief">
                   Batch: 2019-23
                   <br />
