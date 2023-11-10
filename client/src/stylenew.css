@@ -74,7 +74,6 @@ a {
 }
 
 @keyframes astronaut {
-
   0%,
   100% {
     top: 10%;
@@ -1137,7 +1136,8 @@ body {
   position: absolute;
   inset: 0px;
   transform: translate(10px, 14px);
-  animation: error404TextShadowAnime 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  animation: error404TextShadowAnime 3s cubic-bezier(0.445, 0.05, 0.55, 0.95)
+    infinite;
 }
 
 .error404Character {
@@ -1150,7 +1150,6 @@ body {
 }
 
 @keyframes error404TextAnime {
-
   0%,
   100% {
     transform: translateY(0%);
@@ -1162,7 +1161,6 @@ body {
 }
 
 @keyframes error404TextShadowAnime {
-
   0%,
   100% {
     transform: translate(0, 0);
@@ -1317,9 +1315,11 @@ body {
 .third {
   width: 100vw;
   height: 123vh;
-  background: linear-gradient(25deg,
-      rgba(255, 7, 99, 0.65) 5%,
-      rgba(104, 89, 222, 0.65) 100%);
+  background: linear-gradient(
+    25deg,
+    rgba(255, 7, 99, 0.65) 5%,
+    rgba(104, 89, 222, 0.65) 100%
+  );
   backdrop-filter: blur(100px);
   display: flex;
   justify-content: center;
@@ -1686,7 +1686,6 @@ body {
 }
 
 @keyframes h1Anime {
-
   0%,
   19%,
   21%,
@@ -1836,29 +1835,29 @@ section {
   box-shadow: 0 60px 40px -40px rgba(0, 0, 0, 0.3);
 }
 
-.countdown.bg-style>div {
+.countdown.bg-style > div {
   margin: 0 30px;
 }
 
-.countdown>div.counter-day {
+.countdown > div.counter-day {
   color: #ff0763;
 }
 
-.countdown>div {
+.countdown > div {
   display: inline-block;
   margin: 0 50px;
   text-align: center;
   font-family: Lato, sans-serif;
 }
 
-.countdown.bg-style>div.counter-day .days {
+.countdown.bg-style > div.counter-day .days {
   background: #f44336;
   background: -moz-linear-gradient(145deg, #f44336 0%, #d84315 100%);
   background: -webkit-linear-gradient(145deg, #f44336 0%, #d84315 100%);
   background: linear-gradient(145deg, #f44336 0%, #d84315 100%);
 }
 
-.countdown.bg-style div>span {
+.countdown.bg-style div > span {
   font-size: 28px;
   width: 65px;
   height: 60px;
@@ -1869,17 +1868,17 @@ section {
   color: #fff;
 }
 
-.countdown div>span {
+.countdown div > span {
   line-height: 100%;
   font-size: 62px;
   font-weight: 700;
 }
 
-.countdown.bg-style>div.counter-day .smalltext {
+.countdown.bg-style > div.counter-day .smalltext {
   color: #f44336;
 }
 
-.countdown.bg-style div>.smalltext {
+.countdown.bg-style div > .smalltext {
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -1892,33 +1891,33 @@ section {
   margin-top: 10px;
 }
 
-.countdown.bg-style>div {
+.countdown.bg-style > div {
   margin: 0 30px;
 }
 
-.countdown>div.counter-hour {
+.countdown > div.counter-hour {
   color: #ffc107;
 }
 
-.countdown>div {
+.countdown > div {
   display: inline-block;
   margin: 0 50px;
   text-align: center;
   font-family: Lato, sans-serif;
 }
 
-.countdown.bg-style>div.counter-hour .hours {
+.countdown.bg-style > div.counter-hour .hours {
   background: #03a9f4;
   background: -moz-linear-gradient(145deg, #03a9f4 0%, #1e88e5 100%);
   background: -webkit-linear-gradient(145deg, #03a9f4 0%, #1e88e5 100%);
   background: linear-gradient(145deg, #03a9f4 0%, #1e88e5 100%);
 }
 
-.countdown.bg-style>div.counter-hour .smalltext {
+.countdown.bg-style > div.counter-hour .smalltext {
   color: #8bc34a;
 }
 
-.countdown.bg-style div>.smalltext {
+.countdown.bg-style div > .smalltext {
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -1931,7 +1930,7 @@ section {
   margin-top: 10px;
 }
 
-.countdown.bg-style div>span {
+.countdown.bg-style div > span {
   font-size: 28px;
   width: 65px;
   height: 60px;
@@ -1942,37 +1941,37 @@ section {
   color: #fff;
 }
 
-.countdown div>span {
+.countdown div > span {
   line-height: 100%;
   font-size: 62px;
   font-weight: 700;
 }
 
-.countdown.bg-style div>.smalltext {
+.countdown.bg-style div > .smalltext {
   font-size: 20px;
   text-transform: capitalize;
 }
 
-.countdown.bg-style>div {
+.countdown.bg-style > div {
   margin: 0 30px;
 }
 
-.countdown>div.counter-minute {
+.countdown > div.counter-minute {
   color: #03a9f4;
 }
 
-.countdown>div.counter-minute {
+.countdown > div.counter-minute {
   color: #03a9f4;
 }
 
-.countdown.bg-style>div.counter-minute .minutes {
+.countdown.bg-style > div.counter-minute .minutes {
   background: #8bc34a;
   background: -moz-linear-gradient(145deg, #8bc34a 0%, #689f38 100%);
   background: -webkit-linear-gradient(145deg, #8bc34a 0%, #689f38 100%);
   background: linear-gradient(145deg, #8bc34a 0%, #689f38 100%);
 }
 
-.countdown.bg-style div>span {
+.countdown.bg-style div > span {
   font-size: 28px;
   width: 65px;
   height: 60px;
@@ -1983,13 +1982,13 @@ section {
   color: #fff;
 }
 
-.countdown div>span {
+.countdown div > span {
   line-height: 100%;
   font-size: 62px;
   font-weight: 700;
 }
 
-.countdown.bg-style div>span {
+.countdown.bg-style div > span {
   font-size: 28px;
   width: 65px;
   height: 60px;
@@ -2000,7 +1999,7 @@ section {
   color: #fff;
 }
 
-.countdown.bg-style div>.smalltext {
+.countdown.bg-style div > .smalltext {
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -2013,13 +2012,13 @@ section {
   margin-top: 10px;
 }
 
-.countdown div>span {
+.countdown div > span {
   line-height: 100%;
   font-size: 62px;
   font-weight: 700;
 }
 
-.countdown.bg-style div>.smalltext {
+.countdown.bg-style div > .smalltext {
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -2032,29 +2031,29 @@ section {
   margin-top: 10px;
 }
 
-.countdown.bg-style>div {
+.countdown.bg-style > div {
   margin: 0 30px;
 }
 
-.countdown>div.counter-second {
+.countdown > div.counter-second {
   color: #8bc34a;
 }
 
-.countdown>div {
+.countdown > div {
   display: inline-block;
   margin: 0 50px;
   text-align: center;
   font-family: Lato, sans-serif;
 }
 
-.countdown.bg-style>div.counter-second .seconds {
+.countdown.bg-style > div.counter-second .seconds {
   background: #ffc107;
   background: -moz-linear-gradient(145deg, #ffc107 0%, #f57f17 100%);
   background: -webkit-linear-gradient(145deg, #ffc107 0%, #f57f17 100%);
   background: linear-gradient(145deg, #ffc107 0%, #f57f17 100%);
 }
 
-.countdown.bg-style div>span {
+.countdown.bg-style div > span {
   font-size: 28px;
   width: 65px;
   height: 60px;
@@ -2065,17 +2064,17 @@ section {
   color: #fff;
 }
 
-.countdown div>span {
+.countdown div > span {
   line-height: 100%;
   font-size: 62px;
   font-weight: 700;
 }
 
-.countdown.bg-style>div.counter-second .smalltext {
+.countdown.bg-style > div.counter-second .smalltext {
   color: #ffc107;
 }
 
-.countdown.bg-style div>.smalltext {
+.countdown.bg-style div > .smalltext {
   font-size: 20px;
   text-transform: capitalize;
 }
@@ -2202,9 +2201,11 @@ h3 {
   height: 100%;
   top: 0;
   z-index: -1;
-  background: linear-gradient(24deg,
-      rgba(255, 7, 99, 0.65) 5%,
-      rgba(104, 89, 222, 0.65) 100%);
+  background: linear-gradient(
+    24deg,
+    rgba(255, 7, 99, 0.65) 5%,
+    rgba(104, 89, 222, 0.65) 100%
+  );
 }
 
 .container1 {
@@ -2332,9 +2333,11 @@ h3 {
 }
 
 .visionaryBox {
-  background: linear-gradient(145deg,
-      rgba(255, 7, 99, 0.65) 5%,
-      rgba(104, 89, 222, 0.65) 100%);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 7, 99, 0.65) 5%,
+    rgba(104, 89, 222, 0.65) 100%
+  );
   padding: 8em 1em 0 1em;
   display: flex;
   flex-direction: column;
@@ -2635,7 +2638,7 @@ label::before {
   color: #333;
 }
 
-#accordion label+input[type="radio"] {
+#accordion label + input[type="radio"] {
   display: none;
 }
 
@@ -2647,7 +2650,7 @@ label::before {
   transition: max-height 0.5s, padding 0.5s;
 }
 
-#accordion label+input[type="radio"]:checked+.content1 {
+#accordion label + input[type="radio"]:checked + .content1 {
   content: "x";
   max-height: 400px;
   padding: 10px 10px 20px;
@@ -2720,6 +2723,36 @@ label::before {
   text-align: center;
   font-family: "Titillium Web", sans-serif;
 }
+.carouselImgModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+.carouselImgModal img {
+  width: 70vw;
+  height: 90vh;
+  object-fit: contain;
+}
+.carouselImgModal .closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+.carouselImgModal .closeBtn:hover {
+  transform: scale(1.1);
+}
 
 .carouselHeading {
   position: relative;
@@ -2730,7 +2763,7 @@ label::before {
 
 .carouselllItem {
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .carouselllItem img {
@@ -2822,7 +2855,6 @@ label::before {
   }
 }
 
-
 .alertEvent a {
   padding: 0.5em;
 }
@@ -2846,13 +2878,11 @@ label::before {
   background: #d3004e;
 }
 
-
 /*media query*/
 @media screen and (max-width: 480px) {
   .domainHeading h1 {
     font-size: 30px;
   }
-
 
   .eventHeaderr h1 {
     text-align: center;
@@ -3144,7 +3174,6 @@ label::before {
     justify-content: center;
     align-items: center;
     width: 100%;
-
   }
 
   .alertEventHeading h3 {

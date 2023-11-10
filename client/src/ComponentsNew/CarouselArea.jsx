@@ -1,10 +1,25 @@
 import SccCarousel from "./SccCarousel";
 import sccCarouselApi from "../apis/sccCarouselApi";
 import DomainContainer from "./DomainContainer";
+import { useRef, useState } from "react";
 
 export default function CarouselArea() {
+  const [modalImage, setModalImage] = useState(null);
+  const handleImgClick = (e) => {
+    const img = e.target.src;
+    setModalImage(img);
+  };
+  const handleCloseModal = () => {
+    setModalImage(null);
+  };
   return (
     <>
+      {modalImage && (
+        <div className="carouselImgModal" >
+          <img src={modalImage} />
+          <span className="material-symbols-outlined closeBtn" onClick={handleCloseModal}>close</span>
+        </div>
+      )}
       <div className="carouselArea">
         <div className="overlay"></div>
         <div
@@ -37,7 +52,14 @@ export default function CarouselArea() {
         >
           {sccCarouselApi.map((carouselItem) => {
             const { id, href, imgSrc } = carouselItem;
-            return <SccCarousel key={id} href={href} imgSrc={imgSrc} />;
+            return (
+              <SccCarousel
+                key={id}
+                href={href}
+                imgSrc={imgSrc}
+                handleImgClick={handleImgClick}
+              />
+            );
           })}
         </div>
         <DomainContainer />
