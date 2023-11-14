@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gauriAvatar from "../images/gauriAvatar.png";
+import rahulAvatar from "../images/rahulAvatar.png";
 
 export default function DevelopersPage({ navbar }) {
   useEffect(() => {
@@ -56,9 +57,33 @@ export default function DevelopersPage({ navbar }) {
         <div className="meetDevSec1Right">
           <p className="meetDevSec1RightSubHead" ref={works}></p>
           <h2 className="meetDevSec1RightHead">I'm Gauri Gupta</h2>
+
+          <p className="meetDevSec2RightSubHead">
+            I'm a 3rd year college student of Batch 2021-25. I'm pursuing BTech
+            but beside this I've learned my other skills such as Full Stack Web
+            Development, Competitive Programming and Canva. I've taken part in
+            many events and also have organised many events at the college
+            level.
+          </p>
         </div>
       </div>
-      <div className="meetDevSec1">
+      <div className="meetDevSec2">
+        <div className="meetDevSec1Left">
+          <div style={{ backgroundImage: `url(${rahulAvatar})` }}></div>
+        </div>
+        <div className="meetDevSec1Right">
+          <p className="meetDevSec1RightSubHead" ></p>
+          <h2 className="meetDevSec1RightHead">I'm Rahul Singh</h2>
+
+          <p className="meetDevSec2RightSubHead" style={{textAlign:"justify", marginLeft:"6em"}}>
+            Hi, I'm Rahul Singh who has learned few skills like Full Stack Web
+            Development, Competitive Programming and Canva. While being a 3rd
+            year student of Batch 2021-25, I've also learnt the art of teaching
+            and cooking. ;D
+          </p>
+        </div>
+      </div>
+      {/* <div className="meetDevSec1">
         <div className="meetDevSec1Left">
           <img src="https://media.licdn.com/dms/image/D4D03AQHX0IG5uVxBMg/profile-displayphoto-shrink_800_800/0/1677298182571?e=1703721600&v=beta&t=tMyxJFsUcl4TnLiQ0wUo_fX8bX7h5_0zQZtMIEePnys" className="meetDevProfilePic"></img>
         </div>
@@ -67,7 +92,7 @@ export default function DevelopersPage({ navbar }) {
           <p className="meetDevSec2RightSubHead">I'm a 3rd year college student of Batch 2021-25. I'm pursuing BTech but beside this I've learned my other skills such as Full Stack Web Development, Competitive Programming and Canva. I've taken part in many events and also have organised many events at the college level.</p>
           
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

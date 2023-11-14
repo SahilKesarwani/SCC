@@ -2899,16 +2899,26 @@ label::before {
   border-radius: 100%;
   background-position: center;
   background-position-y: 10px;
-  background-size:120% ;
+  background-size: 120%;
   /* box-shadow: -2px -2px #316ce2; */
   animation: developerLogoAnime 2s linear infinite;
 }
 @keyframes developerLogoAnime {
-  0%{ box-shadow: -2px -2px 20px #316ce2;}
-  25%{ box-shadow: 2px -2px 20px #316ce2;}
-  50%{ box-shadow: -2px 2px 20px #316ce2;}
-  75%{ box-shadow: 2px -2px 20px #316ce2;}
-  75%{ box-shadow: -2px -2px  20px #316ce2;}
+  0% {
+    box-shadow: -2px -2px 20px #316ce2;
+  }
+  25% {
+    box-shadow: 2px -2px 20px #316ce2;
+  }
+  50% {
+    box-shadow: -2px 2px 20px #316ce2;
+  }
+  75% {
+    box-shadow: 2px -2px 20px #316ce2;
+  }
+  75% {
+    box-shadow: -2px -2px 20px #316ce2;
+  }
 }
 .meetDevSec1Right {
   flex: 1 1;
@@ -2922,21 +2932,21 @@ label::before {
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: relative;
-  padding-right:0.2em ;
+  padding-right: 0.2em;
   animation: typeWriterBorder 1s linear infinite;
 }
 @keyframes typeWriterBorder {
-  0%{
+  0% {
     border-right: 0.15em solid transparent;
   }
-  100%{
+  100% {
     border-right: 0.15em solid orange;
   }
 }
 
 .meetDevSec1RightHead {
   font-size: 4em;
-  line-height: 10px;
+  margin-bottom: 90px;
   color: white;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -2955,19 +2965,27 @@ label::before {
   border-radius: 10px;
 }
 
-.meetDevProfilePic{
+.meetDevProfilePic {
   height: 400px;
   width: 300px;
   object-fit: cover;
 }
-.meetDevSec2Right{
+.meetDevSec2 {
+  height: 100vh;
+  background: linear-gradient(45deg, #0b001e, #020315);
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: row-reverse;
+}
+.meetDevSec2Right {
   flex: 1 1;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
-.meetDevSec2RightHead{
+.meetDevSec2RightHead {
   font-size: 3em;
   line-height: 10px;
   color: white;
@@ -2978,10 +2996,7 @@ label::before {
   text-decoration: underline;
 }
 
-.meetDevSec2RightSubHead{
-  margin-top: 10px;
-  width: 80%;
-  text-align: justify;
+.meetDevSec2RightSubHead {
 }
 /*media query*/
 @media screen and (max-width: 480px) {
@@ -3297,5 +3312,15 @@ label::before {
     left: 23%;
     margin: 0;
     display: none;
+  }
+  .meetDevSec1{
+    padding-top: 5em;
+    flex-direction: column;
+  }
+  .meetDevSec2{
+    flex-direction: column-reverse;
+  }
+  .meetDevSec1RightHead{
+    font-size: 3em;
   }
 }
