@@ -1,5 +1,6 @@
 import React from "react";
 import "../styleFooter.css";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -71,7 +72,8 @@ export default function Footer() {
               <span>Copyright © 2022 SCC. All Rights Reserved.</span>
             </div>
             <div className="copyright-info">
-              <span>Made with (❤️) by Rahul Singh and Gauri Gupta</span>
+              <span>Made with (❤️) by Rahul Singh and Gauri Gupta -> </span>
+              <Link to="/developerspage" className="meetDevText">Meet the developers</Link>
             </div>
           </div>
         </div>

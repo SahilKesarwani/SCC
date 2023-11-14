@@ -12,6 +12,7 @@ import About from "./ComponentsNew/About";
 import ParticularEventPage from "./ComponentsNew/ParticularEventPage";
 import Error404 from "./ComponentsNew/Error404";
 import Footer from "./ComponentsNew/Footer";
+import DevelopersPage from "./ComponentsNew/DevelopersPage";
 
 const App = () => {
   const navbar = useRef("");
@@ -40,6 +41,7 @@ const App = () => {
           element={<OurTeamPage navbar={navbar} />}
         ></Route>
         <Route exact path="/about" element={<About navbar={navbar} />}></Route>
+        <Route exact path="/developersPage" element={<DevelopersPage navbar={navbar}/>}></Route>
         <Route path="*" element={<Error404 navbar={navbar} />}></Route>
       </Routes>
       <Footer />
