@@ -135,3 +135,11 @@
   justify-content: space-between;
   align-items: baseline;
 }
+.meetDevText{
+  opacity: 0.7;
+}
+.meetDevText:hover{
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
