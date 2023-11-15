@@ -1644,11 +1644,7 @@ body {
 .stepContainer2 {
   font-size: 17px;
 }
-.fb-form {
-  width: 40%;
-  height: 30%;
-  background-color: #03a9f4;
-}
+
 @keyframes toprAnime {
   100% {
     right: 180px;
@@ -2168,7 +2164,26 @@ h3 {
   background: #ff0763;
   border: 2px solid transparent;
 }
-
+.fb-btn {
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  top: 5px;
+  cursor: pointer;
+}
+.fb-form {
+  display: flex;
+  position: relative;
+  top: -3px;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 .btn1.btn-primary,
 .btn1-dark,
 .btn1-border {
@@ -2735,6 +2750,8 @@ label::before {
   flex-direction: column;
   justify-content: center;
   align-items: centre;
+  text-align: justify;
+  padding: 10px;
 }
 
 .domainHeading {
@@ -3343,4 +3360,22 @@ label::before {
   .meetDevSec1RightHead {
     font-size: 3em;
   }
+  .form-group {
+    flex-direction: column;
+    display: flex;
+    gap: 0;
+    position: relative;
+    left: 10px;
+  }
+  .fb-form{
+    top: -30px;
+  }
+  /* .footer-logo img {
+    position: relative;
+    top: 18px;
+  }
+  .footer-logo img {
+    position: relative;
+    top: 14px;
+  } */
 }

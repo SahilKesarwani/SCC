@@ -44,8 +44,37 @@ export default function DevelopersPage({ navbar }) {
       }, 2000);
     }
   };
+  const works2 = useRef("");
+  const text2 = [
+    "WebDeveloper",
+    "WebDesigner",
+    "Competitive Programmer",
+    "Vice President",
+  ];
+  let i2 = 0,
+    j2 = 0;
+  const typeWriter2 = () => {
+    let workDiv2 = works2.current;
+    if (!workDiv2) return;
+    if (i2 < text2[j2].length) {
+      workDiv2.innerHTML += text2[j2][i2];
+      i2++;
+      setTimeout(typeWriter2, 60);
+    } else {
+      i2 = 0;
+      j2++;
+      if (j2 >= text2.length) j2 = 0;
+      setTimeout(() => {
+        workDiv2.innerHTML = "";
+        typeWriter2();
+      }, 2000);
+    }
+  };
   useEffect(() => {
     typeWriter();
+  }, []);
+  useEffect(() => {
+    typeWriter2();
   }, []);
 
   return (
@@ -72,10 +101,13 @@ export default function DevelopersPage({ navbar }) {
           <div style={{ backgroundImage: `url(${rahulAvatar})` }}></div>
         </div>
         <div className="meetDevSec1Right">
-          <p className="meetDevSec1RightSubHead" ></p>
+          <p className="meetDevSec1RightSubHead" ref={works2}></p>
           <h2 className="meetDevSec1RightHead">I'm Rahul Singh</h2>
 
-          <p className="meetDevSec2RightSubHead" style={{textAlign:"justify", marginLeft:"6em"}}>
+          <p
+            className="meetDevSec2RightSubHead"
+            style={{ textAlign: "justify", marginLeft: "6em" }}
+          >
             Hi, I'm Rahul Singh who has learned few skills like Full Stack Web
             Development, Competitive Programming and Canva. While being a 3rd
             year student of Batch 2021-25, I've also learnt the art of teaching
