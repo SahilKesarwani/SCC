@@ -18,7 +18,10 @@
   background-size: contain;
   margin-left: 2em;
 }
-
+.shambhunath{
+  background-image:url("./images/sietLogo.png") ;
+  background-color: white;
+}
 .menu {
   list-style-type: none;
   display: flex;

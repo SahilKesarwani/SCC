@@ -122,8 +122,9 @@ export default function DomainPage({ navbar }) {
                           <div className="rightrr"></div>
                           <div className="toprr"></div>
                           <div className="bottomrr"></div>
-
-                          {steps[0] + " : " + steps[1]}
+                          <div className="stepText">
+                            {steps[0]} :{steps[1]}
+                          </div>
                         </div>
                       </div>
                     </div>

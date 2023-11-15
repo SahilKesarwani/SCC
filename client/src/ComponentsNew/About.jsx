@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import AboutCard from "./AboutCard";
 
+import ContestImg from '../images/WhatDoWeDo/Contests.png'
+import HackathonsImg from '../images/WhatDoWeDo/Hackathons.png'
+import BootCampsImg from '../images/WhatDoWeDo/Bootcamps.png'
+import Meetups from '../images/WhatDoWeDo/Meetups.png'
+
 export default function About({ navbar }) {
   useEffect(() => {
     const navBar = navbar.current;
@@ -33,7 +38,6 @@ export default function About({ navbar }) {
       }
     });
   }, []);
-
   return (
     <>
       <div className="aboutBackground">
@@ -82,36 +86,40 @@ export default function About({ navbar }) {
               </div>
             </div>
             <div className="particularEventSection1div1carousel">
-              <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 1.jpg" />
+            <div className="particularEventSection1div1carouselImageCards">
+                <img alt="" src="./images/AboutPageImages/30daysChallenge.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 11.jpg" />
+                <img alt="" src="./images/AboutPageImages/bootcamp.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 3.jpg" />
+                <img alt="" src="./images/AboutPageImages/hackverse.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 10.jpg" />
+                <img alt="" src="./images/AboutPageImages/oath_to_code.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 5.jpg" />
+                <img alt="" src="./images/AboutPageImages/POTD.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 6.jpg" />
+                <img alt="" src="./images/AboutPageImages/30daysChallenge.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 12.jpg" />
+                <img alt="" src="./images/AboutPageImages/bootcamp.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 8.jpg" />
+                <img alt="" src="./images/AboutPageImages/hackverse.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 9.jpg" />
+                <img alt="" src="./images/AboutPageImages/oath_to_code.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/pic 10.jpg" />
+                <img alt="" src="./images/AboutPageImages/POTD.jpg" />
               </div>
+              
+             
+              
+              
             </div>
           </div>
           <div className="particularEventSection1div2">
@@ -151,7 +159,7 @@ export default function About({ navbar }) {
           <div className="fourth">
             <AboutCard
               title="Hackthon"
-              imgSrc="https://tse4.mm.bing.net/th?id=OIP.XM6Bt1eudAsRjY610zeemgHaEK&pid=Api&P=0&h=180"
+              imgSrc={ContestImg}
               description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
             aspernatur quos, minus sint deleniti commodi repellat iure inventore
             voluptatem cum nobis pariatur suscipit architecto consequatur, ex
@@ -159,7 +167,7 @@ export default function About({ navbar }) {
             />
             <AboutCard
               title="Hackthon"
-              imgSrc="https://tse4.mm.bing.net/th?id=OIP.XM6Bt1eudAsRjY610zeemgHaEK&pid=Api&P=0&h=180"
+              imgSrc={HackathonsImg}
               description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
             aspernatur quos, minus sint deleniti commodi repellat iure inventore
             voluptatem cum nobis pariatur suscipit architecto consequatur, ex
@@ -167,7 +175,7 @@ export default function About({ navbar }) {
             />
             <AboutCard
               title="Hackthon"
-              imgSrc="https://tse4.mm.bing.net/th?id=OIP.XM6Bt1eudAsRjY610zeemgHaEK&pid=Api&P=0&h=180"
+              imgSrc={BootCampsImg}
               description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
             aspernatur quos, minus sint deleniti commodi repellat iure inventore
             voluptatem cum nobis pariatur suscipit architecto consequatur, ex
@@ -175,7 +183,7 @@ export default function About({ navbar }) {
             />
             <AboutCard
               title="Hackthon"
-              imgSrc="https://tse4.mm.bing.net/th?id=OIP.XM6Bt1eudAsRjY610zeemgHaEK&pid=Api&P=0&h=180"
+              imgSrc={Meetups}
               description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
             aspernatur quos, minus sint deleniti commodi repellat iure inventore
             voluptatem cum nobis pariatur suscipit architecto consequatur, ex

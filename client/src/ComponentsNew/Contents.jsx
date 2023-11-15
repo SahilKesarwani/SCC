@@ -38,6 +38,9 @@ export default function Contents() {
               </div>
             </div>
           </div>
+          <div className="lineDesc">
+            SIET Coding Club helps you to pave the way towards excellence.
+          </div>
         </div>
       </div>
     </>
