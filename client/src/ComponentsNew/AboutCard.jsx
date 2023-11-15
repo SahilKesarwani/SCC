@@ -27,7 +27,7 @@ export default function AboutCard({ title, imgSrc, description }) {
             <img src={imgSrc} />
           </div>
           <div className="flip-card-back">
-            <p>Site under development
+            <p>{description}
             </p>
           </div>
         </div>

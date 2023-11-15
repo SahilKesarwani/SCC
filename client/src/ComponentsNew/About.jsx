@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import AboutCard from "./AboutCard";
 
-import ContestImg from '../images/WhatDoWeDo/Contests.png'
-import HackathonsImg from '../images/WhatDoWeDo/Hackathons.png'
-import BootCampsImg from '../images/WhatDoWeDo/Bootcamps.png'
-import Meetups from '../images/WhatDoWeDo/Meetups.png'
+import ContestImg from "../images/WhatDoWeDo/Contests.png";
+import HackathonsImg from "../images/WhatDoWeDo/Hackathons.png";
+import BootCampsImg from "../images/WhatDoWeDo/Bootcamps.png";
+import Meetups from "../images/WhatDoWeDo/Meetups.png";
 
 export default function About({ navbar }) {
   useEffect(() => {
@@ -86,8 +86,11 @@ export default function About({ navbar }) {
               </div>
             </div>
             <div className="particularEventSection1div1carousel">
-            <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/AboutPageImages/30daysChallenge.jpg" />
+              <div className="particularEventSection1div1carouselImageCards">
+                <img
+                  alt=""
+                  src="./images/AboutPageImages/30daysChallenge.jpg"
+                />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
                 <img alt="" src="./images/AboutPageImages/bootcamp.jpg" />
@@ -102,7 +105,10 @@ export default function About({ navbar }) {
                 <img alt="" src="./images/AboutPageImages/POTD.jpg" />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
-                <img alt="" src="./images/AboutPageImages/30daysChallenge.jpg" />
+                <img
+                  alt=""
+                  src="./images/AboutPageImages/30daysChallenge.jpg"
+                />
               </div>
               <div className="particularEventSection1div1carouselImageCards">
                 <img alt="" src="./images/AboutPageImages/bootcamp.jpg" />
@@ -116,10 +122,6 @@ export default function About({ navbar }) {
               <div className="particularEventSection1div1carouselImageCards">
                 <img alt="" src="./images/AboutPageImages/POTD.jpg" />
               </div>
-              
-             
-              
-              
             </div>
           </div>
           <div className="particularEventSection1div2">
@@ -160,18 +162,13 @@ export default function About({ navbar }) {
             <AboutCard
               title="Hackthon"
               imgSrc={ContestImg}
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            aspernatur quos, minus sint deleniti commodi repellat iure inventore
-            voluptatem cum nobis pariatur suscipit architecto consequatur, ex
-            autem illo nihil fugiat!"
+              description="SCC provides various coding contests to enhance and boost up the skills of the students. The winners of the contest gets awarded with prizes and certificates. Coding contest, generally have a set of programming questions which are to be solved by the contestants by writing a  computer program. The programs have to be effective  and efficient. These competitions provide a challenging environment where participants can solve complex problems within a given time limit."
             />
             <AboutCard
               title="Hackthon"
               imgSrc={HackathonsImg}
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            aspernatur quos, minus sint deleniti commodi repellat iure inventore
-            voluptatem cum nobis pariatur suscipit architecto consequatur, ex
-            autem illo nihil fugiat!"
+              description="SCC also provides hackathons. A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve or build new projects together. 
+              Previous year SCC provided a hackthon called hackverse to bring people together, and make them able to work as a team on a web development project and the winner team also got awarded with prizes and certificates"
             />
             <AboutCard
               title="Hackthon"
