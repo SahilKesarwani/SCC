@@ -173,10 +173,8 @@ export default function About({ navbar }) {
             <AboutCard
               title="Hackthon"
               imgSrc={BootCampsImg}
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            aspernatur quos, minus sint deleniti commodi repellat iure inventore
-            voluptatem cum nobis pariatur suscipit architecto consequatur, ex
-            autem illo nihil fugiat!"
+              description="SCC also had bootcamp. A bootcamp is a specialized, intensive training program designed to rapidly increase or significantly affect a participant's knowledge, abilities, or both. Importantly, bootcamp tasks provide participants with a wide range of practical skills depending on the topic, the level of intensity, and the length of time.
+              SCC Bootcamp is basically for providing knowledge that are related to programming"
             />
             <AboutCard
               title="Hackthon"
