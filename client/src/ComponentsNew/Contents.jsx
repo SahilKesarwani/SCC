@@ -25,9 +25,9 @@ export default function Contents() {
   return (
     <>
       <div className="contents">
-        <img src="./images/astronautBg_cleanup.png" className="astronautBg" />
-        <img src="./images/rectanglebox.png" className="astronautRectangle" />
-        <img src="./images/astronaut.png" className="astronaut" />
+        <img alt="" src="./images/astronautBg_cleanup.png" className="astronautBg" />
+        <img alt="" src="./images/rectanglebox.png" className="astronautRectangle" />
+        <img alt="" src="./images/astronaut.png" className="astronaut" />
         <div className="name">
           <div className="text">
             <div className="p">
