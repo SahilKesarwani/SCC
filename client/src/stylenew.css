@@ -3035,6 +3035,14 @@ label::before {
 
 .meetDevSec2RightSubHead {
 }
+.meetDevText {
+  opacity: 0.7;
+}
+.meetDevText:hover {
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
 /*media query*/
 @media screen and (max-width: 480px) {
   .domainHeading h1 {
@@ -3360,22 +3368,5 @@ label::before {
   .meetDevSec1RightHead {
     font-size: 3em;
   }
-  .form-group {
-    flex-direction: column;
-    display: flex;
-    gap: 0;
-    position: relative;
-    left: 10px;
-  }
-  .fb-form{
-    top: -30px;
-  }
-  /* .footer-logo img {
-    position: relative;
-    top: 18px;
-  }
-  .footer-logo img {
-    position: relative;
-    top: 14px;
-  } */
+  
 }

@@ -179,10 +179,9 @@ export default function About({ navbar }) {
             <AboutCard
               title="Hackthon"
               imgSrc={Meetups}
-              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-            aspernatur quos, minus sint deleniti commodi repellat iure inventore
-            voluptatem cum nobis pariatur suscipit architecto consequatur, ex
-            autem illo nihil fugiat!"
+              description="SCC also organize meet-up session  to socialize and collaborate around the common goal of sharing information.
+              Meetup is about connecting people with something in common
+              While meet-up like these have nothing to do with students subjectual knowledge, but it is very  important for overall learning and practical experience of a student for ongoing and upcoming technology for their better future."
             />
           </div>
         </div>

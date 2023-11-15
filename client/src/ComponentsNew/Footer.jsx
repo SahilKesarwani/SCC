@@ -9,38 +9,26 @@ export default function Footer() {
         <div className="container">
           <div className="row2">
             <div className="col-md-12">
-              {/* <div className="footer-menu">
-                <ul className="nav unstyled">
-                  <li>
-                    <a target="_blank" rel="noreferrer" href="www.google.com">Home</a>
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noreferrer" href="www.google.com">Blog</a>
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noreferrer" href="www.google.com">Tickets</a>
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noreferrer" href="www.google.com">Faq</a>
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noreferrer" href="www.google.com">Press</a>
-                  </li>
-                  <li>
-                    <a target="_blank" rel="noreferrer" href="www.google.com">Contact</a>
-                  </li>
-                </ul>
-              </div> */}
               <div className="footer-logo">
                 <img src={require("../images/logo.jpg")} alt="footer logo" />
                 <p>SIET Coding Club</p>
               </div>
               <div className="fb-form">
-                <form className="form-group">
+                <form
+                  className="form-group"
+                  action="https://formspree.io/f/xknlabok"
+                  method="POST"
+                >
                   <input
                     className="form-control"
                     id="fb-comment"
-                    name=""
+                    name="email"
+                    placeholder="Enter your email"
+                  />
+                  <input
+                    className="form-control"
+                    id="fb-comment"
+                    name="message"
                     placeholder="Tell us what you think"
                   />
                   <button className="fb-btn" type="submit">
