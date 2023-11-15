@@ -35,6 +35,19 @@ export default function Footer() {
                 <img src={require("../images/logo.jpg")} alt="footer logo" />
                 <p>SIET Coding Club</p>
               </div>
+              <div className="fb-form">
+                <form className="form-group">
+                  <input
+                    className="form-control"
+                    id="fb-comment"
+                    name=""
+                    placeholder="Tell us what you think"
+                  />
+                  <button className="fb-btn" type="submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
 
               <div className="footer-social">
                 <ul>
@@ -73,7 +86,9 @@ export default function Footer() {
             </div>
             <div className="copyright-info">
               <span>Made with (❤️) by Rahul Singh and Gauri Gupta -> </span>
-              <Link to="/developerspage" className="meetDevText">Meet the developers</Link>
+              <Link to="/developerspage" className="meetDevText">
+                Meet the developers
+              </Link>
             </div>
           </div>
         </div>

@@ -26,8 +26,9 @@ export default function Navbar({ navbar }) {
   return (
     <>
       <div className="navbar" ref={navbar}>
-        <Link to="/">
+        <Link to="/" style={{ display: "flex" }}>
           <div className="logoArea"></div>
+          <div className="logoArea shambhunath"></div>
         </Link>
         <div className="navCloseButton">
           <span className="material-symbols-outlined" id="openCloseNavBtn">
@@ -47,13 +48,13 @@ export default function Navbar({ navbar }) {
               </Link>
             </li>
             <li>
-              <Link to="/ourteam" onClick={toggleNav}>
-                Our Team
+              <Link to="/about" onClick={toggleNav}>
+                About
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={toggleNav}>
-                About
+              <Link to="/ourteam" onClick={toggleNav}>
+                Our Team
               </Link>
             </li>
           </ul>

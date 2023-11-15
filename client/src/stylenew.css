@@ -125,6 +125,15 @@ a {
   width: 109px;
   background: white;
 }
+.lineDesc {
+  font-size: 20px;
+  text-align: right;
+  font-family: "Titillium Web", sans-serif;
+  position: relative;
+  top: 250px;
+  width: 300px;
+  display: none;
+}
 
 .carouselArea {
   display: flex;
@@ -1568,7 +1577,7 @@ body {
 
 .steps {
   flex: 1;
-  width: 90%;
+  width: 102%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1577,8 +1586,12 @@ body {
   overflow: hidden;
   color: white;
   padding: 10px;
+  text-align: center;
 }
-
+.stepsHeading {
+  font-weight: 600;
+  text-decoration: underline;
+}
 .leftrr,
 .rightrr,
 .toprr,
@@ -1628,7 +1641,14 @@ body {
   transform: translateX(-110%);
   animation: bottomrAnime 1s linear infinite;
 }
-
+.stepContainer2 {
+  font-size: 17px;
+}
+.fb-form {
+  width: 40%;
+  height: 30%;
+  background-color: #03a9f4;
+}
 @keyframes toprAnime {
   100% {
     right: 180px;
@@ -2708,7 +2728,7 @@ label::before {
 }
 
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #29045a;
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -3313,14 +3333,14 @@ label::before {
     margin: 0;
     display: none;
   }
-  .meetDevSec1{
+  .meetDevSec1 {
     padding-top: 5em;
     flex-direction: column;
   }
-  .meetDevSec2{
+  .meetDevSec2 {
     flex-direction: column-reverse;
   }
-  .meetDevSec1RightHead{
+  .meetDevSec1RightHead {
     font-size: 3em;
   }
 }
