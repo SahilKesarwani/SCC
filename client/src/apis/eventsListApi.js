@@ -107,12 +107,11 @@ const eventsListApi = [
     date: "11 Feb 2023",
     registrations: "160",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem laborum facere fugit possimus ratione nexercitationem vitae enim distinctio officia, vel ullam atque porro assumenda! Voluptatibus ipsa excepturi corporis in voluptate numquam, quo, maiores accusantium voluptas fugit quaerat hic ea voluptatum a commodi amet explicabo! Fuga dolorum quasi dolorem velit magnam aliquam recusandae maxime ducimus facere repudiandae accusamus repellendus fugit aspernatur ipsam suscipit necessitatibus accusantium reprehenderit, explicabo nulla nihil aliquid? Ea ipsum odit maiores, nisi adipisci laboriosam eligendi labore ratione. Modi aspernatur laudantium hic, doloremque itaque quam, corporis exercitationem accusamus assumenda reprehenderit pariatur quasi odio sed id aperiam deserunt asperiores!",
+      " Oath to Code was an online coding competition that was held at 11-02-2023 in association with Coding Ninjas. It was organised as a part of Hackathon which consisted of two contests - Oath To Code and HackVerse. It was conducted as an elementary round in which the top 30 participants were allowed to take past in  the HackVerse",
     eventDetails: [
-      "This contest will consist of 4 DSA coding questions.",
+      "This contest will consist of 4 coding questions.",
       "The time limit for the contest will be 120 minutes.",
-      "The top coders will be rewarded. Aarambh will be the first level up milestone of the SCC and the programmers to compete with the fellow coders with mutual interests in the Technical Arena.",
-      "Date and Time: 12 May 2022, 07:00 PM (IST)",
+      "Date and Time: 11 Feb 2023, 08:00 PM (IST)",
     ],
     imageURL: [
       {
@@ -182,12 +181,11 @@ const eventsListApi = [
     date: "16 Feb 2023",
     registrations: "160",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem laborum facere fugit possimus ratione nexercitationem vitae enim distinctio officia, vel ullam atque porro assumenda! Voluptatibus ipsa excepturi corporis in voluptate numquam, quo, maiores accusantium voluptas fugit quaerat hic ea voluptatum a commodi amet explicabo! Fuga dolorum quasi dolorem velit magnam aliquam recusandae maxime ducimus facere repudiandae accusamus repellendus fugit aspernatur ipsam suscipit necessitatibus accusantium reprehenderit, explicabo nulla nihil aliquid? Ea ipsum odit maiores, nisi adipisci laboriosam eligendi labore ratione. Modi aspernatur laudantium hic, doloremque itaque quam, corporis exercitationem accusamus assumenda reprehenderit pariatur quasi odio sed id aperiam deserunt asperiores!",
+      "HackVerse was a coding contest which was organised as a part of Hackathon which consisted of two contests - Oath To Code and HackVerse.The top 30 finalists of Oath to Code were allowed to participate in Hackathon in which they were required to make a Front End Website either on Portfolio or E-Commerce.This contest was held for a week from 16-02-2023 to 23-02-2023 in which team Midnight Coders held the first position. ",
     eventDetails: [
-      "This contest will consist of 4 DSA coding questions.",
-      "The time limit for the contest will be 120 minutes.",
-      "The top coders will be rewarded. Aarambh will be the first level up milestone of the SCC and the programmers to compete with the fellow coders with mutual interests in the Technical Arena.",
-      "Date and Time: 12 May 2022, 07:00 PM (IST)",
+      "The time limit for the contest will be 1 week.",
+      "The top coders will be rewarded.",
+      "Date and Time: 16 February 2023, 08:00 PM (IST)",
     ],
     imageURL: [
       {

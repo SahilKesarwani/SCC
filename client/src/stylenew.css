@@ -1526,10 +1526,12 @@ body {
 }
 
 .secondSecContainer {
-  /* background: linear-gradient(160deg, #010535, #2a0232); */
+  background: linear-gradient(191deg, #010535, #2a0232);
   padding: 3em 0;
 }
-
+.accordionContainer {
+  background: linear-gradient(263deg, #210333, #290232);
+}
 .heading {
   font-family: "Noto Serif Balinese", serif;
 }
@@ -3368,5 +3370,4 @@ label::before {
   .meetDevSec1RightHead {
     font-size: 3em;
   }
-  
 }

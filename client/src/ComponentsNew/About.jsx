@@ -188,7 +188,7 @@ export default function About({ navbar }) {
         <div className="accordionContainer">
           <div className="heading5">FAQ</div>
           <ul id="accordion">
-            <li>
+            {/* <li>
               <label htmlFor="first">
                 <p> Where will the contest take place?</p>
               </label>
@@ -199,7 +199,7 @@ export default function About({ navbar }) {
                   for Geeks.
                 </p>
               </div>
-            </li>
+            </li> */}
             <li>
               <label htmlFor="second">
                 <p> Is there any fee to participate in this contest?</p>
