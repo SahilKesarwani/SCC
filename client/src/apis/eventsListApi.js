@@ -2,7 +2,7 @@ const eventsListApi = [
   {
     id: 1,
     name: "Aarambh",
-    time: "19:00 - 21:00",
+    time: "07:00 PM - 09:00 PM",
     date: "12 May 2022",
     registrations: "600",
     description:
@@ -320,7 +320,7 @@ const eventsListApi = [
     name: "Google Meet-Up",
     time: "2:00 PM - 4:00 PM",
     date: "17 November 2023",
-    registrations: "160",
+    registrations: "200",
     description:
       "We had organised a Meet-Up in association with Google in which Sir Ankit Kumar Verma was speaker who represented GDG Prayagraj. This session was hosted by Ms. Gauri Gupta and Mr. Rahul Singh. Here, Ankit sir gave an idea about GDG Communities and GDSC, also he encouraged the students to be the part of GDG Prayagraj. ",
     eventDetails: [""],
@@ -339,31 +339,10 @@ const eventsListApi = [
       },
     ],
     platform: "SIET Seminar Hall",
-    winners: [
-      {
-        teamName: "",
-        rank: "",
-        teamMembers: [
-          {
-            Name: "",
-            Batch: "",
-            socialMediaLinks: [
-              {
-                linkedIn: "",
-              },
-            ],
-            profileImage: "",
-          },
-        ],
-      },
-    ],
+    winners: [],
 
     examiners: [
-      {
-        examinerName: "",
-        examinerImg: "",
-        examinerDesignation: "",
-      },
+      
     ],
   },
 ];

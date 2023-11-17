@@ -27,8 +27,7 @@ const sccCarouselApi = [
   {
     id: 3,
     href: "#three",
-    imgSrc:
-      "https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online.png",
+    imgSrc: "./images/StepsTakenByUs/GoogleMeetup17-11-23.png",
     data: "Join Us",
   },
 ];

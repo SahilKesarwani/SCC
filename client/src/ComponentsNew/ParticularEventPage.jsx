@@ -214,115 +214,125 @@ export default function ParticularEventPage({ navbar }) {
                       Active Participants
                     </div>
                   </div>
-                  <div className="pedescIconContainerDiv">
-                    <div
-                      style={{
-                        fontSize: "2em",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <img
-                        alt=""
-                        src="https://demo.themewinter.com/html/eventor/images/icons/fact-sponsor.png"
-                      />
+                  {sponsors.length !== 0 && (
+                    <div className="pedescIconContainerDiv">
+                      <div
+                        style={{
+                          fontSize: "2em",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          alt=""
+                          src="https://demo.themewinter.com/html/eventor/images/icons/fact-sponsor.png"
+                        />
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          width: "10em",
+                        }}
+                      >
+                        {sponsors.length}
+                        <br />
+                        Sponsor(s)
+                      </div>
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "10em",
-                      }}
-                    >
-                      {sponsors.length}
-                      <br />
-                      Sponsor(s)
+                  )}
+                  {examiners.length !== 0 && (
+                    <div className="pedescIconContainerDiv">
+                      <div
+                        style={{
+                          fontSize: "2em",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          alt=""
+                          src="https://demo.themewinter.com/html/eventor/images/icons/fact-country.png"
+                        />
+                      </div>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          width: "10em",
+                        }}
+                      >
+                        {examiners.length}
+                        <br />
+                        Judges
+                      </div>
                     </div>
-                  </div>
-                  <div className="pedescIconContainerDiv">
-                    <div
-                      style={{
-                        fontSize: "2em",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <img
-                        alt=""
-                        src="https://demo.themewinter.com/html/eventor/images/icons/fact-country.png"
-                      />
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "10em",
-                      }}
-                    >
-                      {examiners.length}
-                      <br />
-                      Judges
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
-              <div className="visionaryBox">
-                <div style={{ textAlign: "center" }}>
-                  <h6 style={{ fontSize: "1.5em" }}>Bringing in the</h6>
-                  <h2 style={{ margin: "0", color: "white" }}>
-                    Winners of this Event
-                  </h2>
-                </div>
+              {winners.length !== 0 && (
+                <div className="visionaryBox">
+                  <div style={{ textAlign: "center" }}>
+                    <h6 style={{ fontSize: "1.5em" }}>Bringing in the</h6>
+                    <h2 style={{ margin: "0", color: "white" }}>
+                      Winners of this Event
+                    </h2>
+                  </div>
 
-                <div className="visSpeakerCardContainer">
-                  {winners.map((win) => {
-                    return (
-                      <div className="visSpeakerCardSubContainer" key={uuid()}>
-                        {win.teamMembers.map((winn) => {
-                          return (
-                            <div className="visSpeakerCard" key={uuid()}>
-                              <div className="visSpeakerImageSection">
-                                <img
-                                  alt=""
-                                  src={winn.profileImage}
-                                  className="visSpeakerPersonImage"
-                                />
-                                <div className="visSpeakerOverlay">
-                                  <div className="visSpeakerSocialIcon">
-                                    <a
-                                      target="_blank"
-                                      rel="noreferrer"
-                                      href={winn.socialMediaLinks[0].linkedIn}
-                                    >
-                                      <i className="fa fa-linkedin socialIcon"></i>
-                                    </a>
+                  <div className="visSpeakerCardContainer">
+                    {winners.map((win) => {
+                      return (
+                        <div
+                          className="visSpeakerCardSubContainer"
+                          key={uuid()}
+                        >
+                          {win.teamMembers.map((winn) => {
+                            return (
+                              <div className="visSpeakerCard" key={uuid()}>
+                                <div className="visSpeakerImageSection">
+                                  <img
+                                    alt=""
+                                    src={winn.profileImage}
+                                    className="visSpeakerPersonImage"
+                                  />
+                                  <div className="visSpeakerOverlay">
+                                    <div className="visSpeakerSocialIcon">
+                                      <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href={winn.socialMediaLinks[0].linkedIn}
+                                      >
+                                        <i className="fa fa-linkedin socialIcon"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="visSpeakerDetails">
+                                  <div className="visSpeakerName">
+                                    {winn.Name}
+                                  </div>
+                                  <div>
+                                    {" "}
+                                    <b>{win.teamName}</b> - {winn.Batch}
+                                    <br />
+                                    <b>{win.rank}</b> Position
                                   </div>
                                 </div>
                               </div>
-                              <div className="visSpeakerDetails">
-                                <div className="visSpeakerName">
-                                  {winn.Name}
-                                </div>
-                                <div>
-                                  {" "}
-                                  <b>{win.teamName}</b> - {winn.Batch}
-                                  <br />
-                                  <b>{win.rank}</b> Position
-                                </div>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    );
-                  })}
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              )}
+
               <section id="ts-speakers" className="ts-speakers gradient-bg">
                 <div className="container1">
                   <div className="row1 text-center">
@@ -360,6 +370,7 @@ export default function ParticularEventPage({ navbar }) {
                   </div>
                 </div>
               </section>
+
               <div className="sponsorContainer">
                 <div className="heading1">Supporting Our Event</div>
                 <div className="heading2">Event Sponsor</div>
