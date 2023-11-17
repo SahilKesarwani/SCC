@@ -374,7 +374,7 @@ export default function ParticularEventPage({ navbar }) {
                   })}
                 </div>
               </div>
-              <div className="third">
+              {/* <div className="third">
                 <h1>Gallery Section</h1>
                 <div className="gallary">
                   <div className="one">
@@ -427,7 +427,7 @@ export default function ParticularEventPage({ navbar }) {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           );
         }
