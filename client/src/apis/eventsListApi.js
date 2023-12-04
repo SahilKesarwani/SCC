@@ -2,7 +2,7 @@ const eventsListApi = [
   {
     id: 1,
     name: "Aarambh",
-    time: "19:00 - 21:00",
+    time: "07:00 PM - 09:00 PM",
     date: "12 May 2022",
     registrations: "600",
     description:
@@ -313,6 +313,36 @@ const eventsListApi = [
         examinerImg: "../images/person-icon-1682.png",
         examinerDesignation: "Assistant Professor",
       },
+    ],
+  },
+  {
+    id: 4,
+    name: "Google Meet-Up",
+    time: "2:00 PM - 4:00 PM",
+    date: "17 November 2023",
+    registrations: "200",
+    description:
+      "We had organised a Meet-Up in association with Google in which Sir Ankit Kumar Verma was speaker who represented GDG Prayagraj. This session was hosted by Ms. Gauri Gupta and Mr. Rahul Singh. Here, Ankit sir gave an idea about GDG Communities and GDSC, also he encouraged the students to be the part of GDG Prayagraj. ",
+    eventDetails: [""],
+    imageURL: [
+      {
+        imgURL: "../images/events/GoogleMeetup17-11-23.png",
+      },
+      { imgURL: "https://images4.alphacoders.com/118/thumb-1920-1182562.png" },
+    ],
+    domainOfEvent: "domains",
+    totalParticipants: "200",
+    sponsors: [
+      {
+        name: "Google Developer Groups",
+        logo: "https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo_dark_QmPdj9K.svg",
+      },
+    ],
+    platform: "SIET Seminar Hall",
+    winners: [],
+
+    examiners: [
+      
     ],
   },
 ];

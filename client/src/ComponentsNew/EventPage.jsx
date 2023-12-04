@@ -18,7 +18,6 @@ export default function EventPage({ navbar }) {
         navBar.style.backdropFilter = "";
       }
     });
-    
   });
 
   useEffect(() => {
@@ -63,10 +62,10 @@ export default function EventPage({ navbar }) {
     totalTimeDiff = totalTimeDiff - secDiff;
 
     if (totalTimeDiff > 0) {
-    setDays(daysDiff);
-    setHours(hoursDiff);
-    setMinute(minDiff);
-    setSeconds(secDiff);
+      setDays(daysDiff);
+      setHours(hoursDiff);
+      setMinute(minDiff);
+      setSeconds(secDiff);
     } else {
       setSeconds(0);
       setRegisteredState("Event Ended");
@@ -115,7 +114,16 @@ export default function EventPage({ navbar }) {
                 <h3 className="banner-desc">{currentEventApi[0].venue}</h3>
 
                 <p id="registerBtn" className="banner-btn1">
-                  <a href="www.google.com" className="btn1 btn-primary">
+                  <a
+                    href="https://www.google.com"
+                    className="btn1 btn-primary"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      pointerEvents:
+                        registeredState == "Event Ended" ? "none" : "",
+                    }}
+                  >
                     {registeredState}
                   </a>
                 </p>
