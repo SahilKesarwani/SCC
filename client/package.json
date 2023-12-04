@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -21,7 +22,7 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test",
     "eject": "react-scripts --openssl-legacy-provider eject",
-    "both" : "concurrently \"npm run start\" \"nodemon ../backend/index.js\""
+    "both": "concurrently \"npm run start\" \"nodemon ../backend/index.js\""
   },
   "eslintConfig": {
     "extends": [
