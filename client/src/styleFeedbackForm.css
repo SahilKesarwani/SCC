@@ -35,12 +35,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 10px;    width: 80vw;
 }
 .teamSelect {
   display: block;
   background-color: aliceblue;
-  width: auto;
 }
 .submitFeebackBtn, .downloadBtn{
     border: 0;

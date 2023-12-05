@@ -6,11 +6,13 @@ import FeedbackFormApi from "../apis/FeedbackFormApi";
 export default function FeedbackForm() {
   const [certificate, setCertificate] = useState(0);
   const [state, handleSubmit] = useForm("xeqbyjrd");
-const fetchCertificate = (e) => {
+  const fetchCertificate = (e) => {
     e.preventDefault();
-    setCertificate(`${e.target[0].value.slice(0,e.target[0].value.indexOf('@'))}`)
-}
-  
+    setCertificate(
+      `${e.target[0].value.slice(0, e.target[0].value.indexOf("@"))}`
+    );
+  };
+
   return (
     <>
       {state.succeeded && (
@@ -30,31 +32,78 @@ const fetchCertificate = (e) => {
                   );
                 })}
               </select>
-              <input type="submit" value="Submit" className="submitFeebackBtn" />
+              <input
+                type="submit"
+                value="Submit"
+                className="submitFeebackBtn"
+              />
             </form>
           </div>
-          {certificate!=0 && <a href={require(`../images/CodingCauldron/Certificates/${certificate}.jpg`)} target="_blank"  className="downloadBtn">View Certificate</a>}
-          {certificate!=0 && <a href={require(`../images/CodingCauldron/Certificates/${certificate}.jpg`)} target="_blank" download className="downloadBtn">Download</a>}
-          {certificate!=0 && <div className="certificateCard">
-            <img src = {require(`../images/CodingCauldron/Certificates/${certificate}.jpg`)}/>
-          </div>}
+          {certificate != 0 && (
+            <a
+              href={require(`../images/CodingCauldron/Certificates/${certificate}.jpg`)}
+              target="_blank"
+              className="downloadBtn"
+            >
+              View Certificate
+            </a>
+          )}
+          {certificate != 0 && (
+            <a
+              href={require(`../images/CodingCauldron/Certificates/${certificate}.jpg`)}
+              target="_blank"
+              download
+              className="downloadBtn"
+            >
+              Download
+            </a>
+          )}
+          {certificate != 0 && (
+            <div className="certificateCard">
+              <img
+                src={require(`../images/CodingCauldron/Certificates/${certificate}.jpg`)}
+              />
+            </div>
+          )}
         </>
       )}
 
       {!state.succeeded && (
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email" className="emailLabel">Email Address</label>
-          <input id="email" type="email" name="email" placeholder="Type your email address"/>
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            width: "80vw",
+          }}
+        >
+          <label htmlFor="email" className="emailLabel">
+            Email Address
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Type your email address"
+          />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <label htmlFor="message" className="emailLabel">Your Feedback</label>
+          <label htmlFor="message" className="emailLabel">
+            Your Feedback
+          </label>
 
-          <textarea id="message" name="message" placeholder="It was a very good and pleasing interview. We really loved the process it happened and help us to learn something new..."/>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="It was a very good and pleasing interview. We really loved the process it happened and help us to learn something new..."
+          />
           <ValidationError
             prefix="Message"
             field="message"
             errors={state.errors}
           />
-          <button type="submit" disabled={state.submitting} className="submitFeebackBtn">
+          <button
+            type="submit"
+            disabled={state.submitting}
+            className="submitFeebackBtn"
+          >
             Submit
           </button>
         </form>
