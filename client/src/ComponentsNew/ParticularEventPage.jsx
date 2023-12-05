@@ -333,7 +333,7 @@ export default function ParticularEventPage({ navbar }) {
                 </div>
               )}
 
-              <section id="ts-speakers" className="ts-speakers gradient-bg">
+              {examiners.length!=0 && <section id="ts-speakers" className="ts-speakers gradient-bg">
                 <div className="container1">
                   <div className="row1 text-center">
                     <h3 className="section-sub-title title-white">
@@ -369,7 +369,7 @@ export default function ParticularEventPage({ navbar }) {
                     })}
                   </div>
                 </div>
-              </section>
+              </section>}
 
               <div className="sponsorContainer">
                 <div className="heading1">Supporting Our Event</div>

@@ -345,6 +345,180 @@ const eventsListApi = [
       
     ],
   },
+  
+  {
+    id: 5,
+    name: "Coding Cauldron",
+    time: "27th November 2023",
+    date: "3rd December 2023",
+    registrations: "104",
+    description:
+    "We hosted a week-long Coding Cauldron Hackathon, in collaboration with GDG Prayagraj, from November 27th to December 3rd. Participants were tasked with creating a front-end for a Music Player Website, incorporating features such as song addition, deletion, and reordering. Throughout the week, students developed their projects, and upon completion, they were instructed to upload them to GitHub or another web hosting platform. To support their efforts, an online session covered the fundamentals of HTML, CSS, JavaScript, and demonstrated the creation of a basic Music Player website. The event concluded with the Result Declaration Day on December 4th, 2023, featuring Ankit sir, our esteemed GDG Representative, as the Chief Guest and judge. Winning teams not only received certificates from Google but also were honored with trophies from SCC.",
+    eventDetails: [
+      "The time limit for the contest will be 1 week.",
+      "The top coders will be rewarded.",
+      "Date and Time: 27th November 2023, 08:00 PM (IST)",
+    ],
+    imageURL: [
+      {
+        imgURL: "../images/events/codeCauldron.png",
+      },
+      { imgURL: "https://images4.alphacoders.com/118/thumb-1920-1182562.png" },
+    ],
+    domainOfEvent: "domains",
+    totalParticipants: "77",
+    sponsors: [
+      {
+        name: "GDG Prayagraj",
+        logo: "https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-goog/contentbuilder/logo_dark_QmPdj9K.svg",
+      },
+      {
+        name: "Tensor Flow",
+        logo: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/sponsors/3P%20Logo%20-Prayagraj%20%282%29_SzFsQwo.png",
+      },
+    ],
+    platform: "VS Code",
+    winners: [
+      {
+        teamName: "Raahi Beats",
+        rank: "1st (3rd year)",
+        teamMembers: [
+          {
+            Name: "Gauri Gupta",
+            Batch: "2021-25",
+            socialMediaLinks: [
+              {
+                linkedIn: "https://www.linkedin.com/in/gauri-gupta-628b7a241/",
+              },
+            ],
+            profileImage:
+              "https://media.licdn.com/dms/image/D4D03AQHX0IG5uVxBMg/profile-displayphoto-shrink_800_800/0/1677298182571?e=1703721600&v=beta&t=tMyxJFsUcl4TnLiQ0wUo_fX8bX7h5_0zQZtMIEePnys",
+          },
+          {
+            Name: "Rahul Singh",
+            Batch: "2021-25",
+            socialMediaLinks: [
+              {
+                linkedIn: "https://www.linkedin.com/in/rahul-singh-543203193/",
+              },
+            ],
+            profileImage:
+              "https://media.licdn.com/dms/image/C5603AQHDSFPDsPka_A/profile-displayphoto-shrink_800_800/0/1644172106470?e=1703721600&v=beta&t=Fg4coEIVjBS8HVrkvmKrlAGJ4_B3QojgU_ACFu0JQZ4",
+          },
+        ],
+      },
+      {
+        teamName: "Carvaan",
+        rank: "2nd (3rd year)",
+        teamMembers: [
+          {
+            Name: "Raj Singh",
+            Batch: "2021-25",
+            socialMediaLinks: [
+              {
+                linkedIn:
+                  "https://www.linkedin.com/in/raj-singh-72189224a/",
+              },
+            ],
+            profileImage:
+              "https://media.licdn.com/dms/image/D4D03AQHzY8R7WEwbQQ/profile-displayphoto-shrink_400_400/0/1685080471085?e=1707350400&v=beta&t=OxkZXxrm92zLqYnbNLExxf9QbYdfoJOHBLAWw_we2vE",
+          },
+          {
+            Name: "Shivansi Singh",
+            Batch: "2021-25",
+            socialMediaLinks: [
+              {
+                linkedIn:
+                  "https://www.linkedin.com/in/shivanshi-singh-588b81241/",
+              },
+            ],
+            profileImage:
+              "https://media.licdn.com/dms/image/D4D03AQFpOTw_RQBxrA/profile-displayphoto-shrink_400_400/0/1684250542293?e=1703721600&v=beta&t=rT0WY2eWUHOk9nKqOvfDILCkD2nXVtFPer_8wjJ_e2M",
+          }
+          
+        ],
+      },
+      {
+        teamName: "Cogito",
+        rank: "1st (2nd year)",
+        teamMembers: [
+          {
+            Name: "Anushka Singh",
+            Batch: "2022-26",
+            socialMediaLinks: [{linkedIn: "https://www.linkedin.com/in/anushka-singh-71a780276/"}],
+            profileImage:"../images/person-icon-1682.png",
+          },
+          {
+            Name: "Harshit Kowsik",
+            Batch: "2022-26",
+            socialMediaLinks: [{ linkedIn: "https://www.linkedin.com/in/harshitkowsik/" }],
+            profileImage: "https://media.licdn.com/dms/image/D4D03AQF54x3p0ieGnQ/profile-displayphoto-shrink_400_400/0/1701489048175?e=1707350400&v=beta&t=szINwCr6tjtXg9d9D41gbWjtNPWrNc_EFXN6iDwWcdI",
+          },
+          {
+            Name: "Shivam Gupta",
+            Batch: "2022-26",
+            socialMediaLinks: [{ linkedIn: "error/io" }],
+            profileImage: "../images/person-icon-1682.png",
+          },
+          {
+            Name: "Sneha Singh",
+            Batch: "2022-26",
+            socialMediaLinks: [{ linkedIn: "error/io" }],
+            profileImage: "../images/person-icon-1682.png",
+          },
+        ],
+      },
+      {
+        teamName: "Tech Maverick",
+        rank: "2nd (2nd year)",
+        teamMembers: [
+          {
+            Name: "Mohammad Amil",
+            Batch: "2022-26",
+            socialMediaLinks: [{ linkedIn: "error/io" }],
+            profileImage: "../images/person-icon-1682.png",
+          },
+        ],
+      },
+      {
+        teamName: "Team Voila",
+        rank: "1st (1st year)",
+        teamMembers: [
+          {
+            Name: "Anuj Singh",
+            Batch: "2023-27",
+            socialMediaLinks: [{ linkedIn: "error/io" }],
+            profileImage: "../images/person-icon-1682.png",
+          },
+          {
+            Name: "Harshit Bind ",
+            Batch: "2023-27",
+            socialMediaLinks: [{ linkedIn: "error/io" }],
+            profileImage: "../images/person-icon-1682.png",
+          },
+          {
+            Name: "Prashant SinghMohammad Amil",
+            Batch: "2023-27",
+            socialMediaLinks: [{ linkedIn: "error/io" }],
+            profileImage: "../images/person-icon-1682.png",
+          },
+        ],
+      },
+    ],
+
+    examiners: [
+      {
+        examinerName: "Ankit Kumar Verma",
+        examinerImg: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/ankit_kumar_verma_chYpsKX.jpeg",
+        examinerDesignation: "GDG Organizer",
+      },
+      {
+        examinerName: "Rahul Singh",
+        examinerImg: "https://media.licdn.com/dms/image/C5603AQHDSFPDsPka_A/profile-displayphoto-shrink_800_800/0/1644172106470?e=1703721600&v=beta&t=Fg4coEIVjBS8HVrkvmKrlAGJ4_B3QojgU_ACFu0JQZ4",
+        examinerDesignation: "GDG Ambassador",
+      },
+    ],
+  },
 ];
 
 export default eventsListApi;
