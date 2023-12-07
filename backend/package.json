@@ -1,18 +1,26 @@
 {
-  "name": "backend(new)",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mongodb": "^6.2.0",
-    "mongoose": "^8.0.0"
-  }
+	"name": "scc",
+	"version": "1.0.0",
+	"description": "Official Website of SIET Coding Club",
+	"main": "server.js",
+	"scripts": {
+		"client-install": "npm install --prefix client",
+		"client-build": "npm run build --prefix client",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"author": "SCC Team",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^8.0.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"jsonwebtoken": "^9.0.0",
+		"mongoose": "^7.0.4",
+		"react-helmet": "^6.1.0",
+		"react-script-tag": "^1.1.2"
+	}
 }
