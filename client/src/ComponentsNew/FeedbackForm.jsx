@@ -14,7 +14,7 @@ export default function FeedbackForm() {
   };
 
   return (
-    <>
+    <div className="feedbackFormRoot">
       {state.succeeded && (
         <>
           <h1>Thanks for sharing the feedback</h1>
@@ -108,6 +108,6 @@ export default function FeedbackForm() {
           </button>
         </form>
       )}
-    </>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 const currentEventApi = [
   {
-    name: "Google Meet-Up",
-    date: "2023-11-17T14:00:00",
+    name: "Coding Cauldron",
+    date: "2023-12-04T10:00:00",
     venue: "CRC Seminar Hall,SIET",
   },
 ];
